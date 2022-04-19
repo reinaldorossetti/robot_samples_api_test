@@ -1,0 +1,334 @@
+{
+  "uid" : "c9466d71c2ee1a8d",
+  "name" : "Checking Units of measurement - For temperature in Kelvin use units=standard",
+  "fullName" : "Robot Openweather Api.Features.Specifications.Weather Spec.Checking Units of measurement - For temperature in Kelvin use units=standard",
+  "historyId" : "1324d1a1e02d67c1152a2d12251f9419",
+  "time" : {
+    "start" : 1650394774674,
+    "stop" : 1650394774779,
+    "duration" : 105
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "weather_steps.Given I start the session",
+      "time" : {
+        "start" : 1650394774674,
+        "stop" : 1650394774676,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "RequestsLibrary.Create Session",
+        "time" : {
+          "start" : 1650394774674,
+          "stop" : 1650394774676,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "fcf7c95a818c5e1b",
+          "name" : "Keyword Log",
+          "source" : "fcf7c95a818c5e1b.html",
+          "type" : "text/html",
+          "size" : 269
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${SESSION}"
+        }, {
+          "name" : "arg2",
+          "value" : "${HOST_BASE}"
+        }, {
+          "name" : "arg3",
+          "value" : "headers=${HEADER}"
+        }, {
+          "name" : "arg4",
+          "value" : "disable_warnings=True"
+        } ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1,
+      "stepsCount" : 1
+    }, {
+      "name" : "weather_steps.When send a request about Units of measurement",
+      "time" : {
+        "start" : 1650394774676,
+        "stop" : 1650394774774,
+        "duration" : 98
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "BuiltIn.Create Dictionary",
+        "time" : {
+          "start" : 1650394774677,
+          "stop" : 1650394774678,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "f09316235c7e3888",
+          "name" : "Keyword Log",
+          "source" : "f09316235c7e3888.html",
+          "type" : "text/html",
+          "size" : 112
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "q=${city}"
+        }, {
+          "name" : "arg2",
+          "value" : "units=${UNITS}"
+        }, {
+          "name" : "arg3",
+          "value" : "appid=${API_KEY}"
+        } ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1,
+        "stepsCount" : 0
+      }, {
+        "name" : "weather_steps.Setting session to weather using GET method",
+        "time" : {
+          "start" : 1650394774678,
+          "stop" : 1650394774773,
+          "duration" : 95
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "RequestsLibrary.GET On Session",
+          "time" : {
+            "start" : 1650394774678,
+            "stop" : 1650394774771,
+            "duration" : 93
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "b04bf1e028568e4f",
+            "name" : "Keyword Log",
+            "source" : "b04bf1e028568e4f.html",
+            "type" : "text/html",
+            "size" : 1573
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "${SESSION}"
+          }, {
+            "name" : "arg2",
+            "value" : "${WEATHER_ENDPOINT}"
+          }, {
+            "name" : "arg3",
+            "value" : "params=${params}"
+          }, {
+            "name" : "arg4",
+            "value" : "headers=${HEADER}"
+          } ],
+          "hasContent" : true,
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 1,
+          "stepsCount" : 0
+        }, {
+          "name" : "BuiltIn.Set Test Variable",
+          "time" : {
+            "start" : 1650394774771,
+            "stop" : 1650394774773,
+            "duration" : 2
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "46691d238b6ddba0",
+            "name" : "Keyword Log",
+            "source" : "46691d238b6ddba0.html",
+            "type" : "text/html",
+            "size" : 56
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "${RESPONSE}"
+          } ],
+          "hasContent" : true,
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 1,
+          "stepsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 2,
+        "stepsCount" : 2
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "standard"
+      } ],
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 3,
+      "stepsCount" : 4
+    }, {
+      "name" : "weather_steps.Then expect API response will be code",
+      "time" : {
+        "start" : 1650394774774,
+        "stop" : 1650394774779,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "BuiltIn.Log",
+        "time" : {
+          "start" : 1650394774774,
+          "stop" : 1650394774776,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "d0ceebb6f1228bff",
+          "name" : "Keyword Log",
+          "source" : "d0ceebb6f1228bff.html",
+          "type" : "text/html",
+          "size" : 526
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "Response: ${RESPONSE.text}"
+        } ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1,
+        "stepsCount" : 0
+      }, {
+        "name" : "BuiltIn.Log To Console",
+        "time" : {
+          "start" : 1650394774776,
+          "stop" : 1650394774777,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "Response: ${RESPONSE.text}"
+        } ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0
+      }, {
+        "name" : "BuiltIn.Should Be Equal As Strings",
+        "time" : {
+          "start" : 1650394774777,
+          "stop" : 1650394774778,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "339f6cfb72c7f73c",
+          "name" : "Keyword Log",
+          "source" : "339f6cfb72c7f73c.html",
+          "type" : "text/html",
+          "size" : 79
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${RESPONSE.status_code}"
+        }, {
+          "name" : "arg2",
+          "value" : "${STATUS_CODE}"
+        } ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "200"
+      } ],
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 2,
+      "stepsCount" : 3
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 6,
+    "stepsCount" : 11
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Robot Openweather Api"
+  }, {
+    "name" : "suite",
+    "value" : "Features"
+  }, {
+    "name" : "subSuite",
+    "value" : "Specifications.Weather Spec"
+  }, {
+    "name" : "framework",
+    "value" : "robotframework"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "host",
+    "value" : "fv-az77-515"
+  }, {
+    "name" : "thread",
+    "value" : "default-f544486a-b8da-423a-b364-b6d2d0c8cc4d"
+  }, {
+    "name" : "tag",
+    "value" : "api_tests"
+  }, {
+    "name" : "tag",
+    "value" : "units_standard"
+  }, {
+    "name" : "tag",
+    "value" : "api_tests"
+  }, {
+    "name" : "tag",
+    "value" : "units_standard"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "api_tests", "units_standard" ]
+  },
+  "source" : "c9466d71c2ee1a8d.json",
+  "parameterValues" : [ ]
+}

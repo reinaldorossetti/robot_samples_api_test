@@ -1,0 +1,250 @@
+{
+  "60517979b9f2bc7e6eeca0e72252dd22" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "30ad47738c6d02d3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1650394774130,
+        "stop" : 1650394774235,
+        "duration" : 105
+      }
+    } ]
+  },
+  "5eabd1d63434e7e2bce3cc74c30255b4" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "53207d39f9ed02a3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1650394774240,
+        "stop" : 1650394774334,
+        "duration" : 94
+      }
+    } ]
+  },
+  "fa46bb058a78ae7832ba561995109f3e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a2c44697fa84f67f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1650394773526,
+        "stop" : 1650394773633,
+        "duration" : 107
+      }
+    } ]
+  },
+  "3c154ee50eeddbb6e1041f389bc30672" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e2e852ebb6703396",
+      "status" : "passed",
+      "time" : {
+        "start" : 1650394773637,
+        "stop" : 1650394773771,
+        "duration" : 134
+      }
+    } ]
+  },
+  "69c31b1d1e23dd8061f27bdbba9c881d" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "eecd3aa2e47a92f0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1650394773391,
+        "stop" : 1650394773521,
+        "duration" : 130
+      }
+    } ]
+  },
+  "008c911b6f4984bab6733eab7467c15f" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9445f674c4a2a8e9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1650394774783,
+        "stop" : 1650394774873,
+        "duration" : 90
+      }
+    } ]
+  },
+  "1324d1a1e02d67c1152a2d12251f9419" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c9466d71c2ee1a8d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1650394774674,
+        "stop" : 1650394774779,
+        "duration" : 105
+      }
+    } ]
+  },
+  "e899cd43ec837f0b1cb4a03f02bfc5fa" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "181cf8d540d89417",
+      "status" : "passed",
+      "time" : {
+        "start" : 1650394773886,
+        "stop" : 1650394773995,
+        "duration" : 109
+      }
+    } ]
+  },
+  "64bfc9f0052f0a87a9e2f9238934075d" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4afd14f7d6e959de",
+      "status" : "passed",
+      "time" : {
+        "start" : 1650394774339,
+        "stop" : 1650394774433,
+        "duration" : 94
+      }
+    } ]
+  },
+  "45298ec612f4bbedc1fff68523708f90" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f5900711e8e4f763",
+      "status" : "failed",
+      "statusDetails" : "HTTPError: 400 Client Error: Bad Request for url: http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&appid=e2f1d841cc16cff49a0aa18b531d71e0",
+      "time" : {
+        "start" : 1650394773999,
+        "stop" : 1650394774125,
+        "duration" : 126
+      }
+    } ]
+  },
+  "3078451c55f5e68a05c43c2acbb68611" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1ae289e94ecb7cec",
+      "status" : "passed",
+      "time" : {
+        "start" : 1650394773775,
+        "stop" : 1650394773881,
+        "duration" : 106
+      }
+    } ]
+  },
+  "75c54e98de0790a593d23485256268df" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9a0ca661fedb4fba",
+      "status" : "passed",
+      "time" : {
+        "start" : 1650394774536,
+        "stop" : 1650394774666,
+        "duration" : 130
+      }
+    } ]
+  },
+  "19591f0e6e1e672796185254122d954a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "2e9fdc4840fc4aa2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1650394774437,
+        "stop" : 1650394774532,
+        "duration" : 95
+      }
+    } ]
+  }
+}

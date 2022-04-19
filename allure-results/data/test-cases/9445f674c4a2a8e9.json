@@ -1,0 +1,268 @@
+{
+  "uid" : "9445f674c4a2a8e9",
+  "name" : "Search weather data by city name with invalid api key",
+  "fullName" : "Robot Openweather Api.Features.Specifications.Weather Spec.Search weather data by city name with invalid api key",
+  "historyId" : "008c911b6f4984bab6733eab7467c15f",
+  "time" : {
+    "start" : 1650394774783,
+    "stop" : 1650394774873,
+    "duration" : 90
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "weather_steps.Given I start the session",
+      "time" : {
+        "start" : 1650394774784,
+        "stop" : 1650394774786,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "RequestsLibrary.Create Session",
+        "time" : {
+          "start" : 1650394774784,
+          "stop" : 1650394774785,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "a88af7afc2c08fd0",
+          "name" : "Keyword Log",
+          "source" : "a88af7afc2c08fd0.html",
+          "type" : "text/html",
+          "size" : 269
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${SESSION}"
+        }, {
+          "name" : "arg2",
+          "value" : "${HOST_BASE}"
+        }, {
+          "name" : "arg3",
+          "value" : "headers=${HEADER}"
+        }, {
+          "name" : "arg4",
+          "value" : "disable_warnings=True"
+        } ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1,
+      "stepsCount" : 1
+    }, {
+      "name" : "weather_steps.When send a request within invalid api key",
+      "time" : {
+        "start" : 1650394774786,
+        "stop" : 1650394774870,
+        "duration" : 84
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "BuiltIn.Create Dictionary",
+        "time" : {
+          "start" : 1650394774786,
+          "stop" : 1650394774787,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "adb62775aee23a03",
+          "name" : "Keyword Log",
+          "source" : "adb62775aee23a03.html",
+          "type" : "text/html",
+          "size" : 96
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "q=${city}"
+        }, {
+          "name" : "arg2",
+          "value" : "appid=${API_KEY_INCORRETA}"
+        } ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1,
+        "stepsCount" : 0
+      }, {
+        "name" : "RequestsLibrary.POST On Session",
+        "time" : {
+          "start" : 1650394774787,
+          "stop" : 1650394774868,
+          "duration" : 81
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "3a1b2507fa3c974b",
+          "name" : "Keyword Log",
+          "source" : "3a1b2507fa3c974b.html",
+          "type" : "text/html",
+          "size" : 1178
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${SESSION}"
+        }, {
+          "name" : "arg2",
+          "value" : "${WEATHER_ENDPOINT}"
+        }, {
+          "name" : "arg3",
+          "value" : "params=${params}"
+        }, {
+          "name" : "arg4",
+          "value" : "headers=${HEADER}"
+        }, {
+          "name" : "arg5",
+          "value" : "expected_status=any"
+        } ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1,
+        "stepsCount" : 0
+      }, {
+        "name" : "BuiltIn.Set Test Variable",
+        "time" : {
+          "start" : 1650394774869,
+          "stop" : 1650394774869,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "7b54bbb800dad23c",
+          "name" : "Keyword Log",
+          "source" : "7b54bbb800dad23c.html",
+          "type" : "text/html",
+          "size" : 56
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${RESPONSE}"
+        } ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 3,
+      "stepsCount" : 3
+    }, {
+      "name" : "weather_steps.Then validate error message for invalid api key",
+      "time" : {
+        "start" : 1650394774870,
+        "stop" : 1650394774872,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Collections.Dictionary Should Contain Item",
+        "time" : {
+          "start" : 1650394774871,
+          "stop" : 1650394774872,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${RESPONSE.json()}"
+        }, {
+          "name" : "arg2",
+          "value" : "message"
+        }, {
+          "name" : "arg3",
+          "value" : "${MSN_INVALID_KEY}"
+        } ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 1
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 4,
+    "stepsCount" : 8
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Robot Openweather Api"
+  }, {
+    "name" : "suite",
+    "value" : "Features"
+  }, {
+    "name" : "subSuite",
+    "value" : "Specifications.Weather Spec"
+  }, {
+    "name" : "framework",
+    "value" : "robotframework"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "host",
+    "value" : "fv-az77-515"
+  }, {
+    "name" : "thread",
+    "value" : "default-f544486a-b8da-423a-b364-b6d2d0c8cc4d"
+  }, {
+    "name" : "tag",
+    "value" : "api_key_invalid"
+  }, {
+    "name" : "tag",
+    "value" : "api_tests"
+  }, {
+    "name" : "tag",
+    "value" : "api_key_invalid"
+  }, {
+    "name" : "tag",
+    "value" : "api_tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "api_tests", "api_key_invalid" ]
+  },
+  "source" : "9445f674c4a2a8e9.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,373 @@
+{
+  "uid" : "30ad47738c6d02d3",
+  "name" : "Checking cities in circle",
+  "fullName" : "Robot Openweather Api.Features.Specifications.Weather Spec.Checking cities in circle",
+  "historyId" : "60517979b9f2bc7e6eeca0e72252dd22",
+  "time" : {
+    "start" : 1650394774130,
+    "stop" : 1650394774235,
+    "duration" : 105
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "weather_steps.Given I start the session",
+      "time" : {
+        "start" : 1650394774130,
+        "stop" : 1650394774132,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "RequestsLibrary.Create Session",
+        "time" : {
+          "start" : 1650394774131,
+          "stop" : 1650394774132,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "4661d607e2414332",
+          "name" : "Keyword Log",
+          "source" : "4661d607e2414332.html",
+          "type" : "text/html",
+          "size" : 269
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${SESSION}"
+        }, {
+          "name" : "arg2",
+          "value" : "${HOST_BASE}"
+        }, {
+          "name" : "arg3",
+          "value" : "headers=${HEADER}"
+        }, {
+          "name" : "arg4",
+          "value" : "disable_warnings=True"
+        } ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1,
+      "stepsCount" : 1
+    }, {
+      "name" : "weather_steps_call.When send a request about weather by cities in circle",
+      "time" : {
+        "start" : 1650394774132,
+        "stop" : 1650394774230,
+        "duration" : 98
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "weather_steps.Setting the parameters for weather by cities in circle",
+        "time" : {
+          "start" : 1650394774133,
+          "stop" : 1650394774135,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "BuiltIn.Create Dictionary",
+          "time" : {
+            "start" : 1650394774133,
+            "stop" : 1650394774134,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "c6aba557ee885307",
+            "name" : "Keyword Log",
+            "source" : "c6aba557ee885307.html",
+            "type" : "text/html",
+            "size" : 119
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "lat=${LATITUDE}"
+          }, {
+            "name" : "arg2",
+            "value" : "lon=${LONGITUDE}"
+          }, {
+            "name" : "arg3",
+            "value" : "cnt=${CNT}"
+          }, {
+            "name" : "arg4",
+            "value" : "appid=${API_KEY}"
+          } ],
+          "hasContent" : true,
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 1,
+          "stepsCount" : 0
+        }, {
+          "name" : "BuiltIn.Set Global Variable",
+          "time" : {
+            "start" : 1650394774134,
+            "stop" : 1650394774135,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "5d125dcb4556a096",
+            "name" : "Keyword Log",
+            "source" : "5d125dcb4556a096.html",
+            "type" : "text/html",
+            "size" : 119
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "&{params}"
+          } ],
+          "hasContent" : true,
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 1,
+          "stepsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 2,
+        "stepsCount" : 2
+      }, {
+        "name" : "weather_steps.Setting session to weather using GET method",
+        "time" : {
+          "start" : 1650394774136,
+          "stop" : 1650394774230,
+          "duration" : 94
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "RequestsLibrary.GET On Session",
+          "time" : {
+            "start" : 1650394774136,
+            "stop" : 1650394774228,
+            "duration" : 92
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "c7fe749518d39a38",
+            "name" : "Keyword Log",
+            "source" : "c7fe749518d39a38.html",
+            "type" : "text/html",
+            "size" : 1576
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "${SESSION}"
+          }, {
+            "name" : "arg2",
+            "value" : "${WEATHER_ENDPOINT}"
+          }, {
+            "name" : "arg3",
+            "value" : "params=${params}"
+          }, {
+            "name" : "arg4",
+            "value" : "headers=${HEADER}"
+          } ],
+          "hasContent" : true,
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 1,
+          "stepsCount" : 0
+        }, {
+          "name" : "BuiltIn.Set Test Variable",
+          "time" : {
+            "start" : 1650394774228,
+            "stop" : 1650394774229,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "5a86da566f368b8b",
+            "name" : "Keyword Log",
+            "source" : "5a86da566f368b8b.html",
+            "type" : "text/html",
+            "size" : 56
+          } ],
+          "parameters" : [ {
+            "name" : "arg1",
+            "value" : "${RESPONSE}"
+          } ],
+          "hasContent" : true,
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 1,
+          "stepsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 2,
+        "stepsCount" : 2
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 4,
+      "stepsCount" : 6
+    }, {
+      "name" : "weather_steps.Then expect API response will be code",
+      "time" : {
+        "start" : 1650394774230,
+        "stop" : 1650394774235,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "BuiltIn.Log",
+        "time" : {
+          "start" : 1650394774231,
+          "stop" : 1650394774232,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "f1846fadb9fd687f",
+          "name" : "Keyword Log",
+          "source" : "f1846fadb9fd687f.html",
+          "type" : "text/html",
+          "size" : 519
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "Response: ${RESPONSE.text}"
+        } ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1,
+        "stepsCount" : 0
+      }, {
+        "name" : "BuiltIn.Log To Console",
+        "time" : {
+          "start" : 1650394774232,
+          "stop" : 1650394774233,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "Response: ${RESPONSE.text}"
+        } ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0
+      }, {
+        "name" : "BuiltIn.Should Be Equal As Strings",
+        "time" : {
+          "start" : 1650394774233,
+          "stop" : 1650394774235,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "c9733bc7432efde",
+          "name" : "Keyword Log",
+          "source" : "c9733bc7432efde.html",
+          "type" : "text/html",
+          "size" : 79
+        } ],
+        "parameters" : [ {
+          "name" : "arg1",
+          "value" : "${RESPONSE.status_code}"
+        }, {
+          "name" : "arg2",
+          "value" : "${STATUS_CODE}"
+        } ],
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "200"
+      } ],
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 2,
+      "stepsCount" : 3
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 7,
+    "stepsCount" : 13
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Robot Openweather Api"
+  }, {
+    "name" : "suite",
+    "value" : "Features"
+  }, {
+    "name" : "subSuite",
+    "value" : "Specifications.Weather Spec"
+  }, {
+    "name" : "framework",
+    "value" : "robotframework"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "host",
+    "value" : "fv-az77-515"
+  }, {
+    "name" : "thread",
+    "value" : "default-f544486a-b8da-423a-b364-b6d2d0c8cc4d"
+  }, {
+    "name" : "tag",
+    "value" : "api_tests"
+  }, {
+    "name" : "tag",
+    "value" : "cities_circle"
+  }, {
+    "name" : "tag",
+    "value" : "api_tests"
+  }, {
+    "name" : "tag",
+    "value" : "cities_circle"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "api_tests", "cities_circle" ]
+  },
+  "source" : "30ad47738c6d02d3.json",
+  "parameterValues" : [ ]
+}
