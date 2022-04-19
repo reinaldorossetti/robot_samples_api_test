@@ -1,12 +1,12 @@
 {
-  "uid" : "8ee2e4820ae2dd86",
+  "uid" : "913d852616454f60",
   "name" : "Checking cities within a rectangle zone",
   "fullName" : "Robot Openweather Api.Features.Specifications.Weather Spec.Checking cities within a rectangle zone",
   "historyId" : "45298ec612f4bbedc1fff68523708f90",
   "time" : {
-    "start" : 1650400665841,
-    "stop" : 1650400665939,
-    "duration" : 98
+    "start" : 1650401169903,
+    "stop" : 1650401170025,
+    "duration" : 122
   },
   "status" : "failed",
   "statusMessage" : "HTTPError: 400 Client Error: Bad Request for url: http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&appid=e2f1d841cc16cff49a0aa18b531d71e0",
@@ -23,24 +23,24 @@
     "steps" : [ {
       "name" : "weather_steps.Given I start the session",
       "time" : {
-        "start" : 1650400665842,
-        "stop" : 1650400665844,
-        "duration" : 2
+        "start" : 1650401169904,
+        "stop" : 1650401169905,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "RequestsLibrary.Create Session",
         "time" : {
-          "start" : 1650400665842,
-          "stop" : 1650400665843,
+          "start" : 1650401169904,
+          "stop" : 1650401169905,
           "duration" : 1
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 ",
           "time" : {
-            "start" : 1650400665843,
-            "stop" : 1650400665843,
+            "start" : 1650401169904,
+            "stop" : 1650401169904,
             "duration" : 0
           },
           "status" : "passed",
@@ -80,33 +80,33 @@
     }, {
       "name" : "weather_steps_call.When send a request about cities within a rectangle zone",
       "time" : {
-        "start" : 1650400665844,
-        "stop" : 1650400665938,
-        "duration" : 94
+        "start" : 1650401169905,
+        "stop" : 1650401170023,
+        "duration" : 118
       },
       "status" : "failed",
       "statusMessage" : "HTTPError: 400 Client Error: Bad Request for url: http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&appid=e2f1d841cc16cff49a0aa18b531d71e0",
       "steps" : [ {
         "name" : "weather_steps.Setting the parameters for weather by cities within a rectangle zone",
         "time" : {
-          "start" : 1650400665844,
-          "stop" : 1650400665847,
-          "duration" : 3
+          "start" : 1650401169906,
+          "stop" : 1650401169908,
+          "duration" : 2
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "BuiltIn.Create Dictionary",
           "time" : {
-            "start" : 1650400665845,
-            "stop" : 1650400665846,
+            "start" : 1650401169906,
+            "stop" : 1650401169907,
             "duration" : 1
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "&{params} = { bbox=12,32,15,37,10 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }",
             "time" : {
-              "start" : 1650400665845,
-              "stop" : 1650400665845,
+              "start" : 1650401169907,
+              "stop" : 1650401169907,
               "duration" : 0
             },
             "status" : "passed",
@@ -133,16 +133,16 @@
         }, {
           "name" : "BuiltIn.Set Global Variable",
           "time" : {
-            "start" : 1650400665846,
-            "stop" : 1650400665847,
+            "start" : 1650401169907,
+            "stop" : 1650401169908,
             "duration" : 1
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "&{params} = { bbox=12,32,15,37,10 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }",
             "time" : {
-              "start" : 1650400665846,
-              "stop" : 1650400665846,
+              "start" : 1650401169907,
+              "stop" : 1650401169907,
               "duration" : 0
             },
             "status" : "passed",
@@ -173,26 +173,26 @@
       }, {
         "name" : "weather_steps.Setting session to weather using GET method",
         "time" : {
-          "start" : 1650400665847,
-          "stop" : 1650400665937,
-          "duration" : 90
+          "start" : 1650401169908,
+          "stop" : 1650401170022,
+          "duration" : 114
         },
         "status" : "failed",
         "statusMessage" : "HTTPError: 400 Client Error: Bad Request for url: http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&appid=e2f1d841cc16cff49a0aa18b531d71e0",
         "steps" : [ {
           "name" : "RequestsLibrary.GET On Session",
           "time" : {
-            "start" : 1650400665848,
-            "stop" : 1650400665935,
-            "duration" : 87
+            "start" : 1650401169909,
+            "stop" : 1650401170021,
+            "duration" : 112
           },
           "status" : "failed",
           "statusMessage" : "HTTPError: 400 Client Error: Bad Request for url: http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&appid=e2f1d841cc16cff49a0aa18b531d71e0",
           "steps" : [ {
             "name" : "GET Request : url=http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n path_url=/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} \n body=None \n ",
             "time" : {
-              "start" : 1650400665931,
-              "stop" : 1650400665931,
+              "start" : 1650401170018,
+              "stop" : 1650401170018,
               "duration" : 0
             },
             "status" : "passed",
@@ -204,10 +204,10 @@
             "shouldDisplayMessage" : false,
             "hasContent" : false
           }, {
-            "name" : "GET Response : url=http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n status=400, reason=Bad Request \n headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:37:45 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '44', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} \n body={\"cod\":\"400\",\"message\":\"Nothing to geocode\"} \n ",
+            "name" : "GET Response : url=http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n status=400, reason=Bad Request \n headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:46:09 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '44', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} \n body={\"cod\":\"400\",\"message\":\"Nothing to geocode\"} \n ",
             "time" : {
-              "start" : 1650400665932,
-              "stop" : 1650400665932,
+              "start" : 1650401170018,
+              "stop" : 1650401170018,
               "duration" : 0
             },
             "status" : "passed",
@@ -221,8 +221,8 @@
           }, {
             "name" : "HTTPError: 400 Client Error: Bad Request for url: http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&appid=e2f1d841cc16cff49a0aa18b531d71e0",
             "time" : {
-              "start" : 1650400665933,
-              "stop" : 1650400665933,
+              "start" : 1650401170019,
+              "stop" : 1650401170019,
               "duration" : 0
             },
             "status" : "failed",
@@ -255,8 +255,8 @@
         }, {
           "name" : "BuiltIn.Set Test Variable",
           "time" : {
-            "start" : 1650400665935,
-            "stop" : 1650400665936,
+            "start" : 1650401170021,
+            "stop" : 1650401170022,
             "duration" : 1
           },
           "status" : "failed",
@@ -288,8 +288,8 @@
     }, {
       "name" : "weather_steps.Then expect API response will be code",
       "time" : {
-        "start" : 1650400665938,
-        "stop" : 1650400665938,
+        "start" : 1650401170024,
+        "stop" : 1650401170024,
         "duration" : 0
       },
       "status" : "failed",
@@ -330,10 +330,10 @@
     "value" : "cpython3"
   }, {
     "name" : "host",
-    "value" : "fv-az74-926"
+    "value" : "fv-az77-312"
   }, {
     "name" : "thread",
-    "value" : "default-73ebb0cc-4ee2-4191-8016-81d4e8e9caff"
+    "value" : "default-bdaf207e-a58b-47a5-ba14-f1d92117b3ee"
   }, {
     "name" : "tag",
     "value" : "api_tests"
@@ -364,6 +364,6 @@
     } ],
     "tags" : [ "api_tests", "weather_rectangle_zone" ]
   },
-  "source" : "8ee2e4820ae2dd86.json",
+  "source" : "913d852616454f60.json",
   "parameterValues" : [ ]
 }
