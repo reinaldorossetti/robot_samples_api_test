@@ -1,12 +1,12 @@
 {
-  "uid" : "883a54ed7d972c68",
+  "uid" : "5888693a84118f08",
   "name" : "Checking weather by longitude and latitude",
   "fullName" : "Robot Openweather Api.Features.Specifications.Weather Spec.Checking weather by longitude and latitude",
   "historyId" : "3c154ee50eeddbb6e1041f389bc30672",
   "time" : {
-    "start" : 1650399402870,
-    "stop" : 1650399403001,
-    "duration" : 131
+    "start" : 1650399795632,
+    "stop" : 1650399795770,
+    "duration" : 138
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,24 +21,24 @@
     "steps" : [ {
       "name" : "weather_steps.Given I start the session",
       "time" : {
-        "start" : 1650399402871,
-        "stop" : 1650399402872,
-        "duration" : 1
+        "start" : 1650399795632,
+        "stop" : 1650399795634,
+        "duration" : 2
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "RequestsLibrary.Create Session",
         "time" : {
-          "start" : 1650399402871,
-          "stop" : 1650399402872,
+          "start" : 1650399795633,
+          "stop" : 1650399795634,
           "duration" : 1
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 ",
           "time" : {
-            "start" : 1650399402871,
-            "stop" : 1650399402871,
+            "start" : 1650399795633,
+            "stop" : 1650399795633,
             "duration" : 0
           },
           "status" : "passed",
@@ -78,32 +78,32 @@
     }, {
       "name" : "weather_steps_call.When send a request about weather by longitude and latitude",
       "time" : {
-        "start" : 1650399402872,
-        "stop" : 1650399402992,
-        "duration" : 120
+        "start" : 1650399795634,
+        "stop" : 1650399795760,
+        "duration" : 126
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "weather_steps.Setting the parameters for weather by longitude and latitude",
         "time" : {
-          "start" : 1650399402873,
-          "stop" : 1650399402875,
-          "duration" : 2
+          "start" : 1650399795634,
+          "stop" : 1650399795637,
+          "duration" : 3
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "BuiltIn.Create Dictionary",
           "time" : {
-            "start" : 1650399402873,
-            "stop" : 1650399402874,
+            "start" : 1650399795635,
+            "stop" : 1650399795636,
             "duration" : 1
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "&{params} = { lat=-23.5475 | lon=-46.6361 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }",
             "time" : {
-              "start" : 1650399402874,
-              "stop" : 1650399402874,
+              "start" : 1650399795636,
+              "stop" : 1650399795636,
               "duration" : 0
             },
             "status" : "passed",
@@ -133,16 +133,16 @@
         }, {
           "name" : "BuiltIn.Set Global Variable",
           "time" : {
-            "start" : 1650399402874,
-            "stop" : 1650399402875,
+            "start" : 1650399795636,
+            "stop" : 1650399795637,
             "duration" : 1
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "&{params} = { lat=-23.5475 | lon=-46.6361 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }",
             "time" : {
-              "start" : 1650399402874,
-              "stop" : 1650399402874,
+              "start" : 1650399795636,
+              "stop" : 1650399795636,
               "duration" : 0
             },
             "status" : "passed",
@@ -173,24 +173,24 @@
       }, {
         "name" : "weather_steps.Setting session to weather using GET method",
         "time" : {
-          "start" : 1650399402875,
-          "stop" : 1650399402991,
-          "duration" : 116
+          "start" : 1650399795637,
+          "stop" : 1650399795759,
+          "duration" : 122
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "RequestsLibrary.GET On Session",
           "time" : {
-            "start" : 1650399402875,
-            "stop" : 1650399402990,
-            "duration" : 115
+            "start" : 1650399795638,
+            "stop" : 1650399795758,
+            "duration" : 120
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "GET Request : url=http://api.openweathermap.org/data/2.5/weather?lat=-23.5475&lon=-46.6361&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n path_url=/data/2.5/weather?lat=-23.5475&lon=-46.6361&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} \n body=None \n ",
             "time" : {
-              "start" : 1650399402989,
-              "stop" : 1650399402989,
+              "start" : 1650399795757,
+              "stop" : 1650399795757,
               "duration" : 0
             },
             "status" : "passed",
@@ -202,10 +202,10 @@
             "shouldDisplayMessage" : false,
             "hasContent" : false
           }, {
-            "name" : "GET Response : url=http://api.openweathermap.org/data/2.5/weather?lat=-23.5475&lon=-46.6361&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n status=200, reason=OK \n headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:16:42 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '481', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?lat=-23.55&lon=-46.64', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} \n body={\"coord\":{\"lon\":-46.6361,\"lat\":-23.5475},\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"base\":\"stations\",\"main\":{\"temp\":292.97,\"feels_like\":293.12,\"temp_min\":292.35,\"temp_max\":295.84,\"pressure\":1020,\"humidity\":81},\"visibility\":10000,\"wind\":{\"speed\":5.66,\"deg\":180},\"clouds\":{\"all\":75},\"dt\":1650398692,\"sys\":{\"type\":1,\"id\":8446,\"country\":\"BR\",\"sunrise\":1650360094,\"sunset\":1650401362},\"timezone\":-10800,\"id\":3448439,\"name\":\"São Paulo\",\"cod\":200} \n ",
+            "name" : "GET Response : url=http://api.openweathermap.org/data/2.5/weather?lat=-23.5475&lon=-46.6361&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n status=200, reason=OK \n headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:23:15 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '481', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?lat=-23.55&lon=-46.64', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} \n body={\"coord\":{\"lon\":-46.6361,\"lat\":-23.5475},\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"base\":\"stations\",\"main\":{\"temp\":292.97,\"feels_like\":293.12,\"temp_min\":292.35,\"temp_max\":295.84,\"pressure\":1020,\"humidity\":81},\"visibility\":10000,\"wind\":{\"speed\":5.66,\"deg\":180},\"clouds\":{\"all\":75},\"dt\":1650399068,\"sys\":{\"type\":1,\"id\":8446,\"country\":\"BR\",\"sunrise\":1650360094,\"sunset\":1650401362},\"timezone\":-10800,\"id\":3448439,\"name\":\"São Paulo\",\"cod\":200} \n ",
             "time" : {
-              "start" : 1650399402989,
-              "stop" : 1650399402989,
+              "start" : 1650399795757,
+              "stop" : 1650399795757,
               "duration" : 0
             },
             "status" : "passed",
@@ -219,8 +219,8 @@
           }, {
             "name" : "${RESPONSE} = <Response [200]>",
             "time" : {
-              "start" : 1650399402989,
-              "stop" : 1650399402989,
+              "start" : 1650399795757,
+              "stop" : 1650399795757,
               "duration" : 0
             },
             "status" : "passed",
@@ -253,16 +253,16 @@
         }, {
           "name" : "BuiltIn.Set Test Variable",
           "time" : {
-            "start" : 1650399402990,
-            "stop" : 1650399402991,
+            "start" : 1650399795758,
+            "stop" : 1650399795759,
             "duration" : 1
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "${RESPONSE} = <Response [200]>",
             "time" : {
-              "start" : 1650399402991,
-              "stop" : 1650399402991,
+              "start" : 1650399795759,
+              "stop" : 1650399795759,
               "duration" : 0
             },
             "status" : "passed",
@@ -300,24 +300,24 @@
     }, {
       "name" : "weather_steps.Then validating the Response's success data",
       "time" : {
-        "start" : 1650399402992,
-        "stop" : 1650399403001,
-        "duration" : 9
+        "start" : 1650399795760,
+        "stop" : 1650399795770,
+        "duration" : 10
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "BuiltIn.Log",
         "time" : {
-          "start" : 1650399402992,
-          "stop" : 1650399402993,
-          "duration" : 1
+          "start" : 1650399795760,
+          "stop" : 1650399795762,
+          "duration" : 2
         },
         "status" : "passed",
         "steps" : [ {
-          "name" : "Response: {\"coord\":{\"lon\":-46.6361,\"lat\":-23.5475},\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"base\":\"stations\",\"main\":{\"temp\":292.97,\"feels_like\":293.12,\"temp_min\":292.35,\"temp_max\":295.84,\"pressure\":1020,\"humidity\":81},\"visibility\":10000,\"wind\":{\"speed\":5.66,\"deg\":180},\"clouds\":{\"all\":75},\"dt\":1650398692,\"sys\":{\"type\":1,\"id\":8446,\"country\":\"BR\",\"sunrise\":1650360094,\"sunset\":1650401362},\"timezone\":-10800,\"id\":3448439,\"name\":\"São Paulo\",\"cod\":200}",
+          "name" : "Response: {\"coord\":{\"lon\":-46.6361,\"lat\":-23.5475},\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"base\":\"stations\",\"main\":{\"temp\":292.97,\"feels_like\":293.12,\"temp_min\":292.35,\"temp_max\":295.84,\"pressure\":1020,\"humidity\":81},\"visibility\":10000,\"wind\":{\"speed\":5.66,\"deg\":180},\"clouds\":{\"all\":75},\"dt\":1650399068,\"sys\":{\"type\":1,\"id\":8446,\"country\":\"BR\",\"sunrise\":1650360094,\"sunset\":1650401362},\"timezone\":-10800,\"id\":3448439,\"name\":\"São Paulo\",\"cod\":200}",
           "time" : {
-            "start" : 1650399402993,
-            "stop" : 1650399402993,
+            "start" : 1650399795761,
+            "stop" : 1650399795761,
             "duration" : 0
           },
           "status" : "passed",
@@ -341,9 +341,9 @@
       }, {
         "name" : "BuiltIn.Log To Console",
         "time" : {
-          "start" : 1650399402993,
-          "stop" : 1650399402995,
-          "duration" : 2
+          "start" : 1650399795762,
+          "stop" : 1650399795763,
+          "duration" : 1
         },
         "status" : "passed",
         "steps" : [ ],
@@ -359,16 +359,16 @@
       }, {
         "name" : "BuiltIn.Should Not Be Empty",
         "time" : {
-          "start" : 1650399402995,
-          "stop" : 1650399402996,
+          "start" : 1650399795763,
+          "stop" : 1650399795764,
           "duration" : 1
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "Length is 13",
           "time" : {
-            "start" : 1650399402996,
-            "stop" : 1650399402996,
+            "start" : 1650399795764,
+            "stop" : 1650399795764,
             "duration" : 0
           },
           "status" : "passed",
@@ -392,8 +392,8 @@
       }, {
         "name" : "Collections.Dictionary Should Contain Item",
         "time" : {
-          "start" : 1650399402996,
-          "stop" : 1650399402997,
+          "start" : 1650399795765,
+          "stop" : 1650399795766,
           "duration" : 1
         },
         "status" : "passed",
@@ -416,8 +416,8 @@
       }, {
         "name" : "Collections.Dictionary Should Contain Item",
         "time" : {
-          "start" : 1650399402997,
-          "stop" : 1650399402998,
+          "start" : 1650399795766,
+          "stop" : 1650399795767,
           "duration" : 1
         },
         "status" : "passed",
@@ -440,8 +440,8 @@
       }, {
         "name" : "Collections.Dictionary Should Contain Item",
         "time" : {
-          "start" : 1650399402999,
-          "stop" : 1650399403000,
+          "start" : 1650399795767,
+          "stop" : 1650399795768,
           "duration" : 1
         },
         "status" : "passed",
@@ -464,16 +464,16 @@
       }, {
         "name" : "BuiltIn.Should Be Equal As Strings",
         "time" : {
-          "start" : 1650399403000,
-          "stop" : 1650399403001,
+          "start" : 1650399795768,
+          "stop" : 1650399795769,
           "duration" : 1
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "Argument types are:\n<class 'int'>\n<class 'str'>",
           "time" : {
-            "start" : 1650399403000,
-            "stop" : 1650399403000,
+            "start" : 1650399795769,
+            "stop" : 1650399795769,
             "duration" : 0
           },
           "status" : "passed",
@@ -530,10 +530,10 @@
     "value" : "cpython3"
   }, {
     "name" : "host",
-    "value" : "fv-az74-926"
+    "value" : "fv-az42-139"
   }, {
     "name" : "thread",
-    "value" : "default-a499d810-8329-430f-bcb6-15173fcaa9f2"
+    "value" : "default-4b9d108d-b73e-4eee-8c51-f058ac0303ea"
   }, {
     "name" : "tag",
     "value" : "api_tests"
@@ -560,6 +560,6 @@
     "categories" : [ ],
     "tags" : [ "api_tests", "weather_long_lati" ]
   },
-  "source" : "883a54ed7d972c68.json",
+  "source" : "5888693a84118f08.json",
   "parameterValues" : [ ]
 }
