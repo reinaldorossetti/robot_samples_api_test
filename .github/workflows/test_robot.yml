@@ -36,6 +36,12 @@ jobs:
       continue-on-error: true
       run: |
         python -m robot --listener allure_robotframework -d my_reports -i api_tests ./
+      env:
+        ALLURE_MAX_STEP_MESSAGE_COUNT: 5
+    - name: Run tests failed
+      if: always()
+      continue-on-error: true
+      run: |
         python -m robot --listener allure_robotframework --rerunfailed my_reports\\output.xml -i api_tests ./
       env:
         ALLURE_MAX_STEP_MESSAGE_COUNT: 5
