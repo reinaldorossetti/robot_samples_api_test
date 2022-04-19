@@ -1,12 +1,12 @@
 {
-  "uid" : "53207d39f9ed02a3",
+  "uid" : "de5cf83ad550b975",
   "name" : "Checking multilingual support",
   "fullName" : "Robot Openweather Api.Features.Specifications.Weather Spec.Checking multilingual support",
   "historyId" : "5eabd1d63434e7e2bce3cc74c30255b4",
   "time" : {
-    "start" : 1650394774240,
-    "stop" : 1650394774334,
-    "duration" : 94
+    "start" : 1650395178869,
+    "stop" : 1650395178998,
+    "duration" : 129
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,24 +21,24 @@
     "steps" : [ {
       "name" : "weather_steps.Given I start the session",
       "time" : {
-        "start" : 1650394774240,
-        "stop" : 1650394774242,
+        "start" : 1650395178869,
+        "stop" : 1650395178871,
         "duration" : 2
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "RequestsLibrary.Create Session",
         "time" : {
-          "start" : 1650394774240,
-          "stop" : 1650394774242,
-          "duration" : 2
+          "start" : 1650395178870,
+          "stop" : 1650395178871,
+          "duration" : 1
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ {
-          "uid" : "b435caab68130ed4",
+          "uid" : "85fd09fb45a6d2f9",
           "name" : "Keyword Log",
-          "source" : "b435caab68130ed4.html",
+          "source" : "85fd09fb45a6d2f9.html",
           "type" : "text/html",
           "size" : 269
         } ],
@@ -55,46 +55,46 @@
           "name" : "arg4",
           "value" : "disable_warnings=True"
         } ],
-        "hasContent" : true,
-        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
         "attachmentsCount" : 1,
-        "stepsCount" : 0
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : true,
-      "shouldDisplayMessage" : false,
+      "stepsCount" : 1,
       "attachmentsCount" : 1,
-      "stepsCount" : 1
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
     }, {
       "name" : "weather_steps_call.When send a request about multilingual support",
       "time" : {
-        "start" : 1650394774242,
-        "stop" : 1650394774328,
-        "duration" : 86
+        "start" : 1650395178871,
+        "stop" : 1650395178992,
+        "duration" : 121
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "weather_steps.Setting the parameters for multilingual support",
         "time" : {
-          "start" : 1650394774242,
-          "stop" : 1650394774245,
-          "duration" : 3
+          "start" : 1650395178872,
+          "stop" : 1650395178874,
+          "duration" : 2
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "BuiltIn.Create Dictionary",
           "time" : {
-            "start" : 1650394774243,
-            "stop" : 1650394774244,
+            "start" : 1650395178872,
+            "stop" : 1650395178873,
             "duration" : 1
           },
           "status" : "passed",
           "steps" : [ ],
           "attachments" : [ {
-            "uid" : "1f59974f64627795",
+            "uid" : "f3ea4b334e3f983b",
             "name" : "Keyword Log",
-            "source" : "1f59974f64627795.html",
+            "source" : "f3ea4b334e3f983b.html",
             "type" : "text/html",
             "size" : 103
           } ],
@@ -108,23 +108,23 @@
             "name" : "arg3",
             "value" : "appid=${API_KEY}"
           } ],
-          "hasContent" : true,
-          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
           "attachmentsCount" : 1,
-          "stepsCount" : 0
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
         }, {
           "name" : "BuiltIn.Set Global Variable",
           "time" : {
-            "start" : 1650394774244,
-            "stop" : 1650394774245,
+            "start" : 1650395178873,
+            "stop" : 1650395178874,
             "duration" : 1
           },
           "status" : "passed",
           "steps" : [ ],
           "attachments" : [ {
-            "uid" : "8459e16be4de42b2",
+            "uid" : "de90c616cbd5e8e1",
             "name" : "Keyword Log",
-            "source" : "8459e16be4de42b2.html",
+            "source" : "de90c616cbd5e8e1.html",
             "type" : "text/html",
             "size" : 103
           } ],
@@ -132,38 +132,38 @@
             "name" : "arg1",
             "value" : "&{params}"
           } ],
-          "hasContent" : true,
-          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
           "attachmentsCount" : 1,
-          "stepsCount" : 0
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
         } ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "hasContent" : true,
-        "shouldDisplayMessage" : false,
+        "stepsCount" : 2,
         "attachmentsCount" : 2,
-        "stepsCount" : 2
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
       }, {
         "name" : "weather_steps.Setting session to weather using GET method",
         "time" : {
-          "start" : 1650394774245,
-          "stop" : 1650394774328,
-          "duration" : 83
+          "start" : 1650395178874,
+          "stop" : 1650395178992,
+          "duration" : 118
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "RequestsLibrary.GET On Session",
           "time" : {
-            "start" : 1650394774246,
-            "stop" : 1650394774326,
-            "duration" : 80
+            "start" : 1650395178875,
+            "stop" : 1650395178991,
+            "duration" : 116
           },
           "status" : "passed",
           "steps" : [ ],
           "attachments" : [ {
-            "uid" : "7f8aad4eaa51e227",
+            "uid" : "b6a8296d0eb27a86",
             "name" : "Keyword Log",
-            "source" : "7f8aad4eaa51e227.html",
+            "source" : "b6a8296d0eb27a86.html",
             "type" : "text/html",
             "size" : 1523
           } ],
@@ -180,23 +180,23 @@
             "name" : "arg4",
             "value" : "headers=${HEADER}"
           } ],
-          "hasContent" : true,
-          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
           "attachmentsCount" : 1,
-          "stepsCount" : 0
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
         }, {
           "name" : "BuiltIn.Set Test Variable",
           "time" : {
-            "start" : 1650394774326,
-            "stop" : 1650394774327,
+            "start" : 1650395178991,
+            "stop" : 1650395178992,
             "duration" : 1
           },
           "status" : "passed",
           "steps" : [ ],
           "attachments" : [ {
-            "uid" : "4312996ec32f4ec5",
+            "uid" : "5e677bb9c56aba2a",
             "name" : "Keyword Log",
-            "source" : "4312996ec32f4ec5.html",
+            "source" : "5e677bb9c56aba2a.html",
             "type" : "text/html",
             "size" : 56
           } ],
@@ -204,45 +204,45 @@
             "name" : "arg1",
             "value" : "${RESPONSE}"
           } ],
-          "hasContent" : true,
-          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
           "attachmentsCount" : 1,
-          "stepsCount" : 0
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
         } ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "hasContent" : true,
-        "shouldDisplayMessage" : false,
+        "stepsCount" : 2,
         "attachmentsCount" : 2,
-        "stepsCount" : 2
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : true,
-      "shouldDisplayMessage" : false,
+      "stepsCount" : 6,
       "attachmentsCount" : 4,
-      "stepsCount" : 6
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
     }, {
       "name" : "weather_steps.Then expect API response will be code",
       "time" : {
-        "start" : 1650394774329,
-        "stop" : 1650394774334,
+        "start" : 1650395178992,
+        "stop" : 1650395178997,
         "duration" : 5
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "BuiltIn.Log",
         "time" : {
-          "start" : 1650394774329,
-          "stop" : 1650394774331,
-          "duration" : 2
+          "start" : 1650395178993,
+          "stop" : 1650395178994,
+          "duration" : 1
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ {
-          "uid" : "cd32ac254eb0f84b",
+          "uid" : "10d846d920217f3c",
           "name" : "Keyword Log",
-          "source" : "cd32ac254eb0f84b.html",
+          "source" : "10d846d920217f3c.html",
           "type" : "text/html",
           "size" : 518
         } ],
@@ -250,16 +250,16 @@
           "name" : "arg1",
           "value" : "Response: ${RESPONSE.text}"
         } ],
-        "hasContent" : true,
-        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
         "attachmentsCount" : 1,
-        "stepsCount" : 0
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
       }, {
         "name" : "BuiltIn.Log To Console",
         "time" : {
-          "start" : 1650394774331,
-          "stop" : 1650394774332,
-          "duration" : 1
+          "start" : 1650395178994,
+          "stop" : 1650395178996,
+          "duration" : 2
         },
         "status" : "passed",
         "steps" : [ ],
@@ -268,23 +268,23 @@
           "name" : "arg1",
           "value" : "Response: ${RESPONSE.text}"
         } ],
-        "hasContent" : true,
-        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
         "attachmentsCount" : 0,
-        "stepsCount" : 0
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
       }, {
         "name" : "BuiltIn.Should Be Equal As Strings",
         "time" : {
-          "start" : 1650394774332,
-          "stop" : 1650394774333,
+          "start" : 1650395178996,
+          "stop" : 1650395178997,
           "duration" : 1
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ {
-          "uid" : "c9bd1351bcbad714",
+          "uid" : "14145a477a4d141c",
           "name" : "Keyword Log",
-          "source" : "c9bd1351bcbad714.html",
+          "source" : "14145a477a4d141c.html",
           "type" : "text/html",
           "size" : 79
         } ],
@@ -295,27 +295,27 @@
           "name" : "arg2",
           "value" : "${STATUS_CODE}"
         } ],
-        "hasContent" : true,
-        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
         "attachmentsCount" : 1,
-        "stepsCount" : 0
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
       } ],
       "attachments" : [ ],
       "parameters" : [ {
         "name" : "arg1",
         "value" : "200"
       } ],
-      "hasContent" : true,
-      "shouldDisplayMessage" : false,
+      "stepsCount" : 3,
       "attachmentsCount" : 2,
-      "stepsCount" : 3
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "hasContent" : true,
-    "shouldDisplayMessage" : false,
+    "stepsCount" : 13,
     "attachmentsCount" : 7,
-    "stepsCount" : 13
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
   },
   "afterStages" : [ ],
   "labels" : [ {
@@ -335,10 +335,10 @@
     "value" : "cpython3"
   }, {
     "name" : "host",
-    "value" : "fv-az77-515"
+    "value" : "fv-az127-310"
   }, {
     "name" : "thread",
-    "value" : "default-f544486a-b8da-423a-b364-b6d2d0c8cc4d"
+    "value" : "default-5346d6a7-cc4f-4c58-b5db-bea359e7d4a3"
   }, {
     "name" : "tag",
     "value" : "api_tests"
@@ -365,6 +365,6 @@
     "categories" : [ ],
     "tags" : [ "api_tests", "multilingual" ]
   },
-  "source" : "53207d39f9ed02a3.json",
+  "source" : "de5cf83ad550b975.json",
   "parameterValues" : [ ]
 }
