@@ -132,3 +132,4 @@ dmypy.json
 .pyre/
 /drivers/
 /output/
+output.xml
