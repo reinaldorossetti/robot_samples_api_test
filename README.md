@@ -32,6 +32,10 @@ Comando diretamente pelo robot.
 robot --loglevel DEBUG:INFO -d my_reports -i api_tests ./  
 ```
 
+robot --listener allure_robotframework -d my_reports -i api_tests ./ 
+allure generate ./output/allure -o allure-results/
+allure serve
+
 
 Folder Structure Conventions
 ============================
