@@ -31,11 +31,15 @@ Comando diretamente pelo robot.
 ```
 robot --loglevel DEBUG:INFO -d my_reports -i api_tests ./  
 ```
-
+Rodando o report local:
+```
 robot --listener allure_robotframework -d my_reports -i api_tests ./ 
 allure generate ./output/allure -o allure-results/
 allure serve
+```
 
+Link do Report pelo Git Actions:
+https://reinaldorossetti.github.io/robot_openweather_api/allure-results/
 
 Folder Structure Conventions
 ============================
