@@ -62,7 +62,6 @@ Dependencies of project:
 ```
 robotframework-requests
 robotframework==5.0.0
-robotframework-pageobjectlibrary>=1.0.2
 robotframework-faker
 pyyaml>=5.4
 ```
