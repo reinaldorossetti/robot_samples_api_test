@@ -19,6 +19,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - name: Install operating system dependencies
+      run: |
+       npm install -g allure-commandline --save-dev
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
