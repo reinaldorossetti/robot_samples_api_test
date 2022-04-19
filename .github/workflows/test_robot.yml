@@ -36,6 +36,8 @@ jobs:
       continue-on-error: true
       run: |
         python -m robot --listener allure_robotframework -d my_reports -i api_tests ./
+      env:
+        ALLURE_MAX_STEP_MESSAGE_COUNT: 5
     - name: 📊 Collect Allure files and generate allure-report folder
       run: |
         allure generate ./output/allure -o allure-results/
