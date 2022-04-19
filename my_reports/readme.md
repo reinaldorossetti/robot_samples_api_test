@@ -1,0 +1,1 @@
+A pasta vai conter os relatórios do robot.
