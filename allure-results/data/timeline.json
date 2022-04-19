@@ -1,86 +1,35 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
-    "name" : "fv-az36-644",
+    "name" : "fv-az130-277",
     "children" : [ {
-      "name" : "default-c9ff23cf-9901-4cf7-8b90-5ae6896b8da9",
+      "name" : "default-481789d4-922c-4d1b-8ed5-a748a02fbd83",
       "children" : [ {
+        "name" : "Checking multilingual support",
+        "uid" : "a3e84bac73592c25",
+        "parentUid" : "5151d3b44edb3c9df659dd12a2172676",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650399272423,
+          "stop" : 1650399272571,
+          "duration" : 148
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
         "name" : "Checking weather by zip code",
-        "uid" : "62f42a2c53170d2",
-        "parentUid" : "861362f968ffdd92b48ed05000d9ed0b",
+        "uid" : "109429936b7daaf8",
+        "parentUid" : "5151d3b44edb3c9df659dd12a2172676",
         "status" : "passed",
         "time" : {
-          "start" : 1650398884613,
-          "stop" : 1650398884726,
-          "duration" : 113
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Checking Call back function",
-        "uid" : "b52b83c6eec744bc",
-        "parentUid" : "861362f968ffdd92b48ed05000d9ed0b",
-        "status" : "passed",
-        "time" : {
-          "start" : 1650398885291,
-          "stop" : 1650398885427,
-          "duration" : 136
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Checking Units of measurement - For temperature in Celsius use units=metric",
-        "uid" : "fc188057c0a77aed",
-        "parentUid" : "861362f968ffdd92b48ed05000d9ed0b",
-        "status" : "passed",
-        "time" : {
-          "start" : 1650398885532,
-          "stop" : 1650398885653,
-          "duration" : 121
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Checking cities in circle",
-        "uid" : "bece588d81ac0d76",
-        "parentUid" : "861362f968ffdd92b48ed05000d9ed0b",
-        "status" : "passed",
-        "time" : {
-          "start" : 1650398884980,
-          "stop" : 1650398885097,
-          "duration" : 117
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Checking cities within a rectangle zone",
-        "uid" : "a898ba0ad218303f",
-        "parentUid" : "861362f968ffdd92b48ed05000d9ed0b",
-        "status" : "failed",
-        "time" : {
-          "start" : 1650398884833,
-          "stop" : 1650398884975,
-          "duration" : 142
+          "start" : 1650399271571,
+          "stop" : 1650399271935,
+          "duration" : 364
         },
         "flaky" : false,
         "newFailed" : false,
@@ -91,13 +40,13 @@
         "parameters" : [ ]
       }, {
         "name" : "Checking Units of measurement - For temperature in Fahrenheit use units=imperial",
-        "uid" : "8a52988df08f4a9a",
-        "parentUid" : "861362f968ffdd92b48ed05000d9ed0b",
+        "uid" : "f7e22d9bd327de4a",
+        "parentUid" : "5151d3b44edb3c9df659dd12a2172676",
         "status" : "passed",
         "time" : {
-          "start" : 1650398885432,
-          "stop" : 1650398885528,
-          "duration" : 96
+          "start" : 1650399272724,
+          "stop" : 1650399272867,
+          "duration" : 143
         },
         "flaky" : false,
         "newFailed" : false,
@@ -107,31 +56,14 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Search weather data by city name with invalid api key",
-        "uid" : "66eddeb13d396049",
-        "parentUid" : "861362f968ffdd92b48ed05000d9ed0b",
+        "name" : "Checking Call back function",
+        "uid" : "32ac069f0ced3b48",
+        "parentUid" : "5151d3b44edb3c9df659dd12a2172676",
         "status" : "passed",
         "time" : {
-          "start" : 1650398885756,
-          "stop" : 1650398885846,
-          "duration" : 90
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Checking the weather by city",
-        "uid" : "a665ad6de3074f6c",
-        "parentUid" : "861362f968ffdd92b48ed05000d9ed0b",
-        "status" : "passed",
-        "time" : {
-          "start" : 1650398883907,
-          "stop" : 1650398884087,
-          "duration" : 180
+          "start" : 1650399272575,
+          "stop" : 1650399272720,
+          "duration" : 145
         },
         "flaky" : false,
         "newFailed" : false,
@@ -142,13 +74,13 @@
         "parameters" : [ ]
       }, {
         "name" : "Checking Units of measurement - For temperature in Kelvin use units=standard",
-        "uid" : "87a27a6a9bb925ca",
-        "parentUid" : "861362f968ffdd92b48ed05000d9ed0b",
+        "uid" : "52322b52775dfd4a",
+        "parentUid" : "5151d3b44edb3c9df659dd12a2172676",
         "status" : "passed",
         "time" : {
-          "start" : 1650398885657,
-          "stop" : 1650398885752,
-          "duration" : 95
+          "start" : 1650399273012,
+          "stop" : 1650399273148,
+          "duration" : 136
         },
         "flaky" : false,
         "newFailed" : false,
@@ -158,14 +90,48 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Checking weather by longitude and latitude",
-        "uid" : "b4ac3a6f98032ee",
-        "parentUid" : "861362f968ffdd92b48ed05000d9ed0b",
+        "name" : "Checking cities in circle",
+        "uid" : "97692415ef5c26e6",
+        "parentUid" : "5151d3b44edb3c9df659dd12a2172676",
         "status" : "passed",
         "time" : {
-          "start" : 1650398884445,
-          "stop" : 1650398884609,
-          "duration" : 164
+          "start" : 1650399272270,
+          "stop" : 1650399272418,
+          "duration" : 148
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Checking Units of measurement - For temperature in Celsius use units=metric",
+        "uid" : "b2a8b49f497522b8",
+        "parentUid" : "5151d3b44edb3c9df659dd12a2172676",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650399272871,
+          "stop" : 1650399273008,
+          "duration" : 137
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Checking cities within a rectangle zone",
+        "uid" : "cf7e7b84b6cb3890",
+        "parentUid" : "5151d3b44edb3c9df659dd12a2172676",
+        "status" : "failed",
+        "time" : {
+          "start" : 1650399272080,
+          "stop" : 1650399272265,
+          "duration" : 185
         },
         "flaky" : false,
         "newFailed" : false,
@@ -176,13 +142,47 @@
         "parameters" : [ ]
       }, {
         "name" : "Checking the weather by id",
-        "uid" : "3c1994e7a776591e",
-        "parentUid" : "861362f968ffdd92b48ed05000d9ed0b",
+        "uid" : "67abbd4239c42aa3",
+        "parentUid" : "5151d3b44edb3c9df659dd12a2172676",
         "status" : "passed",
         "time" : {
-          "start" : 1650398884091,
-          "stop" : 1650398884441,
-          "duration" : 350
+          "start" : 1650399271237,
+          "stop" : 1650399271411,
+          "duration" : 174
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Checking weather by longitude and latitude",
+        "uid" : "85ef8c63b3bb627a",
+        "parentUid" : "5151d3b44edb3c9df659dd12a2172676",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650399271414,
+          "stop" : 1650399271567,
+          "duration" : 153
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Checking the weather by city",
+        "uid" : "f7504fdb1b49703b",
+        "parentUid" : "5151d3b44edb3c9df659dd12a2172676",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650399270846,
+          "stop" : 1650399271233,
+          "duration" : 387
         },
         "flaky" : false,
         "newFailed" : false,
@@ -193,13 +193,13 @@
         "parameters" : [ ]
       }, {
         "name" : "Checking weather by not found zip code",
-        "uid" : "8722b2fc4c2753e",
-        "parentUid" : "861362f968ffdd92b48ed05000d9ed0b",
+        "uid" : "929d33f9c94d5e15",
+        "parentUid" : "5151d3b44edb3c9df659dd12a2172676",
         "status" : "passed",
         "time" : {
-          "start" : 1650398884730,
-          "stop" : 1650398884829,
-          "duration" : 99
+          "start" : 1650399271939,
+          "stop" : 1650399272076,
+          "duration" : 137
         },
         "flaky" : false,
         "newFailed" : false,
@@ -209,14 +209,14 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Checking multilingual support",
-        "uid" : "87393d1ba2bc5255",
-        "parentUid" : "861362f968ffdd92b48ed05000d9ed0b",
+        "name" : "Search weather data by city name with invalid api key",
+        "uid" : "17d2f8de792f1298",
+        "parentUid" : "5151d3b44edb3c9df659dd12a2172676",
         "status" : "passed",
         "time" : {
-          "start" : 1650398885101,
-          "stop" : 1650398885286,
-          "duration" : 185
+          "start" : 1650399273152,
+          "stop" : 1650399273283,
+          "duration" : 131
         },
         "flaky" : false,
         "newFailed" : false,
@@ -226,9 +226,9 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "861362f968ffdd92b48ed05000d9ed0b"
+      "uid" : "5151d3b44edb3c9df659dd12a2172676"
     } ],
-    "uid" : "3da39aa79f55f5b11664a9ca7d9bbcac"
+    "uid" : "3f1032007a7a6995922dec3105f18bc8"
   } ],
   "name" : "timeline"
 }

@@ -1,12 +1,12 @@
 {
-  "uid" : "66eddeb13d396049",
+  "uid" : "17d2f8de792f1298",
   "name" : "Search weather data by city name with invalid api key",
   "fullName" : "Robot Openweather Api.Features.Specifications.Weather Spec.Search weather data by city name with invalid api key",
   "historyId" : "008c911b6f4984bab6733eab7467c15f",
   "time" : {
-    "start" : 1650398885756,
-    "stop" : 1650398885846,
-    "duration" : 90
+    "start" : 1650399273152,
+    "stop" : 1650399273283,
+    "duration" : 131
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,24 +21,24 @@
     "steps" : [ {
       "name" : "weather_steps.Given I start the session",
       "time" : {
-        "start" : 1650398885756,
-        "stop" : 1650398885758,
+        "start" : 1650399273152,
+        "stop" : 1650399273154,
         "duration" : 2
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "RequestsLibrary.Create Session",
         "time" : {
-          "start" : 1650398885757,
-          "stop" : 1650398885758,
-          "duration" : 1
+          "start" : 1650399273153,
+          "stop" : 1650399273153,
+          "duration" : 0
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 ",
           "time" : {
-            "start" : 1650398885757,
-            "stop" : 1650398885757,
+            "start" : 1650399273153,
+            "stop" : 1650399273153,
             "duration" : 0
           },
           "status" : "passed",
@@ -78,24 +78,24 @@
     }, {
       "name" : "weather_steps.When send a request within invalid api key",
       "time" : {
-        "start" : 1650398885758,
-        "stop" : 1650398885844,
-        "duration" : 86
+        "start" : 1650399273154,
+        "stop" : 1650399273280,
+        "duration" : 126
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "BuiltIn.Create Dictionary",
         "time" : {
-          "start" : 1650398885758,
-          "stop" : 1650398885759,
+          "start" : 1650399273154,
+          "stop" : 1650399273155,
           "duration" : 1
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "&{params} = { q=São Paulo | appid=e2f1d841cc16cff49a0aa18b531d71e0x }",
           "time" : {
-            "start" : 1650398885759,
-            "stop" : 1650398885759,
+            "start" : 1650399273155,
+            "stop" : 1650399273155,
             "duration" : 0
           },
           "status" : "passed",
@@ -122,16 +122,16 @@
       }, {
         "name" : "RequestsLibrary.POST On Session",
         "time" : {
-          "start" : 1650398885759,
-          "stop" : 1650398885843,
-          "duration" : 84
+          "start" : 1650399273155,
+          "stop" : 1650399273279,
+          "duration" : 124
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "POST Request : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&appid=e2f1d841cc16cff49a0aa18b531d71e0x \n path_url=/data/2.5/weather?q=S%C3%A3o+Paulo&appid=e2f1d841cc16cff49a0aa18b531d71e0x \n headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '0'} \n body=None \n ",
           "time" : {
-            "start" : 1650398885843,
-            "stop" : 1650398885843,
+            "start" : 1650399273278,
+            "stop" : 1650399273278,
             "duration" : 0
           },
           "status" : "passed",
@@ -143,10 +143,10 @@
           "shouldDisplayMessage" : false,
           "hasContent" : false
         }, {
-          "name" : "POST Response : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&appid=e2f1d841cc16cff49a0aa18b531d71e0x \n status=401, reason=Unauthorized \n headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:08:05 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '107', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?q=s%c3%a3o+paulo', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} \n body={\"cod\":401, \"message\": \"Invalid API key. Please see http://openweathermap.org/faq#error401 for more info.\"} \n ",
+          "name" : "POST Response : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&appid=e2f1d841cc16cff49a0aa18b531d71e0x \n status=401, reason=Unauthorized \n headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:14:33 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '107', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?q=s%c3%a3o+paulo', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} \n body={\"cod\":401, \"message\": \"Invalid API key. Please see http://openweathermap.org/faq#error401 for more info.\"} \n ",
           "time" : {
-            "start" : 1650398885843,
-            "stop" : 1650398885843,
+            "start" : 1650399273278,
+            "stop" : 1650399273278,
             "duration" : 0
           },
           "status" : "passed",
@@ -160,8 +160,8 @@
         }, {
           "name" : "${RESPONSE} = <Response [401]>",
           "time" : {
-            "start" : 1650398885843,
-            "stop" : 1650398885843,
+            "start" : 1650399273278,
+            "stop" : 1650399273278,
             "duration" : 0
           },
           "status" : "passed",
@@ -197,16 +197,16 @@
       }, {
         "name" : "BuiltIn.Set Test Variable",
         "time" : {
-          "start" : 1650398885843,
-          "stop" : 1650398885844,
+          "start" : 1650399273279,
+          "stop" : 1650399273280,
           "duration" : 1
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "${RESPONSE} = <Response [401]>",
           "time" : {
-            "start" : 1650398885844,
-            "stop" : 1650398885844,
+            "start" : 1650399273280,
+            "stop" : 1650399273280,
             "duration" : 0
           },
           "status" : "passed",
@@ -237,16 +237,16 @@
     }, {
       "name" : "weather_steps.Then validate error message for invalid api key",
       "time" : {
-        "start" : 1650398885844,
-        "stop" : 1650398885846,
+        "start" : 1650399273281,
+        "stop" : 1650399273283,
         "duration" : 2
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Collections.Dictionary Should Contain Item",
         "time" : {
-          "start" : 1650398885845,
-          "stop" : 1650398885846,
+          "start" : 1650399273281,
+          "stop" : 1650399273282,
           "duration" : 1
         },
         "status" : "passed",
@@ -299,10 +299,10 @@
     "value" : "cpython3"
   }, {
     "name" : "host",
-    "value" : "fv-az36-644"
+    "value" : "fv-az130-277"
   }, {
     "name" : "thread",
-    "value" : "default-c9ff23cf-9901-4cf7-8b90-5ae6896b8da9"
+    "value" : "default-481789d4-922c-4d1b-8ed5-a748a02fbd83"
   }, {
     "name" : "tag",
     "value" : "api_key_invalid"
@@ -329,6 +329,6 @@
     "categories" : [ ],
     "tags" : [ "api_tests", "api_key_invalid" ]
   },
-  "source" : "66eddeb13d396049.json",
+  "source" : "17d2f8de792f1298.json",
   "parameterValues" : [ ]
 }
