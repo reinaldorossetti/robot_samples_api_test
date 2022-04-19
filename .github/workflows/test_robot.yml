@@ -27,7 +27,8 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Test with pytest
+    - name: Run tests
+      if: always()
       run: |
         python -m robot --listener allure_robotframework -d my_reports -i api_tests ./
     - name: 📊 Collect Allure files and generate allure-report folder
