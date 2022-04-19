@@ -2,10 +2,12 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
+*.log
+*.html
+*.xml
+# C extensionss
 *.so
-
+*.png
 # Distribution / packaging
 .Python
 build/
@@ -26,6 +28,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+.idea/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -127,3 +130,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/drivers/
+/output/
