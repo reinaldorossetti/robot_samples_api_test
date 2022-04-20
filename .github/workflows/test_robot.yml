@@ -42,7 +42,7 @@ jobs:
       if: always()
       continue-on-error: true
       run: |
-        python -m robot --listener allure_robotframework my_reports/rerun.xml --rerunfailed my_reports/output.xml --output my_reports/rerun.xml -i api_tests ./
+        python -m robot --listener allure_robotframework --rerunfailed my_reports/output.xml --output my_reports/rerun.xml -i api_tests ./
       env:
         ALLURE_MAX_STEP_MESSAGE_COUNT: 5
     - name: 📊 Collect Allure files and generate allure-report folder
@@ -51,8 +51,8 @@ jobs:
     - name: 🎁 Publishing Allure artifact to GitHub Actions
       uses: actions/upload-artifact@v2
       with:
-        name: allure-results
-        path: allure-results
+        name: my_reports
+        path: my_reports
         
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3

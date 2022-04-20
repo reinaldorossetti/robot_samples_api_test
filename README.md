@@ -33,7 +33,7 @@ robot --loglevel DEBUG:INFO -d my_reports -i api_tests ./
 ```
 Rodando o report local:
 ```
-robot --listener allure_robotframework -d my_reports -i api_tests ./ 
+python -m robot --listener allure_robotframework --rerunfailed my_reports/output.xml -d my_reports -i api_tests ./ 
 allure generate ./output/allure -o allure-results/
 allure serve
 ```

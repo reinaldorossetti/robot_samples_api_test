@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.8.10 on win32)" generated="20220420 11:57:02.726" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Openweather Api" source="C:\Users\reinaldo.junior\Documents\GitHub\robot_openweather_api">
+<suite id="s1-s1" name="Features" source="C:\Users\reinaldo.junior\Documents\GitHub\robot_openweather_api\features">
+<suite id="s1-s1-s1" name="Specifications" source="C:\Users\reinaldo.junior\Documents\GitHub\robot_openweather_api\features\specifications">
+<suite id="s1-s1-s1-s1" name="Weather Spec" source="C:\Users\reinaldo.junior\Documents\GitHub\robot_openweather_api\features\specifications\weather_spec.robot">
+<test id="s1-s1-s1-s1-t1" name="Checking cities within a rectangle zone" line="37">
+<kw name="Given I start the session" library="weather_steps">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>${SESSION}</arg>
+<arg>${HOST_BASE}</arg>
+<arg>headers=${HEADER}</arg>
+<arg>disable_warnings=True</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220420 11:57:02.923" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220420 11:57:02.922" endtime="20220420 11:57:02.923"/>
+</kw>
+<status status="PASS" starttime="20220420 11:57:02.921" endtime="20220420 11:57:02.924"/>
+</kw>
+<kw name="When send a request about cities within a rectangle zone" library="weather_steps_call">
+<kw name="Setting the parameters for weather by cities within a rectangle zone" library="weather_steps">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{params}</var>
+<arg>bbox=${BBOX}</arg>
+<arg>appid=${API_KEY}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220420 11:57:02.927" level="INFO">&amp;{params} = { bbox=12,32,15,37,10 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220420 11:57:02.927" endtime="20220420 11:57:02.927"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>&amp;{params}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220420 11:57:02.928" level="INFO">&amp;{params} = { bbox=12,32,15,37,10 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220420 11:57:02.928" endtime="20220420 11:57:02.929"/>
+</kw>
+<status status="PASS" starttime="20220420 11:57:02.926" endtime="20220420 11:57:02.934"/>
+</kw>
+<kw name="Setting session to weather using GET method" library="weather_steps">
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${RESPONSE}</var>
+<arg>${SESSION}</arg>
+<arg>${WEATHER_ENDPOINT}</arg>
+<arg>params=${params}</arg>
+<arg>headers=${HEADER}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220420 11:57:03.507" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+ path_url=/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+ headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
+ body=None 
+ </msg>
+<msg timestamp="20220420 11:57:03.508" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+ status=400, reason=Bad Request 
+ headers={'Server': 'openresty', 'Date': 'Wed, 20 Apr 2022 14:57:03 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '44', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
+ body={"cod":"400","message":"Nothing to geocode"} 
+ </msg>
+<msg timestamp="20220420 11:57:03.508" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0</msg>
+<status status="FAIL" starttime="20220420 11:57:02.935" endtime="20220420 11:57:03.508"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${RESPONSE}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" starttime="20220420 11:57:03.518" endtime="20220420 11:57:03.518"/>
+</kw>
+<status status="FAIL" starttime="20220420 11:57:02.935" endtime="20220420 11:57:03.519"/>
+</kw>
+<status status="FAIL" starttime="20220420 11:57:02.926" endtime="20220420 11:57:03.522"/>
+</kw>
+<kw name="Then expect API response will be code" library="weather_steps">
+<arg>200</arg>
+<status status="NOT RUN" starttime="20220420 11:57:03.523" endtime="20220420 11:57:03.523"/>
+</kw>
+<tag>api_tests</tag>
+<tag>weather_rectangle_zone</tag>
+<status status="FAIL" starttime="20220420 11:57:02.920" endtime="20220420 11:57:03.526">HTTPError: 400 Client Error: Bad Request for url: http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0</status>
+</test>
+<status status="FAIL" starttime="20220420 11:57:02.807" endtime="20220420 11:57:03.537"/>
+</suite>
+<status status="FAIL" starttime="20220420 11:57:02.805" endtime="20220420 11:57:03.544"/>
+</suite>
+<status status="FAIL" starttime="20220420 11:57:02.803" endtime="20220420 11:57:03.550"/>
+</suite>
+<status status="FAIL" starttime="20220420 11:57:02.787" endtime="20220420 11:57:03.554"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">api_tests</stat>
+<stat pass="0" fail="1" skip="0">weather_rectangle_zone</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robot Openweather Api">Robot Openweather Api</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Features">Robot Openweather Api.Features</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Specifications">Robot Openweather Api.Features.Specifications</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Weather Spec">Robot Openweather Api.Features.Specifications.Weather Spec</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
