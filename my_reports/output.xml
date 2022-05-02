@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.8.10 on win32)" generated="20220419 17:12:29.781" rpa="false" schemaversion="3">
-<suite id="s1" name="Robot Openweather Api" source="C:\Users\reinaldo.junior\Documents\GitHub\robot_openweather_api">
-<suite id="s1-s1" name="Features" source="C:\Users\reinaldo.junior\Documents\GitHub\robot_openweather_api\features">
-<suite id="s1-s1-s1" name="Specifications" source="C:\Users\reinaldo.junior\Documents\GitHub\robot_openweather_api\features\specifications">
-<suite id="s1-s1-s1-s1" name="Weather Spec" source="C:\Users\reinaldo.junior\Documents\GitHub\robot_openweather_api\features\specifications\weather_spec.robot">
+<robot generator="Robot 5.0 (Python 3.9.11 on win32)" generated="20220501 11:48:24.441" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Openweather Api" source="C:\Users\reinaldo.junior\Documents\projetos\robot_openweather_api">
+<suite id="s1-s1" name="Features" source="C:\Users\reinaldo.junior\Documents\projetos\robot_openweather_api\features">
+<suite id="s1-s1-s1" name="Specifications" source="C:\Users\reinaldo.junior\Documents\projetos\robot_openweather_api\features\specifications">
+<suite id="s1-s1-s1-s1" name="Weather Spec" source="C:\Users\reinaldo.junior\Documents\projetos\robot_openweather_api\features\specifications\weather_spec.robot">
 <test id="s1-s1-s1-s1-t1" name="Checking the weather by city" line="7">
 <kw name="Given I start the session" library="weather_steps">
 <kw name="Create Session" library="RequestsLibrary">
@@ -12,10 +12,10 @@
 <arg>headers=${HEADER}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220419 17:12:29.948" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220419 17:12:29.948" endtime="20220419 17:12:29.948"/>
+<msg timestamp="20220501 11:48:24.550" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220501 11:48:24.550" endtime="20220501 11:48:24.550"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:29.947" endtime="20220419 17:12:29.950"/>
+<status status="PASS" starttime="20220501 11:48:24.550" endtime="20220501 11:48:24.550"/>
 </kw>
 <kw name="When send a request about the city weather" library="weather_steps_call">
 <kw name="Setting the parameters for city weather test" library="weather_steps">
@@ -24,16 +24,16 @@
 <arg>q=${city}</arg>
 <arg>appid=${API_KEY}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220419 17:12:29.951" level="INFO">&amp;{params} = { q=São Paulo | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:29.950" endtime="20220419 17:12:29.951"/>
+<msg timestamp="20220501 11:48:24.550" level="INFO">&amp;{params} = { q=São Paulo | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:24.550" endtime="20220501 11:48:24.550"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>&amp;{params}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220419 17:12:29.952" level="INFO">&amp;{params} = { q=São Paulo | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:29.952" endtime="20220419 17:12:29.952"/>
+<msg timestamp="20220501 11:48:24.550" level="INFO">&amp;{params} = { q=São Paulo | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:24.550" endtime="20220501 11:48:24.550"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:29.950" endtime="20220419 17:12:29.953"/>
+<status status="PASS" starttime="20220501 11:48:24.550" endtime="20220501 11:48:24.550"/>
 </kw>
 <kw name="Setting session to weather using GET method" library="weather_steps">
 <kw name="GET On Session" library="RequestsLibrary">
@@ -43,82 +43,82 @@
 <arg>params=${params}</arg>
 <arg>headers=${HEADER}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20220419 17:12:30.494" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:24.988" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  path_url=/data/2.5/weather?q=S%C3%A3o+Paulo&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
  body=None 
  </msg>
-<msg timestamp="20220419 17:12:30.494" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:24.988" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  status=200, reason=OK 
- headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:12:30 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '481', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?q=s%c3%a3o+paulo', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
- body={"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650399049,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200} 
+ headers={'Server': 'openresty', 'Date': 'Sun, 01 May 2022 14:48:26 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '474', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?q=s%c3%a3o+paulo', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
+ body={"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.47,"feels_like":298.62,"temp_min":296.95,"temp_max":299.9,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416443,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200} 
  </msg>
-<msg timestamp="20220419 17:12:30.495" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:29.953" endtime="20220419 17:12:30.495"/>
+<msg timestamp="20220501 11:48:24.988" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:24.550" endtime="20220501 11:48:24.988"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220419 17:12:30.498" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:30.497" endtime="20220419 17:12:30.498"/>
+<msg timestamp="20220501 11:48:24.988" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:24.988"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:29.953" endtime="20220419 17:12:30.499"/>
+<status status="PASS" starttime="20220501 11:48:24.550" endtime="20220501 11:48:24.988"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:29.950" endtime="20220419 17:12:30.500"/>
+<status status="PASS" starttime="20220501 11:48:24.550" endtime="20220501 11:48:24.988"/>
 </kw>
 <kw name="Then validating the Response's success data" library="weather_steps">
 <kw name="Log" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220419 17:12:30.501" level="INFO">Response: {"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650399049,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}</msg>
-<status status="PASS" starttime="20220419 17:12:30.501" endtime="20220419 17:12:30.501"/>
+<msg timestamp="20220501 11:48:24.988" level="INFO">Response: {"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.47,"feels_like":298.62,"temp_min":296.95,"temp_max":299.9,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416443,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}</msg>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:24.988"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220419 17:12:30.506" endtime="20220419 17:12:30.508"/>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:24.988"/>
 </kw>
 <kw name="Should Not Be Empty" library="BuiltIn">
 <arg>${RESPONSE.json()}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<msg timestamp="20220419 17:12:30.510" level="INFO">Length is 13</msg>
-<status status="PASS" starttime="20220419 17:12:30.508" endtime="20220419 17:12:30.510"/>
+<msg timestamp="20220501 11:48:24.988" level="INFO">Length is 13</msg>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:24.988"/>
 </kw>
 <kw name="Dictionary Should Contain Item" library="Collections">
 <arg>${RESPONSE.json()["sys"]}</arg>
 <arg>country</arg>
 <arg>${COUNTRY}</arg>
 <doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
-<status status="PASS" starttime="20220419 17:12:30.513" endtime="20220419 17:12:30.515"/>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:24.988"/>
 </kw>
 <kw name="Dictionary Should Contain Item" library="Collections">
 <arg>${RESPONSE.json()}</arg>
 <arg>coord</arg>
 <arg>${COORDINATES}</arg>
 <doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
-<status status="PASS" starttime="20220419 17:12:30.515" endtime="20220419 17:12:30.515"/>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:24.988"/>
 </kw>
 <kw name="Dictionary Should Contain Item" library="Collections">
 <arg>${RESPONSE.json()}</arg>
 <arg>name</arg>
 <arg>${CITY}</arg>
 <doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
-<status status="PASS" starttime="20220419 17:12:30.515" endtime="20220419 17:12:30.515"/>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:24.988"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${RESPONSE.status_code}</arg>
 <arg>${STATUS_ESPERADO}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20220419 17:12:30.515" level="INFO">Argument types are:
+<msg timestamp="20220501 11:48:24.988" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:30.515" endtime="20220419 17:12:30.515"/>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:24.988"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:30.501" endtime="20220419 17:12:30.524"/>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:24.988"/>
 </kw>
 <tag>api_tests</tag>
 <tag>weather_by_city</tag>
-<status status="PASS" starttime="20220419 17:12:29.947" endtime="20220419 17:12:30.525"/>
+<status status="PASS" starttime="20220501 11:48:24.550" endtime="20220501 11:48:24.988"/>
 </test>
 <test id="s1-s1-s1-s1-t2" name="Checking the weather by id" line="13">
 <kw name="Given I start the session" library="weather_steps">
@@ -128,10 +128,10 @@
 <arg>headers=${HEADER}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220419 17:12:30.533" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220419 17:12:30.533" endtime="20220419 17:12:30.533"/>
+<msg timestamp="20220501 11:48:24.988" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:24.988"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:30.533" endtime="20220419 17:12:30.536"/>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:24.988"/>
 </kw>
 <kw name="When send a request about the city weather by id" library="weather_steps_call">
 <kw name="Setting the parameters for weather test by id" library="weather_steps">
@@ -140,16 +140,16 @@
 <arg>id=${ID_CITY}</arg>
 <arg>appid=${API_KEY}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220419 17:12:30.538" level="INFO">&amp;{params} = { id=3448439 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:30.537" endtime="20220419 17:12:30.538"/>
+<msg timestamp="20220501 11:48:24.988" level="INFO">&amp;{params} = { id=3448439 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:24.988"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>&amp;{params}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220419 17:12:30.540" level="INFO">&amp;{params} = { id=3448439 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:30.539" endtime="20220419 17:12:30.540"/>
+<msg timestamp="20220501 11:48:24.988" level="INFO">&amp;{params} = { id=3448439 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:24.988"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:30.537" endtime="20220419 17:12:30.541"/>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:24.988"/>
 </kw>
 <kw name="Setting session to weather using GET method" library="weather_steps">
 <kw name="GET On Session" library="RequestsLibrary">
@@ -159,82 +159,82 @@
 <arg>params=${params}</arg>
 <arg>headers=${HEADER}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20220419 17:12:31.037" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?id=3448439&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:25.409" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?id=3448439&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  path_url=/data/2.5/weather?id=3448439&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
  body=None 
  </msg>
-<msg timestamp="20220419 17:12:31.037" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?id=3448439&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:25.409" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?id=3448439&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  status=200, reason=OK 
- headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:12:30 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '484', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?id=3448439', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
- body={"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],"base":"stations","main":{"temp":293.95,"feels_like":294.07,"temp_min":292.35,"temp_max":297.09,"pressure":1019,"humidity":76},"visibility":10000,"wind":{"speed":6.17,"deg":170},"clouds":{"all":40},"dt":1650398353,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200} 
+ headers={'Server': 'openresty', 'Date': 'Sun, 01 May 2022 14:48:26 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '475', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?id=3448439', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
+ body={"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.52,"feels_like":298.68,"temp_min":296.95,"temp_max":300.45,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416149,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200} 
  </msg>
-<msg timestamp="20220419 17:12:31.037" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:30.542" endtime="20220419 17:12:31.037"/>
+<msg timestamp="20220501 11:48:25.409" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:25.409"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220419 17:12:31.049" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:31.049" endtime="20220419 17:12:31.049"/>
+<msg timestamp="20220501 11:48:25.409" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.409"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:30.541" endtime="20220419 17:12:31.050"/>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:25.409"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:30.536" endtime="20220419 17:12:31.050"/>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:25.409"/>
 </kw>
 <kw name="Then validating the Response's success data" library="weather_steps">
 <kw name="Log" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220419 17:12:31.051" level="INFO">Response: {"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],"base":"stations","main":{"temp":293.95,"feels_like":294.07,"temp_min":292.35,"temp_max":297.09,"pressure":1019,"humidity":76},"visibility":10000,"wind":{"speed":6.17,"deg":170},"clouds":{"all":40},"dt":1650398353,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}</msg>
-<status status="PASS" starttime="20220419 17:12:31.051" endtime="20220419 17:12:31.051"/>
+<msg timestamp="20220501 11:48:25.409" level="INFO">Response: {"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.52,"feels_like":298.68,"temp_min":296.95,"temp_max":300.45,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416149,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}</msg>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.409"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220419 17:12:31.053" endtime="20220419 17:12:31.054"/>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.409"/>
 </kw>
 <kw name="Should Not Be Empty" library="BuiltIn">
 <arg>${RESPONSE.json()}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<msg timestamp="20220419 17:12:31.055" level="INFO">Length is 13</msg>
-<status status="PASS" starttime="20220419 17:12:31.054" endtime="20220419 17:12:31.055"/>
+<msg timestamp="20220501 11:48:25.409" level="INFO">Length is 13</msg>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.409"/>
 </kw>
 <kw name="Dictionary Should Contain Item" library="Collections">
 <arg>${RESPONSE.json()["sys"]}</arg>
 <arg>country</arg>
 <arg>${COUNTRY}</arg>
 <doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
-<status status="PASS" starttime="20220419 17:12:31.056" endtime="20220419 17:12:31.057"/>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.409"/>
 </kw>
 <kw name="Dictionary Should Contain Item" library="Collections">
 <arg>${RESPONSE.json()}</arg>
 <arg>coord</arg>
 <arg>${COORDINATES}</arg>
 <doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
-<status status="PASS" starttime="20220419 17:12:31.057" endtime="20220419 17:12:31.057"/>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.409"/>
 </kw>
 <kw name="Dictionary Should Contain Item" library="Collections">
 <arg>${RESPONSE.json()}</arg>
 <arg>name</arg>
 <arg>${CITY}</arg>
 <doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
-<status status="PASS" starttime="20220419 17:12:31.057" endtime="20220419 17:12:31.057"/>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.409"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${RESPONSE.status_code}</arg>
 <arg>${STATUS_ESPERADO}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20220419 17:12:31.057" level="INFO">Argument types are:
+<msg timestamp="20220501 11:48:25.409" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:31.057" endtime="20220419 17:12:31.057"/>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.409"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:31.051" endtime="20220419 17:12:31.061"/>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.409"/>
 </kw>
 <tag>api_tests</tag>
 <tag>weather_by_id</tag>
-<status status="PASS" starttime="20220419 17:12:30.532" endtime="20220419 17:12:31.061"/>
+<status status="PASS" starttime="20220501 11:48:24.988" endtime="20220501 11:48:25.409"/>
 </test>
 <test id="s1-s1-s1-s1-t3" name="Checking weather by longitude and latitude" line="19">
 <kw name="Given I start the session" library="weather_steps">
@@ -244,10 +244,10 @@
 <arg>headers=${HEADER}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220419 17:12:31.066" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220419 17:12:31.066" endtime="20220419 17:12:31.066"/>
+<msg timestamp="20220501 11:48:25.409" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.409"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:31.065" endtime="20220419 17:12:31.068"/>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.409"/>
 </kw>
 <kw name="When send a request about weather by longitude and latitude" library="weather_steps_call">
 <kw name="Setting the parameters for weather by longitude and latitude" library="weather_steps">
@@ -257,16 +257,16 @@
 <arg>lon=${LONGITUDE}</arg>
 <arg>appid=${API_KEY}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220419 17:12:31.069" level="INFO">&amp;{params} = { lat=-23.5475 | lon=-46.6361 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:31.069" endtime="20220419 17:12:31.069"/>
+<msg timestamp="20220501 11:48:25.409" level="INFO">&amp;{params} = { lat=-23.5475 | lon=-46.6361 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.409"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>&amp;{params}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220419 17:12:31.070" level="INFO">&amp;{params} = { lat=-23.5475 | lon=-46.6361 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:31.070" endtime="20220419 17:12:31.070"/>
+<msg timestamp="20220501 11:48:25.409" level="INFO">&amp;{params} = { lat=-23.5475 | lon=-46.6361 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.409"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:31.068" endtime="20220419 17:12:31.071"/>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.409"/>
 </kw>
 <kw name="Setting session to weather using GET method" library="weather_steps">
 <kw name="GET On Session" library="RequestsLibrary">
@@ -276,82 +276,82 @@
 <arg>params=${params}</arg>
 <arg>headers=${HEADER}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20220419 17:12:31.622" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?lat=-23.5475&amp;lon=-46.6361&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:25.863" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?lat=-23.5475&amp;lon=-46.6361&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  path_url=/data/2.5/weather?lat=-23.5475&amp;lon=-46.6361&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
  body=None 
  </msg>
-<msg timestamp="20220419 17:12:31.622" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?lat=-23.5475&amp;lon=-46.6361&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:25.863" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?lat=-23.5475&amp;lon=-46.6361&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  status=200, reason=OK 
- headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:12:31 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '481', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?lat=-23.55&amp;lon=-46.64', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
- body={"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650399124,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200} 
+ headers={'Server': 'openresty', 'Date': 'Sun, 01 May 2022 14:48:26 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '475', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?lat=-23.55&amp;lon=-46.64', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
+ body={"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.48,"feels_like":298.64,"temp_min":296.95,"temp_max":300.45,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416292,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200} 
  </msg>
-<msg timestamp="20220419 17:12:31.622" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:31.072" endtime="20220419 17:12:31.622"/>
+<msg timestamp="20220501 11:48:25.863" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.863"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220419 17:12:31.626" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:31.626" endtime="20220419 17:12:31.626"/>
+<msg timestamp="20220501 11:48:25.863" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:25.863" endtime="20220501 11:48:25.863"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:31.071" endtime="20220419 17:12:31.627"/>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.863"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:31.068" endtime="20220419 17:12:31.627"/>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.863"/>
 </kw>
 <kw name="Then validating the Response's success data" library="weather_steps">
 <kw name="Log" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220419 17:12:31.629" level="INFO">Response: {"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650399124,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}</msg>
-<status status="PASS" starttime="20220419 17:12:31.628" endtime="20220419 17:12:31.630"/>
+<msg timestamp="20220501 11:48:25.863" level="INFO">Response: {"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.48,"feels_like":298.64,"temp_min":296.95,"temp_max":300.45,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416292,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}</msg>
+<status status="PASS" starttime="20220501 11:48:25.863" endtime="20220501 11:48:25.863"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220419 17:12:31.630" endtime="20220419 17:12:31.631"/>
+<status status="PASS" starttime="20220501 11:48:25.879" endtime="20220501 11:48:25.879"/>
 </kw>
 <kw name="Should Not Be Empty" library="BuiltIn">
 <arg>${RESPONSE.json()}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<msg timestamp="20220419 17:12:31.631" level="INFO">Length is 13</msg>
-<status status="PASS" starttime="20220419 17:12:31.631" endtime="20220419 17:12:31.632"/>
+<msg timestamp="20220501 11:48:25.879" level="INFO">Length is 13</msg>
+<status status="PASS" starttime="20220501 11:48:25.879" endtime="20220501 11:48:25.879"/>
 </kw>
 <kw name="Dictionary Should Contain Item" library="Collections">
 <arg>${RESPONSE.json()["sys"]}</arg>
 <arg>country</arg>
 <arg>${COUNTRY}</arg>
 <doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
-<status status="PASS" starttime="20220419 17:12:31.633" endtime="20220419 17:12:31.634"/>
+<status status="PASS" starttime="20220501 11:48:25.879" endtime="20220501 11:48:25.879"/>
 </kw>
 <kw name="Dictionary Should Contain Item" library="Collections">
 <arg>${RESPONSE.json()}</arg>
 <arg>coord</arg>
 <arg>${COORDINATES}</arg>
 <doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
-<status status="PASS" starttime="20220419 17:12:31.634" endtime="20220419 17:12:31.635"/>
+<status status="PASS" starttime="20220501 11:48:25.879" endtime="20220501 11:48:25.879"/>
 </kw>
 <kw name="Dictionary Should Contain Item" library="Collections">
 <arg>${RESPONSE.json()}</arg>
 <arg>name</arg>
 <arg>${CITY}</arg>
 <doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
-<status status="PASS" starttime="20220419 17:12:31.635" endtime="20220419 17:12:31.635"/>
+<status status="PASS" starttime="20220501 11:48:25.879" endtime="20220501 11:48:25.879"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${RESPONSE.status_code}</arg>
 <arg>${STATUS_ESPERADO}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20220419 17:12:31.635" level="INFO">Argument types are:
+<msg timestamp="20220501 11:48:25.879" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:31.635" endtime="20220419 17:12:31.635"/>
+<status status="PASS" starttime="20220501 11:48:25.879" endtime="20220501 11:48:25.879"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:31.627" endtime="20220419 17:12:31.637"/>
+<status status="PASS" starttime="20220501 11:48:25.863" endtime="20220501 11:48:25.879"/>
 </kw>
 <tag>api_tests</tag>
 <tag>weather_long_lati</tag>
-<status status="PASS" starttime="20220419 17:12:31.065" endtime="20220419 17:12:31.637"/>
+<status status="PASS" starttime="20220501 11:48:25.409" endtime="20220501 11:48:25.879"/>
 </test>
 <test id="s1-s1-s1-s1-t4" name="Checking weather by zip code" line="25">
 <kw name="Given I start the session" library="weather_steps">
@@ -361,10 +361,10 @@
 <arg>headers=${HEADER}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220419 17:12:31.643" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220419 17:12:31.643" endtime="20220419 17:12:31.643"/>
+<msg timestamp="20220501 11:48:25.879" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220501 11:48:25.879" endtime="20220501 11:48:25.879"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:31.642" endtime="20220419 17:12:31.644"/>
+<status status="PASS" starttime="20220501 11:48:25.879" endtime="20220501 11:48:25.879"/>
 </kw>
 <kw name="When send a request about weather by zip code us" library="weather_steps_call">
 <kw name="Setting the parameters for weather by zip code us" library="weather_steps">
@@ -373,16 +373,16 @@
 <arg>zip=${ZIP_CODE_US}</arg>
 <arg>appid=${API_KEY}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220419 17:12:31.645" level="INFO">&amp;{params} = { zip=94040,us | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:31.645" endtime="20220419 17:12:31.646"/>
+<msg timestamp="20220501 11:48:25.879" level="INFO">&amp;{params} = { zip=94040,us | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:25.879" endtime="20220501 11:48:25.879"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>&amp;{params}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220419 17:12:31.647" level="INFO">&amp;{params} = { zip=94040,us | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:31.646" endtime="20220419 17:12:31.647"/>
+<msg timestamp="20220501 11:48:25.879" level="INFO">&amp;{params} = { zip=94040,us | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:25.879" endtime="20220501 11:48:25.879"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:31.645" endtime="20220419 17:12:31.648"/>
+<status status="PASS" starttime="20220501 11:48:25.879" endtime="20220501 11:48:25.879"/>
 </kw>
 <kw name="Setting session to weather using GET method" library="weather_steps">
 <kw name="GET On Session" library="RequestsLibrary">
@@ -392,56 +392,56 @@
 <arg>params=${params}</arg>
 <arg>headers=${HEADER}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20220419 17:12:32.132" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?zip=94040%2Cus&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:26.347" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?zip=94040%2Cus&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  path_url=/data/2.5/weather?zip=94040%2Cus&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
  body=None 
  </msg>
-<msg timestamp="20220419 17:12:32.133" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?zip=94040%2Cus&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:26.347" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?zip=94040%2Cus&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  status=200, reason=OK 
- headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:12:31 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '474', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?zip=94040%2cus', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
- body={"coord":{"lon":-122.088,"lat":37.3855},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":290.74,"feels_like":290.02,"temp_min":287.34,"temp_max":292.96,"pressure":1016,"humidity":56},"visibility":10000,"wind":{"speed":6.69,"deg":340},"clouds":{"all":0},"dt":1650399151,"sys":{"type":2,"id":2017352,"country":"US","sunrise":1650374871,"sunset":1650422795},"timezone":-25200,"id":0,"name":"Mountain View","cod":200} 
+ headers={'Server': 'openresty', 'Date': 'Sun, 01 May 2022 14:48:27 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '474', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?zip=94040%2cus', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
+ body={"coord":{"lon":-122.088,"lat":37.3855},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":283.18,"feels_like":282.38,"temp_min":280.96,"temp_max":285.19,"pressure":1013,"humidity":82},"visibility":10000,"wind":{"speed":1.54,"deg":170},"clouds":{"all":0},"dt":1651416507,"sys":{"type":2,"id":2017352,"country":"US","sunrise":1651410785,"sunset":1651460255},"timezone":-25200,"id":0,"name":"Mountain View","cod":200} 
  </msg>
-<msg timestamp="20220419 17:12:32.133" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:31.648" endtime="20220419 17:12:32.133"/>
+<msg timestamp="20220501 11:48:26.347" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:25.879" endtime="20220501 11:48:26.347"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220419 17:12:32.136" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:32.135" endtime="20220419 17:12:32.136"/>
+<msg timestamp="20220501 11:48:26.347" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:26.347" endtime="20220501 11:48:26.347"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:31.648" endtime="20220419 17:12:32.138"/>
+<status status="PASS" starttime="20220501 11:48:25.879" endtime="20220501 11:48:26.347"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:31.644" endtime="20220419 17:12:32.139"/>
+<status status="PASS" starttime="20220501 11:48:25.879" endtime="20220501 11:48:26.347"/>
 </kw>
 <kw name="Then expect API response will be code" library="weather_steps">
 <arg>200</arg>
 <kw name="Log" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220419 17:12:32.143" level="INFO">Response: {"coord":{"lon":-122.088,"lat":37.3855},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":290.74,"feels_like":290.02,"temp_min":287.34,"temp_max":292.96,"pressure":1016,"humidity":56},"visibility":10000,"wind":{"speed":6.69,"deg":340},"clouds":{"all":0},"dt":1650399151,"sys":{"type":2,"id":2017352,"country":"US","sunrise":1650374871,"sunset":1650422795},"timezone":-25200,"id":0,"name":"Mountain View","cod":200}</msg>
-<status status="PASS" starttime="20220419 17:12:32.140" endtime="20220419 17:12:32.143"/>
+<msg timestamp="20220501 11:48:26.347" level="INFO">Response: {"coord":{"lon":-122.088,"lat":37.3855},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":283.18,"feels_like":282.38,"temp_min":280.96,"temp_max":285.19,"pressure":1013,"humidity":82},"visibility":10000,"wind":{"speed":1.54,"deg":170},"clouds":{"all":0},"dt":1651416507,"sys":{"type":2,"id":2017352,"country":"US","sunrise":1651410785,"sunset":1651460255},"timezone":-25200,"id":0,"name":"Mountain View","cod":200}</msg>
+<status status="PASS" starttime="20220501 11:48:26.347" endtime="20220501 11:48:26.347"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220419 17:12:32.144" endtime="20220419 17:12:32.145"/>
+<status status="PASS" starttime="20220501 11:48:26.347" endtime="20220501 11:48:26.347"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${RESPONSE.status_code}</arg>
 <arg>${STATUS_CODE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20220419 17:12:32.148" level="INFO">Argument types are:
+<msg timestamp="20220501 11:48:26.347" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:32.147" endtime="20220419 17:12:32.148"/>
+<status status="PASS" starttime="20220501 11:48:26.347" endtime="20220501 11:48:26.347"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:32.140" endtime="20220419 17:12:32.150"/>
+<status status="PASS" starttime="20220501 11:48:26.347" endtime="20220501 11:48:26.347"/>
 </kw>
 <tag>api_tests</tag>
 <tag>weather_zipcod</tag>
-<status status="PASS" starttime="20220419 17:12:31.642" endtime="20220419 17:12:32.152"/>
+<status status="PASS" starttime="20220501 11:48:25.879" endtime="20220501 11:48:26.347"/>
 </test>
 <test id="s1-s1-s1-s1-t5" name="Checking weather by not found zip code" line="31">
 <kw name="Given I start the session" library="weather_steps">
@@ -451,10 +451,10 @@
 <arg>headers=${HEADER}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220419 17:12:32.163" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220419 17:12:32.163" endtime="20220419 17:12:32.164"/>
+<msg timestamp="20220501 11:48:26.347" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220501 11:48:26.347" endtime="20220501 11:48:26.347"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:32.162" endtime="20220419 17:12:32.165"/>
+<status status="PASS" starttime="20220501 11:48:26.347" endtime="20220501 11:48:26.347"/>
 </kw>
 <kw name="When send a request about weather by zip code wrong" library="weather_steps">
 <kw name="Create Dictionary" library="BuiltIn">
@@ -462,8 +462,8 @@
 <arg>zip=${ZIP_CODE_FAIL}</arg>
 <arg>appid=${API_KEY}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220419 17:12:32.166" level="INFO">&amp;{params} = { zip=040,us | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:32.166" endtime="20220419 17:12:32.166"/>
+<msg timestamp="20220501 11:48:26.347" level="INFO">&amp;{params} = { zip=040,us | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:26.347" endtime="20220501 11:48:26.347"/>
 </kw>
 <kw name="POST On Session" library="RequestsLibrary">
 <var>${RESPONSE}</var>
@@ -473,54 +473,54 @@
 <arg>headers=${HEADER}</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<msg timestamp="20220419 17:12:32.636" level="INFO">POST Request : url=http://api.openweathermap.org/data/2.5/weather?zip=040%2Cus&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:26.832" level="INFO">POST Request : url=http://api.openweathermap.org/data/2.5/weather?zip=040%2Cus&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  path_url=/data/2.5/weather?zip=040%2Cus&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '0'} 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '0'} 
  body=None 
  </msg>
-<msg timestamp="20220419 17:12:32.637" level="INFO">POST Response : url=http://api.openweathermap.org/data/2.5/weather?zip=040%2Cus&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:26.832" level="INFO">POST Response : url=http://api.openweathermap.org/data/2.5/weather?zip=040%2Cus&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  status=404, reason=Not Found 
- headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:12:32 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '40', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?zip=040%2cus', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
+ headers={'Server': 'openresty', 'Date': 'Sun, 01 May 2022 14:48:27 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '40', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?zip=040%2cus', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
  body={"cod":"404","message":"city not found"} 
  </msg>
-<msg timestamp="20220419 17:12:32.637" level="INFO">${RESPONSE} = &lt;Response [404]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:32.168" endtime="20220419 17:12:32.637"/>
+<msg timestamp="20220501 11:48:26.832" level="INFO">${RESPONSE} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:26.347" endtime="20220501 11:48:26.832"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220419 17:12:32.638" level="INFO">${RESPONSE} = &lt;Response [404]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:32.638" endtime="20220419 17:12:32.638"/>
+<msg timestamp="20220501 11:48:26.832" level="INFO">${RESPONSE} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:26.832" endtime="20220501 11:48:26.832"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:32.165" endtime="20220419 17:12:32.639"/>
+<status status="PASS" starttime="20220501 11:48:26.347" endtime="20220501 11:48:26.832"/>
 </kw>
 <kw name="Then expect API response will be code" library="weather_steps">
 <arg>404</arg>
 <kw name="Log" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220419 17:12:32.641" level="INFO">Response: {"cod":"404","message":"city not found"}</msg>
-<status status="PASS" starttime="20220419 17:12:32.640" endtime="20220419 17:12:32.641"/>
+<msg timestamp="20220501 11:48:26.832" level="INFO">Response: {"cod":"404","message":"city not found"}</msg>
+<status status="PASS" starttime="20220501 11:48:26.832" endtime="20220501 11:48:26.832"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220419 17:12:32.642" endtime="20220419 17:12:32.643"/>
+<status status="PASS" starttime="20220501 11:48:26.832" endtime="20220501 11:48:26.832"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${RESPONSE.status_code}</arg>
 <arg>${STATUS_CODE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20220419 17:12:32.643" level="INFO">Argument types are:
+<msg timestamp="20220501 11:48:26.832" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:32.643" endtime="20220419 17:12:32.643"/>
+<status status="PASS" starttime="20220501 11:48:26.832" endtime="20220501 11:48:26.832"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:32.639" endtime="20220419 17:12:32.645"/>
+<status status="PASS" starttime="20220501 11:48:26.832" endtime="20220501 11:48:26.832"/>
 </kw>
 <tag>api_tests</tag>
 <tag>weather_zipcode_fail</tag>
-<status status="PASS" starttime="20220419 17:12:32.160" endtime="20220419 17:12:32.645"/>
+<status status="PASS" starttime="20220501 11:48:26.347" endtime="20220501 11:48:26.832"/>
 </test>
 <test id="s1-s1-s1-s1-t6" name="Checking cities within a rectangle zone" line="37">
 <kw name="Given I start the session" library="weather_steps">
@@ -530,10 +530,10 @@
 <arg>headers=${HEADER}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220419 17:12:32.651" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220419 17:12:32.651" endtime="20220419 17:12:32.651"/>
+<msg timestamp="20220501 11:48:26.832" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220501 11:48:26.832" endtime="20220501 11:48:26.832"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:32.650" endtime="20220419 17:12:32.653"/>
+<status status="PASS" starttime="20220501 11:48:26.832" endtime="20220501 11:48:26.832"/>
 </kw>
 <kw name="When send a request about cities within a rectangle zone" library="weather_steps_call">
 <kw name="Setting the parameters for weather by cities within a rectangle zone" library="weather_steps">
@@ -542,16 +542,16 @@
 <arg>bbox=${BBOX}</arg>
 <arg>appid=${API_KEY}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220419 17:12:32.654" level="INFO">&amp;{params} = { bbox=12,32,15,37,10 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:32.654" endtime="20220419 17:12:32.654"/>
+<msg timestamp="20220501 11:48:26.832" level="INFO">&amp;{params} = { bbox=12,32,15,37,10 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:26.832" endtime="20220501 11:48:26.832"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>&amp;{params}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220419 17:12:32.655" level="INFO">&amp;{params} = { bbox=12,32,15,37,10 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:32.655" endtime="20220419 17:12:32.655"/>
+<msg timestamp="20220501 11:48:26.832" level="INFO">&amp;{params} = { bbox=12,32,15,37,10 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:26.832" endtime="20220501 11:48:26.832"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:32.653" endtime="20220419 17:12:32.656"/>
+<status status="PASS" starttime="20220501 11:48:26.832" endtime="20220501 11:48:26.832"/>
 </kw>
 <kw name="Setting session to weather using GET method" library="weather_steps">
 <kw name="GET On Session" library="RequestsLibrary">
@@ -561,35 +561,35 @@
 <arg>params=${params}</arg>
 <arg>headers=${HEADER}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20220419 17:12:33.160" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:27.285" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  path_url=/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
  body=None 
  </msg>
-<msg timestamp="20220419 17:12:33.160" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:27.285" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  status=400, reason=Bad Request 
- headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:12:32 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '44', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
+ headers={'Server': 'openresty', 'Date': 'Sun, 01 May 2022 14:48:28 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '44', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
  body={"cod":"400","message":"Nothing to geocode"} 
  </msg>
-<msg timestamp="20220419 17:12:33.160" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0</msg>
-<status status="FAIL" starttime="20220419 17:12:32.657" endtime="20220419 17:12:33.184"/>
+<msg timestamp="20220501 11:48:27.285" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0</msg>
+<status status="FAIL" starttime="20220501 11:48:26.832" endtime="20220501 11:48:27.285"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="NOT RUN" starttime="20220419 17:12:33.187" endtime="20220419 17:12:33.188"/>
+<status status="NOT RUN" starttime="20220501 11:48:27.285" endtime="20220501 11:48:27.285"/>
 </kw>
-<status status="FAIL" starttime="20220419 17:12:32.657" endtime="20220419 17:12:33.188"/>
+<status status="FAIL" starttime="20220501 11:48:26.832" endtime="20220501 11:48:27.285"/>
 </kw>
-<status status="FAIL" starttime="20220419 17:12:32.653" endtime="20220419 17:12:33.188"/>
+<status status="FAIL" starttime="20220501 11:48:26.832" endtime="20220501 11:48:27.285"/>
 </kw>
 <kw name="Then expect API response will be code" library="weather_steps">
 <arg>200</arg>
-<status status="NOT RUN" starttime="20220419 17:12:33.188" endtime="20220419 17:12:33.188"/>
+<status status="NOT RUN" starttime="20220501 11:48:27.285" endtime="20220501 11:48:27.285"/>
 </kw>
 <tag>api_tests</tag>
 <tag>weather_rectangle_zone</tag>
-<status status="FAIL" starttime="20220419 17:12:32.650" endtime="20220419 17:12:33.188">HTTPError: 400 Client Error: Bad Request for url: http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0</status>
+<status status="FAIL" starttime="20220501 11:48:26.832" endtime="20220501 11:48:27.285">HTTPError: 400 Client Error: Bad Request for url: http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0</status>
 </test>
 <test id="s1-s1-s1-s1-t7" name="Checking cities in circle" line="43">
 <kw name="Given I start the session" library="weather_steps">
@@ -599,10 +599,10 @@
 <arg>headers=${HEADER}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220419 17:12:33.201" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220419 17:12:33.201" endtime="20220419 17:12:33.201"/>
+<msg timestamp="20220501 11:48:27.285" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220501 11:48:27.285" endtime="20220501 11:48:27.285"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:33.200" endtime="20220419 17:12:33.203"/>
+<status status="PASS" starttime="20220501 11:48:27.285" endtime="20220501 11:48:27.285"/>
 </kw>
 <kw name="When send a request about weather by cities in circle" library="weather_steps_call">
 <kw name="Setting the parameters for weather by cities in circle" library="weather_steps">
@@ -613,16 +613,16 @@
 <arg>cnt=${CNT}</arg>
 <arg>appid=${API_KEY}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220419 17:12:33.205" level="INFO">&amp;{params} = { lat=-23.5475 | lon=-46.6361 | cnt=10 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:33.204" endtime="20220419 17:12:33.205"/>
+<msg timestamp="20220501 11:48:27.285" level="INFO">&amp;{params} = { lat=-23.5475 | lon=-46.6361 | cnt=10 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:27.285" endtime="20220501 11:48:27.285"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>&amp;{params}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220419 17:12:33.211" level="INFO">&amp;{params} = { lat=-23.5475 | lon=-46.6361 | cnt=10 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:33.209" endtime="20220419 17:12:33.211"/>
+<msg timestamp="20220501 11:48:27.285" level="INFO">&amp;{params} = { lat=-23.5475 | lon=-46.6361 | cnt=10 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:27.285" endtime="20220501 11:48:27.285"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:33.204" endtime="20220419 17:12:33.213"/>
+<status status="PASS" starttime="20220501 11:48:27.285" endtime="20220501 11:48:27.285"/>
 </kw>
 <kw name="Setting session to weather using GET method" library="weather_steps">
 <kw name="GET On Session" library="RequestsLibrary">
@@ -632,56 +632,56 @@
 <arg>params=${params}</arg>
 <arg>headers=${HEADER}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20220419 17:12:33.861" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?lat=-23.5475&amp;lon=-46.6361&amp;cnt=10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:27.723" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?lat=-23.5475&amp;lon=-46.6361&amp;cnt=10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  path_url=/data/2.5/weather?lat=-23.5475&amp;lon=-46.6361&amp;cnt=10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
  body=None 
  </msg>
-<msg timestamp="20220419 17:12:33.873" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?lat=-23.5475&amp;lon=-46.6361&amp;cnt=10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:27.723" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?lat=-23.5475&amp;lon=-46.6361&amp;cnt=10&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  status=200, reason=OK 
- headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:12:33 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '481', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?cnt=10&amp;lat=-23.55&amp;lon=-46.64', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
- body={"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650398964,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200} 
+ headers={'Server': 'openresty', 'Date': 'Sun, 01 May 2022 14:48:28 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '475', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?cnt=10&amp;lat=-23.55&amp;lon=-46.64', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
+ body={"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.48,"feels_like":298.64,"temp_min":296.95,"temp_max":300.45,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416292,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200} 
  </msg>
-<msg timestamp="20220419 17:12:33.873" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:33.214" endtime="20220419 17:12:33.873"/>
+<msg timestamp="20220501 11:48:27.723" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:27.285" endtime="20220501 11:48:27.723"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220419 17:12:33.880" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:33.879" endtime="20220419 17:12:33.881"/>
+<msg timestamp="20220501 11:48:27.723" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:27.723" endtime="20220501 11:48:27.723"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:33.213" endtime="20220419 17:12:33.882"/>
+<status status="PASS" starttime="20220501 11:48:27.285" endtime="20220501 11:48:27.723"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:33.203" endtime="20220419 17:12:33.882"/>
+<status status="PASS" starttime="20220501 11:48:27.285" endtime="20220501 11:48:27.723"/>
 </kw>
 <kw name="Then expect API response will be code" library="weather_steps">
 <arg>200</arg>
 <kw name="Log" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220419 17:12:33.883" level="INFO">Response: {"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650398964,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}</msg>
-<status status="PASS" starttime="20220419 17:12:33.883" endtime="20220419 17:12:33.883"/>
+<msg timestamp="20220501 11:48:27.723" level="INFO">Response: {"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.48,"feels_like":298.64,"temp_min":296.95,"temp_max":300.45,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416292,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}</msg>
+<status status="PASS" starttime="20220501 11:48:27.723" endtime="20220501 11:48:27.723"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220419 17:12:33.885" endtime="20220419 17:12:33.885"/>
+<status status="PASS" starttime="20220501 11:48:27.723" endtime="20220501 11:48:27.739"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${RESPONSE.status_code}</arg>
 <arg>${STATUS_CODE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20220419 17:12:33.887" level="INFO">Argument types are:
+<msg timestamp="20220501 11:48:27.739" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:33.887" endtime="20220419 17:12:33.887"/>
+<status status="PASS" starttime="20220501 11:48:27.739" endtime="20220501 11:48:27.739"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:33.883" endtime="20220419 17:12:33.888"/>
+<status status="PASS" starttime="20220501 11:48:27.723" endtime="20220501 11:48:27.739"/>
 </kw>
 <tag>api_tests</tag>
 <tag>cities_circle</tag>
-<status status="PASS" starttime="20220419 17:12:33.200" endtime="20220419 17:12:33.888"/>
+<status status="PASS" starttime="20220501 11:48:27.285" endtime="20220501 11:48:27.739"/>
 </test>
 <test id="s1-s1-s1-s1-t8" name="Checking multilingual support" line="49">
 <kw name="Given I start the session" library="weather_steps">
@@ -691,10 +691,10 @@
 <arg>headers=${HEADER}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220419 17:12:33.893" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220419 17:12:33.893" endtime="20220419 17:12:33.893"/>
+<msg timestamp="20220501 11:48:27.739" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220501 11:48:27.739" endtime="20220501 11:48:27.739"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:33.892" endtime="20220419 17:12:33.895"/>
+<status status="PASS" starttime="20220501 11:48:27.739" endtime="20220501 11:48:27.739"/>
 </kw>
 <kw name="When send a request about multilingual support" library="weather_steps_call">
 <kw name="Setting the parameters for multilingual support" library="weather_steps">
@@ -704,16 +704,16 @@
 <arg>lang=${LANGUAGE}</arg>
 <arg>appid=${API_KEY}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220419 17:12:33.896" level="INFO">&amp;{params} = { id=3448439 | lang=sp | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:33.896" endtime="20220419 17:12:33.896"/>
+<msg timestamp="20220501 11:48:27.739" level="INFO">&amp;{params} = { id=3448439 | lang=sp | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:27.739" endtime="20220501 11:48:27.739"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>&amp;{params}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220419 17:12:33.897" level="INFO">&amp;{params} = { id=3448439 | lang=sp | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:33.897" endtime="20220419 17:12:33.897"/>
+<msg timestamp="20220501 11:48:27.739" level="INFO">&amp;{params} = { id=3448439 | lang=sp | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:27.739" endtime="20220501 11:48:27.739"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:33.895" endtime="20220419 17:12:33.898"/>
+<status status="PASS" starttime="20220501 11:48:27.739" endtime="20220501 11:48:27.739"/>
 </kw>
 <kw name="Setting session to weather using GET method" library="weather_steps">
 <kw name="GET On Session" library="RequestsLibrary">
@@ -723,56 +723,56 @@
 <arg>params=${params}</arg>
 <arg>headers=${HEADER}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20220419 17:12:34.375" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?id=3448439&amp;lang=sp&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:28.208" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?id=3448439&amp;lang=sp&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  path_url=/data/2.5/weather?id=3448439&amp;lang=sp&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
  body=None 
  </msg>
-<msg timestamp="20220419 17:12:34.375" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?id=3448439&amp;lang=sp&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:28.208" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?id=3448439&amp;lang=sp&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  status=200, reason=OK 
- headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:12:34 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '478', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?id=3448439&amp;lang=sp', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
- body={"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"muy nuboso","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650398926,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200} 
+ headers={'Server': 'openresty', 'Date': 'Sun, 01 May 2022 14:48:29 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '476', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?id=3448439&amp;lang=sp', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
+ body={"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"cielo claro","icon":"01d"}],"base":"stations","main":{"temp":298.44,"feels_like":298.59,"temp_min":296.95,"temp_max":299.9,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416333,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200} 
  </msg>
-<msg timestamp="20220419 17:12:34.375" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:33.899" endtime="20220419 17:12:34.375"/>
+<msg timestamp="20220501 11:48:28.208" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:27.739" endtime="20220501 11:48:28.208"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220419 17:12:34.388" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:34.386" endtime="20220419 17:12:34.388"/>
+<msg timestamp="20220501 11:48:28.208" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:28.208" endtime="20220501 11:48:28.208"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:33.898" endtime="20220419 17:12:34.388"/>
+<status status="PASS" starttime="20220501 11:48:27.739" endtime="20220501 11:48:28.208"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:33.895" endtime="20220419 17:12:34.388"/>
+<status status="PASS" starttime="20220501 11:48:27.739" endtime="20220501 11:48:28.208"/>
 </kw>
 <kw name="Then expect API response will be code" library="weather_steps">
 <arg>200</arg>
 <kw name="Log" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220419 17:12:34.390" level="INFO">Response: {"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"muy nuboso","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650398926,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}</msg>
-<status status="PASS" starttime="20220419 17:12:34.389" endtime="20220419 17:12:34.390"/>
+<msg timestamp="20220501 11:48:28.208" level="INFO">Response: {"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"cielo claro","icon":"01d"}],"base":"stations","main":{"temp":298.44,"feels_like":298.59,"temp_min":296.95,"temp_max":299.9,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416333,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}</msg>
+<status status="PASS" starttime="20220501 11:48:28.208" endtime="20220501 11:48:28.208"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220419 17:12:34.391" endtime="20220419 17:12:34.392"/>
+<status status="PASS" starttime="20220501 11:48:28.208" endtime="20220501 11:48:28.208"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${RESPONSE.status_code}</arg>
 <arg>${STATUS_CODE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20220419 17:12:34.393" level="INFO">Argument types are:
+<msg timestamp="20220501 11:48:28.208" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:34.392" endtime="20220419 17:12:34.393"/>
+<status status="PASS" starttime="20220501 11:48:28.208" endtime="20220501 11:48:28.208"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:34.388" endtime="20220419 17:12:34.397"/>
+<status status="PASS" starttime="20220501 11:48:28.208" endtime="20220501 11:48:28.208"/>
 </kw>
 <tag>api_tests</tag>
 <tag>multilingual</tag>
-<status status="PASS" starttime="20220419 17:12:33.892" endtime="20220419 17:12:34.397"/>
+<status status="PASS" starttime="20220501 11:48:27.739" endtime="20220501 11:48:28.208"/>
 </test>
 <test id="s1-s1-s1-s1-t9" name="Checking Call back function" line="55">
 <kw name="Given I start the session" library="weather_steps">
@@ -782,10 +782,10 @@
 <arg>headers=${HEADER}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220419 17:12:34.403" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220419 17:12:34.402" endtime="20220419 17:12:34.403"/>
+<msg timestamp="20220501 11:48:28.208" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220501 11:48:28.208" endtime="20220501 11:48:28.208"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:34.402" endtime="20220419 17:12:34.404"/>
+<status status="PASS" starttime="20220501 11:48:28.208" endtime="20220501 11:48:28.208"/>
 </kw>
 <kw name="When send a request about call back support" library="weather_steps_call">
 <kw name="Setting the parameters for call back support" library="weather_steps">
@@ -795,16 +795,16 @@
 <arg>callback=test</arg>
 <arg>appid=${API_KEY}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220419 17:12:34.406" level="INFO">&amp;{params} = { q=São Paulo | callback=test | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:34.405" endtime="20220419 17:12:34.406"/>
+<msg timestamp="20220501 11:48:28.208" level="INFO">&amp;{params} = { q=São Paulo | callback=test | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:28.208" endtime="20220501 11:48:28.208"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>&amp;{params}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20220419 17:12:34.407" level="INFO">&amp;{params} = { q=São Paulo | callback=test | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:34.406" endtime="20220419 17:12:34.407"/>
+<msg timestamp="20220501 11:48:28.208" level="INFO">&amp;{params} = { q=São Paulo | callback=test | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:28.208" endtime="20220501 11:48:28.208"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:34.404" endtime="20220419 17:12:34.408"/>
+<status status="PASS" starttime="20220501 11:48:28.208" endtime="20220501 11:48:28.208"/>
 </kw>
 <kw name="Setting session to weather using GET method" library="weather_steps">
 <kw name="GET On Session" library="RequestsLibrary">
@@ -814,56 +814,56 @@
 <arg>params=${params}</arg>
 <arg>headers=${HEADER}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20220419 17:12:34.891" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:28.668" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  path_url=/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
  body=None 
  </msg>
-<msg timestamp="20220419 17:12:34.891" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:28.668" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  status=200, reason=OK 
- headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:12:34 GMT', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '487', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?callback=test&amp;q=s%c3%a3o+paulo', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
- body=test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650398926,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}) 
+ headers={'Server': 'openresty', 'Date': 'Sun, 01 May 2022 14:48:29 GMT', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '480', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?callback=test&amp;q=s%c3%a3o+paulo', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
+ body=test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.47,"feels_like":298.62,"temp_min":296.95,"temp_max":299.9,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416509,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}) 
  </msg>
-<msg timestamp="20220419 17:12:34.891" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:34.409" endtime="20220419 17:12:34.891"/>
+<msg timestamp="20220501 11:48:28.668" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:28.208" endtime="20220501 11:48:28.668"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220419 17:12:34.900" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:34.899" endtime="20220419 17:12:34.900"/>
+<msg timestamp="20220501 11:48:28.668" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:28.668" endtime="20220501 11:48:28.668"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:34.408" endtime="20220419 17:12:34.902"/>
+<status status="PASS" starttime="20220501 11:48:28.208" endtime="20220501 11:48:28.668"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:34.404" endtime="20220419 17:12:34.903"/>
+<status status="PASS" starttime="20220501 11:48:28.208" endtime="20220501 11:48:28.668"/>
 </kw>
 <kw name="Then expect API response will be code" library="weather_steps">
 <arg>200</arg>
 <kw name="Log" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220419 17:12:34.903" level="INFO">Response: test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650398926,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200})</msg>
-<status status="PASS" starttime="20220419 17:12:34.903" endtime="20220419 17:12:34.903"/>
+<msg timestamp="20220501 11:48:28.668" level="INFO">Response: test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.47,"feels_like":298.62,"temp_min":296.95,"temp_max":299.9,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416509,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200})</msg>
+<status status="PASS" starttime="20220501 11:48:28.668" endtime="20220501 11:48:28.668"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220419 17:12:34.912" endtime="20220419 17:12:34.913"/>
+<status status="PASS" starttime="20220501 11:48:28.668" endtime="20220501 11:48:28.668"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${RESPONSE.status_code}</arg>
 <arg>${STATUS_CODE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20220419 17:12:34.913" level="INFO">Argument types are:
+<msg timestamp="20220501 11:48:28.668" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:34.913" endtime="20220419 17:12:34.913"/>
+<status status="PASS" starttime="20220501 11:48:28.668" endtime="20220501 11:48:28.668"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:34.903" endtime="20220419 17:12:34.917"/>
+<status status="PASS" starttime="20220501 11:48:28.668" endtime="20220501 11:48:28.684"/>
 </kw>
 <tag>api_tests</tag>
 <tag>call_back</tag>
-<status status="PASS" starttime="20220419 17:12:34.402" endtime="20220419 17:12:34.917"/>
+<status status="PASS" starttime="20220501 11:48:28.208" endtime="20220501 11:48:28.684"/>
 </test>
 <test id="s1-s1-s1-s1-t10" name="Checking Units of measurement - For temperature in Fahrenheit use units=imperial" line="61">
 <kw name="Given I start the session" library="weather_steps">
@@ -873,10 +873,10 @@
 <arg>headers=${HEADER}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220419 17:12:34.927" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220419 17:12:34.926" endtime="20220419 17:12:34.927"/>
+<msg timestamp="20220501 11:48:28.684" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220501 11:48:28.684" endtime="20220501 11:48:28.684"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:34.925" endtime="20220419 17:12:34.928"/>
+<status status="PASS" starttime="20220501 11:48:28.684" endtime="20220501 11:48:28.684"/>
 </kw>
 <kw name="When send a request about Units of measurement" library="weather_steps">
 <arg>imperial</arg>
@@ -886,8 +886,8 @@
 <arg>units=${UNITS}</arg>
 <arg>appid=${API_KEY}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220419 17:12:34.930" level="INFO">&amp;{params} = { q=São Paulo | units=imperial | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:34.930" endtime="20220419 17:12:34.930"/>
+<msg timestamp="20220501 11:48:28.684" level="INFO">&amp;{params} = { q=São Paulo | units=imperial | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:28.684" endtime="20220501 11:48:28.684"/>
 </kw>
 <kw name="Setting session to weather using GET method" library="weather_steps">
 <kw name="GET On Session" library="RequestsLibrary">
@@ -897,56 +897,56 @@
 <arg>params=${params}</arg>
 <arg>headers=${HEADER}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20220419 17:12:35.491" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:29.106" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  path_url=/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
  body=None 
  </msg>
-<msg timestamp="20220419 17:12:35.491" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:29.106" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  status=200, reason=OK 
- headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:12:35 GMT', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '487', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?callback=test&amp;q=s%c3%a3o+paulo', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
- body=test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650398926,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}) 
+ headers={'Server': 'openresty', 'Date': 'Sun, 01 May 2022 14:48:30 GMT', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '480', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?callback=test&amp;q=s%c3%a3o+paulo', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
+ body=test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.47,"feels_like":298.62,"temp_min":296.95,"temp_max":299.9,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416509,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}) 
  </msg>
-<msg timestamp="20220419 17:12:35.491" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:34.931" endtime="20220419 17:12:35.491"/>
+<msg timestamp="20220501 11:48:29.106" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:28.684" endtime="20220501 11:48:29.106"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220419 17:12:35.501" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:35.499" endtime="20220419 17:12:35.501"/>
+<msg timestamp="20220501 11:48:29.106" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:29.106" endtime="20220501 11:48:29.106"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:34.931" endtime="20220419 17:12:35.503"/>
+<status status="PASS" starttime="20220501 11:48:28.684" endtime="20220501 11:48:29.106"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:34.928" endtime="20220419 17:12:35.506"/>
+<status status="PASS" starttime="20220501 11:48:28.684" endtime="20220501 11:48:29.106"/>
 </kw>
 <kw name="Then expect API response will be code" library="weather_steps">
 <arg>200</arg>
 <kw name="Log" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220419 17:12:35.507" level="INFO">Response: test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650398926,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200})</msg>
-<status status="PASS" starttime="20220419 17:12:35.507" endtime="20220419 17:12:35.507"/>
+<msg timestamp="20220501 11:48:29.122" level="INFO">Response: test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.47,"feels_like":298.62,"temp_min":296.95,"temp_max":299.9,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416509,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200})</msg>
+<status status="PASS" starttime="20220501 11:48:29.106" endtime="20220501 11:48:29.122"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220419 17:12:35.513" endtime="20220419 17:12:35.514"/>
+<status status="PASS" starttime="20220501 11:48:29.122" endtime="20220501 11:48:29.122"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${RESPONSE.status_code}</arg>
 <arg>${STATUS_CODE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20220419 17:12:35.517" level="INFO">Argument types are:
+<msg timestamp="20220501 11:48:29.122" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:35.516" endtime="20220419 17:12:35.517"/>
+<status status="PASS" starttime="20220501 11:48:29.122" endtime="20220501 11:48:29.122"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:35.507" endtime="20220419 17:12:35.521"/>
+<status status="PASS" starttime="20220501 11:48:29.106" endtime="20220501 11:48:29.122"/>
 </kw>
 <tag>api_tests</tag>
 <tag>units_imperial</tag>
-<status status="PASS" starttime="20220419 17:12:34.924" endtime="20220419 17:12:35.522"/>
+<status status="PASS" starttime="20220501 11:48:28.684" endtime="20220501 11:48:29.122"/>
 </test>
 <test id="s1-s1-s1-s1-t11" name="Checking Units of measurement - For temperature in Celsius use units=metric" line="67">
 <kw name="Given I start the session" library="weather_steps">
@@ -956,10 +956,10 @@
 <arg>headers=${HEADER}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220419 17:12:35.536" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220419 17:12:35.536" endtime="20220419 17:12:35.536"/>
+<msg timestamp="20220501 11:48:29.122" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220501 11:48:29.122" endtime="20220501 11:48:29.122"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:35.535" endtime="20220419 17:12:35.539"/>
+<status status="PASS" starttime="20220501 11:48:29.122" endtime="20220501 11:48:29.122"/>
 </kw>
 <kw name="When send a request about Units of measurement" library="weather_steps">
 <arg>metric</arg>
@@ -969,8 +969,8 @@
 <arg>units=${UNITS}</arg>
 <arg>appid=${API_KEY}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220419 17:12:35.541" level="INFO">&amp;{params} = { q=São Paulo | units=metric | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:35.541" endtime="20220419 17:12:35.541"/>
+<msg timestamp="20220501 11:48:29.122" level="INFO">&amp;{params} = { q=São Paulo | units=metric | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:29.122" endtime="20220501 11:48:29.122"/>
 </kw>
 <kw name="Setting session to weather using GET method" library="weather_steps">
 <kw name="GET On Session" library="RequestsLibrary">
@@ -980,56 +980,56 @@
 <arg>params=${params}</arg>
 <arg>headers=${HEADER}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20220419 17:12:36.106" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:29.591" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  path_url=/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
  body=None 
  </msg>
-<msg timestamp="20220419 17:12:36.106" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:29.591" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  status=200, reason=OK 
- headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:12:35 GMT', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '487', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?callback=test&amp;q=s%c3%a3o+paulo', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
- body=test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650398926,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}) 
+ headers={'Server': 'openresty', 'Date': 'Sun, 01 May 2022 14:48:30 GMT', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '480', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?callback=test&amp;q=s%c3%a3o+paulo', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
+ body=test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.47,"feels_like":298.62,"temp_min":296.95,"temp_max":299.9,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416509,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}) 
  </msg>
-<msg timestamp="20220419 17:12:36.106" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:35.542" endtime="20220419 17:12:36.106"/>
+<msg timestamp="20220501 11:48:29.591" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:29.122" endtime="20220501 11:48:29.591"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220419 17:12:36.124" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:36.123" endtime="20220419 17:12:36.124"/>
+<msg timestamp="20220501 11:48:29.591" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:29.591" endtime="20220501 11:48:29.591"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:35.542" endtime="20220419 17:12:36.131"/>
+<status status="PASS" starttime="20220501 11:48:29.122" endtime="20220501 11:48:29.591"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:35.540" endtime="20220419 17:12:36.132"/>
+<status status="PASS" starttime="20220501 11:48:29.122" endtime="20220501 11:48:29.591"/>
 </kw>
 <kw name="Then expect API response will be code" library="weather_steps">
 <arg>200</arg>
 <kw name="Log" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220419 17:12:36.139" level="INFO">Response: test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650398926,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200})</msg>
-<status status="PASS" starttime="20220419 17:12:36.132" endtime="20220419 17:12:36.139"/>
+<msg timestamp="20220501 11:48:29.591" level="INFO">Response: test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.47,"feels_like":298.62,"temp_min":296.95,"temp_max":299.9,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416509,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200})</msg>
+<status status="PASS" starttime="20220501 11:48:29.591" endtime="20220501 11:48:29.591"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220419 17:12:36.142" endtime="20220419 17:12:36.143"/>
+<status status="PASS" starttime="20220501 11:48:29.591" endtime="20220501 11:48:29.591"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${RESPONSE.status_code}</arg>
 <arg>${STATUS_CODE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20220419 17:12:36.147" level="INFO">Argument types are:
+<msg timestamp="20220501 11:48:29.591" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:36.146" endtime="20220419 17:12:36.147"/>
+<status status="PASS" starttime="20220501 11:48:29.591" endtime="20220501 11:48:29.591"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:36.132" endtime="20220419 17:12:36.151"/>
+<status status="PASS" starttime="20220501 11:48:29.591" endtime="20220501 11:48:29.591"/>
 </kw>
 <tag>api_tests</tag>
 <tag>units_metric</tag>
-<status status="PASS" starttime="20220419 17:12:35.534" endtime="20220419 17:12:36.152"/>
+<status status="PASS" starttime="20220501 11:48:29.122" endtime="20220501 11:48:29.591"/>
 </test>
 <test id="s1-s1-s1-s1-t12" name="Checking Units of measurement - For temperature in Kelvin use units=standard" line="73">
 <kw name="Given I start the session" library="weather_steps">
@@ -1039,10 +1039,10 @@
 <arg>headers=${HEADER}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220419 17:12:36.166" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220419 17:12:36.166" endtime="20220419 17:12:36.166"/>
+<msg timestamp="20220501 11:48:29.606" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220501 11:48:29.591" endtime="20220501 11:48:29.606"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:36.165" endtime="20220419 17:12:36.169"/>
+<status status="PASS" starttime="20220501 11:48:29.591" endtime="20220501 11:48:29.606"/>
 </kw>
 <kw name="When send a request about Units of measurement" library="weather_steps">
 <arg>standard</arg>
@@ -1052,8 +1052,8 @@
 <arg>units=${UNITS}</arg>
 <arg>appid=${API_KEY}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220419 17:12:36.172" level="INFO">&amp;{params} = { q=São Paulo | units=standard | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
-<status status="PASS" starttime="20220419 17:12:36.171" endtime="20220419 17:12:36.172"/>
+<msg timestamp="20220501 11:48:29.606" level="INFO">&amp;{params} = { q=São Paulo | units=standard | appid=e2f1d841cc16cff49a0aa18b531d71e0 }</msg>
+<status status="PASS" starttime="20220501 11:48:29.606" endtime="20220501 11:48:29.606"/>
 </kw>
 <kw name="Setting session to weather using GET method" library="weather_steps">
 <kw name="GET On Session" library="RequestsLibrary">
@@ -1063,56 +1063,56 @@
 <arg>params=${params}</arg>
 <arg>headers=${HEADER}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20220419 17:12:36.633" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:30.044" level="INFO">GET Request : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  path_url=/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} 
  body=None 
  </msg>
-<msg timestamp="20220419 17:12:36.633" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
+<msg timestamp="20220501 11:48:30.044" level="INFO">GET Response : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;callback=test&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0 
  status=200, reason=OK 
- headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:12:36 GMT', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '487', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?callback=test&amp;q=s%c3%a3o+paulo', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
- body=test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650398926,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}) 
+ headers={'Server': 'openresty', 'Date': 'Sun, 01 May 2022 14:48:31 GMT', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '480', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?callback=test&amp;q=s%c3%a3o+paulo', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
+ body=test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.47,"feels_like":298.62,"temp_min":296.95,"temp_max":299.9,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416509,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200}) 
  </msg>
-<msg timestamp="20220419 17:12:36.633" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:36.174" endtime="20220419 17:12:36.633"/>
+<msg timestamp="20220501 11:48:30.044" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:29.606" endtime="20220501 11:48:30.044"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220419 17:12:36.647" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:36.646" endtime="20220419 17:12:36.647"/>
+<msg timestamp="20220501 11:48:30.044" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:30.044" endtime="20220501 11:48:30.044"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:36.173" endtime="20220419 17:12:36.655"/>
+<status status="PASS" starttime="20220501 11:48:29.606" endtime="20220501 11:48:30.044"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:36.169" endtime="20220419 17:12:36.656"/>
+<status status="PASS" starttime="20220501 11:48:29.606" endtime="20220501 11:48:30.044"/>
 </kw>
 <kw name="Then expect API response will be code" library="weather_steps">
 <arg>200</arg>
 <kw name="Log" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220419 17:12:36.656" level="INFO">Response: test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"stations","main":{"temp":292.97,"feels_like":293.12,"temp_min":292.35,"temp_max":295.84,"pressure":1020,"humidity":81},"visibility":10000,"wind":{"speed":5.66,"deg":180},"clouds":{"all":75},"dt":1650398926,"sys":{"type":1,"id":8446,"country":"BR","sunrise":1650360094,"sunset":1650401362},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200})</msg>
-<status status="PASS" starttime="20220419 17:12:36.656" endtime="20220419 17:12:36.656"/>
+<msg timestamp="20220501 11:48:30.044" level="INFO">Response: test({"coord":{"lon":-46.6361,"lat":-23.5475},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":298.47,"feels_like":298.62,"temp_min":296.95,"temp_max":299.9,"pressure":1019,"humidity":60},"visibility":10000,"wind":{"speed":5.66,"deg":340},"clouds":{"all":0},"dt":1651416509,"sys":{"type":1,"id":8394,"country":"BR","sunrise":1651397207,"sunset":1651437618},"timezone":-10800,"id":3448439,"name":"São Paulo","cod":200})</msg>
+<status status="PASS" starttime="20220501 11:48:30.044" endtime="20220501 11:48:30.044"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Response: ${RESPONSE.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220419 17:12:36.659" endtime="20220419 17:12:36.659"/>
+<status status="PASS" starttime="20220501 11:48:30.044" endtime="20220501 11:48:30.044"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${RESPONSE.status_code}</arg>
 <arg>${STATUS_CODE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20220419 17:12:36.660" level="INFO">Argument types are:
+<msg timestamp="20220501 11:48:30.044" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:36.660" endtime="20220419 17:12:36.661"/>
+<status status="PASS" starttime="20220501 11:48:30.044" endtime="20220501 11:48:30.044"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:36.656" endtime="20220419 17:12:36.661"/>
+<status status="PASS" starttime="20220501 11:48:30.044" endtime="20220501 11:48:30.044"/>
 </kw>
 <tag>api_tests</tag>
 <tag>units_standard</tag>
-<status status="PASS" starttime="20220419 17:12:36.164" endtime="20220419 17:12:36.661"/>
+<status status="PASS" starttime="20220501 11:48:29.591" endtime="20220501 11:48:30.044"/>
 </test>
 <test id="s1-s1-s1-s1-t13" name="Search weather data by city name with invalid api key" line="79">
 <kw name="Given I start the session" library="weather_steps">
@@ -1122,10 +1122,10 @@
 <arg>headers=${HEADER}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220419 17:12:36.667" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220419 17:12:36.666" endtime="20220419 17:12:36.667"/>
+<msg timestamp="20220501 11:48:30.044" level="INFO">Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220501 11:48:30.044" endtime="20220501 11:48:30.044"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:36.666" endtime="20220419 17:12:36.668"/>
+<status status="PASS" starttime="20220501 11:48:30.044" endtime="20220501 11:48:30.044"/>
 </kw>
 <kw name="When send a request within invalid api key" library="weather_steps">
 <kw name="Create Dictionary" library="BuiltIn">
@@ -1133,8 +1133,8 @@
 <arg>q=${city}</arg>
 <arg>appid=${API_KEY_INCORRETA}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220419 17:12:36.669" level="INFO">&amp;{params} = { q=São Paulo | appid=e2f1d841cc16cff49a0aa18b531d71e0x }</msg>
-<status status="PASS" starttime="20220419 17:12:36.669" endtime="20220419 17:12:36.669"/>
+<msg timestamp="20220501 11:48:30.059" level="INFO">&amp;{params} = { q=São Paulo | appid=e2f1d841cc16cff49a0aa18b531d71e0x }</msg>
+<status status="PASS" starttime="20220501 11:48:30.059" endtime="20220501 11:48:30.059"/>
 </kw>
 <kw name="POST On Session" library="RequestsLibrary">
 <var>${RESPONSE}</var>
@@ -1144,26 +1144,26 @@
 <arg>headers=${HEADER}</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<msg timestamp="20220419 17:12:37.115" level="INFO">POST Request : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0x 
+<msg timestamp="20220501 11:48:30.481" level="INFO">POST Request : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0x 
  path_url=/data/2.5/weather?q=S%C3%A3o+Paulo&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0x 
- headers={'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '0'} 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '0'} 
  body=None 
  </msg>
-<msg timestamp="20220419 17:12:37.115" level="INFO">POST Response : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0x 
+<msg timestamp="20220501 11:48:30.481" level="INFO">POST Response : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&amp;appid=e2f1d841cc16cff49a0aa18b531d71e0x 
  status=401, reason=Unauthorized 
- headers={'Server': 'openresty', 'Date': 'Tue, 19 Apr 2022 20:12:36 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '107', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?q=s%c3%a3o+paulo', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
+ headers={'Server': 'openresty', 'Date': 'Sun, 01 May 2022 14:48:31 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '107', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?q=s%c3%a3o+paulo', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} 
  body={"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."} 
  </msg>
-<msg timestamp="20220419 17:12:37.115" level="INFO">${RESPONSE} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:36.670" endtime="20220419 17:12:37.115"/>
+<msg timestamp="20220501 11:48:30.481" level="INFO">${RESPONSE} = &lt;Response [401]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:30.059" endtime="20220501 11:48:30.481"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPONSE}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220419 17:12:37.118" level="INFO">${RESPONSE} = &lt;Response [401]&gt;</msg>
-<status status="PASS" starttime="20220419 17:12:37.117" endtime="20220419 17:12:37.118"/>
+<msg timestamp="20220501 11:48:30.481" level="INFO">${RESPONSE} = &lt;Response [401]&gt;</msg>
+<status status="PASS" starttime="20220501 11:48:30.481" endtime="20220501 11:48:30.481"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:36.668" endtime="20220419 17:12:37.123"/>
+<status status="PASS" starttime="20220501 11:48:30.044" endtime="20220501 11:48:30.481"/>
 </kw>
 <kw name="Then validate error message for invalid api key" library="weather_steps">
 <kw name="Dictionary Should Contain Item" library="Collections">
@@ -1171,21 +1171,21 @@
 <arg>message</arg>
 <arg>${MSN_INVALID_KEY}</arg>
 <doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
-<status status="PASS" starttime="20220419 17:12:37.123" endtime="20220419 17:12:37.123"/>
+<status status="PASS" starttime="20220501 11:48:30.481" endtime="20220501 11:48:30.481"/>
 </kw>
-<status status="PASS" starttime="20220419 17:12:37.123" endtime="20220419 17:12:37.123"/>
+<status status="PASS" starttime="20220501 11:48:30.481" endtime="20220501 11:48:30.481"/>
 </kw>
 <tag>api_key_invalid</tag>
 <tag>api_tests</tag>
-<status status="PASS" starttime="20220419 17:12:36.666" endtime="20220419 17:12:37.123"/>
+<status status="PASS" starttime="20220501 11:48:30.044" endtime="20220501 11:48:30.481"/>
 </test>
-<status status="FAIL" starttime="20220419 17:12:29.848" endtime="20220419 17:12:37.138"/>
+<status status="FAIL" starttime="20220501 11:48:24.456" endtime="20220501 11:48:30.481"/>
 </suite>
-<status status="FAIL" starttime="20220419 17:12:29.846" endtime="20220419 17:12:37.179"/>
+<status status="FAIL" starttime="20220501 11:48:24.456" endtime="20220501 11:48:30.481"/>
 </suite>
-<status status="FAIL" starttime="20220419 17:12:29.845" endtime="20220419 17:12:37.183"/>
+<status status="FAIL" starttime="20220501 11:48:24.456" endtime="20220501 11:48:30.481"/>
 </suite>
-<status status="FAIL" starttime="20220419 17:12:29.831" endtime="20220419 17:12:37.187"/>
+<status status="FAIL" starttime="20220501 11:48:24.441" endtime="20220501 11:48:30.481"/>
 </suite>
 <statistics>
 <total>

@@ -1,10 +1,9 @@
 *** Settings ***
-Resource           ../steps_definitions/weather_steps.robot
-
+Resource    ../steps_definitions/weather_steps.robot
 ### Behave steps call Keywords.
 
-*** Keywords ***
 
+*** Keywords ***
 When send a request about the city weather
     Setting the parameters for city weather test
     Setting session to weather using GET method

@@ -1,5 +1,6 @@
-robotframework-requests
+robotframework-requests==0.9.2
 robotframework==5.0.0
 robotframework-faker
 allure-robotframework
 pyyaml>=5.4
+robotframework-tidy
