@@ -4,3 +4,4 @@ robotframework-faker
 allure-robotframework
 pyyaml>=5.4
 robotframework-tidy
+robotframework-faker==5.0.0
