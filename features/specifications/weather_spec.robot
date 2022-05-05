@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../resources/imports_api.robot
+Resource        ../support/imports_api.robot
 
 Force Tags      api_tests
 Suite Setup     Given I start the session

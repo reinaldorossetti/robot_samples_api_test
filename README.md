@@ -48,9 +48,10 @@ Folder Structure Conventions
 
 ### A typical cucumber directory pattern.
     .
-    ├── features                    # Files and folders of framework (root code)
-        ├── commons                 # Commons files to tests spec (global use).
-        ├── steps_definitios        # Step by step of tests.
+    ├── features                    # Files and folders of framework (root code).
+        ├── resources               # Json ou YAML files.
+        ├── support                 # Commons files to tests spec (global use).
+        ├── steps_definitios        # Keywords of tests.
         ├── specifications          # Specification of what the tests should do and runner of tests.
     ├── .gitignore                  # Files and Folders to ignore in repository.
     ├── LICENSE
