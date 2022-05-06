@@ -1,12 +1,12 @@
 {
-  "uid" : "fa04d0bd2054a99f",
+  "uid" : "389cdc8d066e9e3c",
   "name" : "Checking weather by zip code",
   "fullName" : "Robot Openweather Api.Features.Specifications.Weather Spec.Checking weather by zip code",
   "historyId" : "3078451c55f5e68a05c43c2acbb68611",
   "time" : {
-    "start" : 1651850579471,
-    "stop" : 1651850579885,
-    "duration" : 414
+    "start" : 1651851198287,
+    "stop" : 1651851198639,
+    "duration" : 352
   },
   "status" : "passed",
   "flaky" : false,
@@ -18,22 +18,22 @@
   "beforeStages" : [ {
     "name" : "weather_steps.Given I start the session",
     "time" : {
-      "stop" : 1651850579074
+      "stop" : 1651851198108
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "RequestsLibrary.Create Session",
       "time" : {
-        "start" : 1651850579070,
-        "stop" : 1651850579073,
+        "start" : 1651851198105,
+        "stop" : 1651851198108,
         "duration" : 3
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 ",
         "time" : {
-          "start" : 1651850579071,
-          "stop" : 1651850579071,
+          "start" : 1651851198106,
+          "stop" : 1651851198106,
           "duration" : 0
         },
         "status" : "passed",
@@ -76,32 +76,32 @@
     "steps" : [ {
       "name" : "tasks_weather_steps_call.When send a request about weather by zip code us",
       "time" : {
-        "start" : 1651850579472,
-        "stop" : 1651850579878,
-        "duration" : 406
+        "start" : 1651851198287,
+        "stop" : 1651851198634,
+        "duration" : 347
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "weather_steps.Setting the parameters for weather by zip code us",
         "time" : {
-          "start" : 1651850579472,
-          "stop" : 1651850579475,
+          "start" : 1651851198287,
+          "stop" : 1651851198290,
           "duration" : 3
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "BuiltIn.Create Dictionary",
           "time" : {
-            "start" : 1651850579473,
-            "stop" : 1651850579473,
+            "start" : 1651851198288,
+            "stop" : 1651851198288,
             "duration" : 0
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "&{params} = { zip=94040,us | appid=e2f1d841cc16cff49a0aa18b531d71e0 }",
             "time" : {
-              "start" : 1651850579473,
-              "stop" : 1651850579473,
+              "start" : 1651851198288,
+              "stop" : 1651851198288,
               "duration" : 0
             },
             "status" : "passed",
@@ -128,16 +128,16 @@
         }, {
           "name" : "BuiltIn.Set Global Variable",
           "time" : {
-            "start" : 1651850579474,
-            "stop" : 1651850579475,
-            "duration" : 1
+            "start" : 1651851198289,
+            "stop" : 1651851198289,
+            "duration" : 0
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "&{params} = { zip=94040,us | appid=e2f1d841cc16cff49a0aa18b531d71e0 }",
             "time" : {
-              "start" : 1651850579474,
-              "stop" : 1651850579474,
+              "start" : 1651851198289,
+              "stop" : 1651851198289,
               "duration" : 0
             },
             "status" : "passed",
@@ -168,24 +168,24 @@
       }, {
         "name" : "weather_steps.Setting session to weather using GET method",
         "time" : {
-          "start" : 1651850579475,
-          "stop" : 1651850579877,
-          "duration" : 402
+          "start" : 1651851198290,
+          "stop" : 1651851198633,
+          "duration" : 343
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "RequestsLibrary.GET On Session",
           "time" : {
-            "start" : 1651850579476,
-            "stop" : 1651850579876,
-            "duration" : 400
+            "start" : 1651851198290,
+            "stop" : 1651851198632,
+            "duration" : 342
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "GET Request : url=http://api.openweathermap.org/data/2.5/weather?zip=94040%2Cus&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n path_url=/data/2.5/weather?zip=94040%2Cus&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} \n body=None \n ",
             "time" : {
-              "start" : 1651850579874,
-              "stop" : 1651850579874,
+              "start" : 1651851198631,
+              "stop" : 1651851198631,
               "duration" : 0
             },
             "status" : "passed",
@@ -197,10 +197,10 @@
             "shouldDisplayMessage" : false,
             "hasContent" : false
           }, {
-            "name" : "GET Response : url=http://api.openweathermap.org/data/2.5/weather?zip=94040%2Cus&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n status=200, reason=OK \n headers={'Server': 'openresty', 'Date': 'Fri, 06 May 2022 15:22:59 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '494', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?zip=94040%2cus', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} \n body={\"coord\":{\"lon\":-122.088,\"lat\":37.3855},\"weather\":[{\"id\":804,\"main\":\"Clouds\",\"description\":\"overcast clouds\",\"icon\":\"04d\"}],\"base\":\"stations\",\"main\":{\"temp\":288.63,\"feels_like\":288.37,\"temp_min\":285.56,\"temp_max\":290.67,\"pressure\":1018,\"humidity\":82},\"visibility\":10000,\"wind\":{\"speed\":0.89,\"deg\":51,\"gust\":2.24},\"clouds\":{\"all\":100},\"dt\":1651850579,\"sys\":{\"type\":2,\"id\":2003994,\"country\":\"US\",\"sunrise\":1651842463,\"sunset\":1651892529},\"timezone\":-25200,\"id\":0,\"name\":\"Mountain View\",\"cod\":200} \n ",
+            "name" : "GET Response : url=http://api.openweathermap.org/data/2.5/weather?zip=94040%2Cus&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n status=200, reason=OK \n headers={'Server': 'openresty', 'Date': 'Fri, 06 May 2022 15:33:18 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '495', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?zip=94040%2cus', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} \n body={\"coord\":{\"lon\":-122.088,\"lat\":37.3855},\"weather\":[{\"id\":804,\"main\":\"Clouds\",\"description\":\"overcast clouds\",\"icon\":\"04d\"}],\"base\":\"stations\",\"main\":{\"temp\":289.14,\"feels_like\":288.88,\"temp_min\":285.79,\"temp_max\":291.22,\"pressure\":1018,\"humidity\":80},\"visibility\":10000,\"wind\":{\"speed\":0.89,\"deg\":340,\"gust\":1.79},\"clouds\":{\"all\":100},\"dt\":1651851198,\"sys\":{\"type\":2,\"id\":2003994,\"country\":\"US\",\"sunrise\":1651842463,\"sunset\":1651892529},\"timezone\":-25200,\"id\":0,\"name\":\"Mountain View\",\"cod\":200} \n ",
             "time" : {
-              "start" : 1651850579875,
-              "stop" : 1651850579875,
+              "start" : 1651851198631,
+              "stop" : 1651851198631,
               "duration" : 0
             },
             "status" : "passed",
@@ -214,8 +214,8 @@
           }, {
             "name" : "${RESPONSE} = <Response [200]>",
             "time" : {
-              "start" : 1651850579875,
-              "stop" : 1651850579875,
+              "start" : 1651851198631,
+              "stop" : 1651851198631,
               "duration" : 0
             },
             "status" : "passed",
@@ -248,16 +248,16 @@
         }, {
           "name" : "BuiltIn.Set Test Variable",
           "time" : {
-            "start" : 1651850579876,
-            "stop" : 1651850579877,
+            "start" : 1651851198632,
+            "stop" : 1651851198633,
             "duration" : 1
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "${RESPONSE} = <Response [200]>",
             "time" : {
-              "start" : 1651850579876,
-              "stop" : 1651850579876,
+              "start" : 1651851198633,
+              "stop" : 1651851198633,
               "duration" : 0
             },
             "status" : "passed",
@@ -295,24 +295,24 @@
     }, {
       "name" : "weather_steps.Then expect API response will be code",
       "time" : {
-        "start" : 1651850579878,
-        "stop" : 1651850579885,
-        "duration" : 7
+        "start" : 1651851198634,
+        "stop" : 1651851198639,
+        "duration" : 5
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "BuiltIn.Log",
         "time" : {
-          "start" : 1651850579879,
-          "stop" : 1651850579880,
+          "start" : 1651851198634,
+          "stop" : 1651851198635,
           "duration" : 1
         },
         "status" : "passed",
         "steps" : [ {
-          "name" : "Response: {\"coord\":{\"lon\":-122.088,\"lat\":37.3855},\"weather\":[{\"id\":804,\"main\":\"Clouds\",\"description\":\"overcast clouds\",\"icon\":\"04d\"}],\"base\":\"stations\",\"main\":{\"temp\":288.63,\"feels_like\":288.37,\"temp_min\":285.56,\"temp_max\":290.67,\"pressure\":1018,\"humidity\":82},\"visibility\":10000,\"wind\":{\"speed\":0.89,\"deg\":51,\"gust\":2.24},\"clouds\":{\"all\":100},\"dt\":1651850579,\"sys\":{\"type\":2,\"id\":2003994,\"country\":\"US\",\"sunrise\":1651842463,\"sunset\":1651892529},\"timezone\":-25200,\"id\":0,\"name\":\"Mountain View\",\"cod\":200}",
+          "name" : "Response: {\"coord\":{\"lon\":-122.088,\"lat\":37.3855},\"weather\":[{\"id\":804,\"main\":\"Clouds\",\"description\":\"overcast clouds\",\"icon\":\"04d\"}],\"base\":\"stations\",\"main\":{\"temp\":289.14,\"feels_like\":288.88,\"temp_min\":285.79,\"temp_max\":291.22,\"pressure\":1018,\"humidity\":80},\"visibility\":10000,\"wind\":{\"speed\":0.89,\"deg\":340,\"gust\":1.79},\"clouds\":{\"all\":100},\"dt\":1651851198,\"sys\":{\"type\":2,\"id\":2003994,\"country\":\"US\",\"sunrise\":1651842463,\"sunset\":1651892529},\"timezone\":-25200,\"id\":0,\"name\":\"Mountain View\",\"cod\":200}",
           "time" : {
-            "start" : 1651850579880,
-            "stop" : 1651850579880,
+            "start" : 1651851198635,
+            "stop" : 1651851198635,
             "duration" : 0
           },
           "status" : "passed",
@@ -336,8 +336,8 @@
       }, {
         "name" : "BuiltIn.Log To Console",
         "time" : {
-          "start" : 1651850579881,
-          "stop" : 1651850579882,
+          "start" : 1651851198636,
+          "stop" : 1651851198637,
           "duration" : 1
         },
         "status" : "passed",
@@ -354,16 +354,16 @@
       }, {
         "name" : "BuiltIn.Should Be Equal As Strings",
         "time" : {
-          "start" : 1651850579883,
-          "stop" : 1651850579884,
+          "start" : 1651851198637,
+          "stop" : 1651851198638,
           "duration" : 1
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "Argument types are:\n<class 'int'>\n<class 'str'>",
           "time" : {
-            "start" : 1651850579884,
-            "stop" : 1651850579884,
+            "start" : 1651851198638,
+            "stop" : 1651851198638,
             "duration" : 0
           },
           "status" : "passed",
@@ -423,10 +423,10 @@
     "value" : "cpython3"
   }, {
     "name" : "host",
-    "value" : "fv-az375-767"
+    "value" : "fv-az198-826"
   }, {
     "name" : "thread",
-    "value" : "default-56724c89-2100-41c1-b5fe-020faf4e316b"
+    "value" : "default-d7e8b93a-524e-45d9-a612-f92612638e3f"
   }, {
     "name" : "tag",
     "value" : "api_tests"
@@ -453,6 +453,6 @@
     "categories" : [ ],
     "tags" : [ "api_tests", "weather_zipcod" ]
   },
-  "source" : "fa04d0bd2054a99f.json",
+  "source" : "389cdc8d066e9e3c.json",
   "parameterValues" : [ ]
 }
