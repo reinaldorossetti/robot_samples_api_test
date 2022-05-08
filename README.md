@@ -51,7 +51,7 @@ Folder Structure Conventions
     ├── features                    # Files and folders of framework (root code).
         ├── resources               # Json ou YAML files.
         ├── support                 # Commons files to tests spec (global use).
-        ├── steps_definitios        # Keywords of tests.
+        ├── steps_definitions       # Keywords of tests.
         ├── specifications          # Specification of what the tests should do and runner of tests.
     ├── .gitignore                  # Files and Folders to ignore in repository.
     ├── LICENSE
@@ -59,10 +59,8 @@ Folder Structure Conventions
     └── requirements.txt            # Libraries to need to install.
 
 > Use short lowercase names at least for the top-level files and folders except  
-> `LICENSE`, `README.md`, in folder pages the name of pages follow Camel Case.  
-
-> Use yaml file to store as environment variables and locators, used in the robot files.  
-> The project follow Pycharm Python static code analysis tool which looks for programming errors.  
+> `LICENSE`, `README.md`, in folder pages the name follow github default in Letter case.  
+> Use yaml file to store as environment variables and locators, used in the robot files.   
 > The Variables that are not mutable must follow upcase in python by default.  
 
 ** This project follow the best pratices, below refences of the same.
