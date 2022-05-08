@@ -1,15 +1,4 @@
 {
-  "total" : 1,
-  "items" : [ {
-    "uid" : "445fac8c130d03b54fa2c10b897952f8",
-    "name" : "Robot Openweather Api",
-    "statistic" : {
-      "failed" : 1,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 12,
-      "unknown" : 0,
-      "total" : 13
-    }
-  } ]
+  "total" : 0,
+  "items" : [ ]
 }
