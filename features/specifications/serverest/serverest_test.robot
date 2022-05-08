@@ -2,6 +2,8 @@
 Library    RequestsLibrary
 Library    Collections
 Library    FakerLibrary
+Library    JSONSchemaLibrary    ${EXECDIR}/features/support/resources/schemas/
+Resource        ../../support/base.robot
 
 Suite Setup    Criar a sessao com a api serverest
 
@@ -41,8 +43,8 @@ Criar a sessao com a api serverest
 
 Cadastrar o usuario de teste
     ${RESPONSE}=    POST On Session        ${ALIAS}    json=${usuario}    url=${URL}/usuarios
-    Log        Resposta Retornada: ${RESPONSE}
-    Log To Console     Resposta Retornada: ${RESPONSE}
+    Log        Resposta Retornada: ${RESPONSE.json()}
+    Log To Console     Resposta Retornada: ${RESPONSE.json()}
     Request Should Be Successful
     Status Should Be                  201        ${RESPONSE}
     Should Be Equal As Strings        Created    ${RESPONSE.reason}
@@ -58,6 +60,7 @@ Cadastrar o usuario de teste
     Set Suite Variable                ${ID_PRODUTO_CADASTRADO}
     Log                Resposta ID: ${ID_PRODUTO_CADASTRADO}
     Log To Console     Resposta ID: ${ID_PRODUTO_CADASTRADO}
+    Validate Json        user.json        ${RESPONSE.json()}  
 
 Efetuar o login
     ${BODY}=    Create Dictionary     email=${usuario.email}    password=${usuario.password}

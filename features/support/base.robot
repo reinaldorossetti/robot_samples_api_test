@@ -6,9 +6,8 @@ Library        JSONLibrary
 *** Keywords ***
 
 Get JSON
-    [Arguments]        ${file_name}
-    ${file}            Get File        ${EXECDIR}/features/resources/data/${file_name}
-    ${dados}           Load Json From File	        ${file} 
+    [Arguments]        ${file_name} 
+    ${dados}           Load Json From File	        ${EXECDIR}/features/support/resources/schemas/${file_name}
     [Return]           ${dados}
 
 Update JSON

@@ -5,3 +5,5 @@ allure-robotframework
 pyyaml>=5.4
 robotframework-tidy
 robotframework-jsonlibrary
+robotframework-jsonschemalibrary
+jsonschema

@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../resources/imports_api.robot
+Resource        ../support/imports_api.robot
 
 *** Keywords ***
 Given I start the session
