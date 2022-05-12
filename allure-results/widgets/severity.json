@@ -1,1 +1,131 @@
-[ ]
+[ {
+  "uid" : "86a005c73d6e98a5",
+  "name" : "Checking weather by not found zip code",
+  "time" : {
+    "start" : 1652385661988,
+    "stop" : 1652385662045,
+    "duration" : 57
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c211d28358714503",
+  "name" : "Search weather data by city name with invalid api key",
+  "time" : {
+    "start" : 1652385662472,
+    "stop" : 1652385662525,
+    "duration" : 53
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "209c71fd5b8f5f4b",
+  "name" : "Checking cities within a rectangle zone",
+  "time" : {
+    "start" : 1652385662943,
+    "stop" : 1652385663192,
+    "duration" : 249
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "f8edd50df3653e33",
+  "name" : "Checking weather by longitude and latitude",
+  "time" : {
+    "start" : 1652385661858,
+    "stop" : 1652385661921,
+    "duration" : 63
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5ed5aceebb8a1868",
+  "name" : "Checking weather by zip code",
+  "time" : {
+    "start" : 1652385661925,
+    "stop" : 1652385661983,
+    "duration" : 58
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "df9514e4d6dc3254",
+  "name" : "Checking Units of measurement - For temperature in Kelvin use units=standard",
+  "time" : {
+    "start" : 1652385662412,
+    "stop" : 1652385662467,
+    "duration" : 55
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d94dfc6c84800338",
+  "name" : "Checking cities in circle",
+  "time" : {
+    "start" : 1652385662108,
+    "stop" : 1652385662166,
+    "duration" : 58
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "53176ddadcb59eb7",
+  "name" : "Checking Call back function",
+  "time" : {
+    "start" : 1652385662232,
+    "stop" : 1652385662289,
+    "duration" : 57
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "27765d5b6976e3d2",
+  "name" : "Checking the weather by city",
+  "time" : {
+    "start" : 1652385661539,
+    "stop" : 1652385661779,
+    "duration" : 240
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3afd39177d0249ce",
+  "name" : "Checking multilingual support",
+  "time" : {
+    "start" : 1652385662170,
+    "stop" : 1652385662228,
+    "duration" : 58
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "61ecdd72630c912f",
+  "name" : "Checking the weather by id",
+  "time" : {
+    "start" : 1652385661784,
+    "stop" : 1652385661854,
+    "duration" : 70
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9abcd59311540b5e",
+  "name" : "Checking Units of measurement - For temperature in Fahrenheit use units=imperial",
+  "time" : {
+    "start" : 1652385662294,
+    "stop" : 1652385662349,
+    "duration" : 55
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "56feb8531ec24d03",
+  "name" : "Checking Units of measurement - For temperature in Celsius use units=metric",
+  "time" : {
+    "start" : 1652385662353,
+    "stop" : 1652385662408,
+    "duration" : 55
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
