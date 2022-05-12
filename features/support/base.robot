@@ -2,13 +2,18 @@
 Library        OperatingSystem
 Library        JSONLibrary
 
-
 *** Keywords ***
 
-Get JSON
+Get Json
     [Arguments]        ${file_name} 
     ${dados}           Load Json From File	        ${EXECDIR}/features/support/resources/schemas/${file_name}
     [Return]           ${dados}
+
+Get Json Schema
+    [Arguments]            ${file_name} 
+    ${schema_binary}       Get Binary File	        ${EXECDIR}/features/support/resources/schemas/${file_name}
+    ${schema}              evaluate    json.loads('''${schema_binary}''')    json
+    [Return]               ${schema}
 
 Update JSON
     [Arguments]        ${file_name}    ${Chave}    ${Valor}

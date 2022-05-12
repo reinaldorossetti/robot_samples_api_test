@@ -1,0 +1,8 @@
+ADDRESS: Avenida Guilherme Perereca Guglielmo, 676, Barueri -SP, Brasil
+WEATHER_ENDPOINT: weather?
+CITY_ENDPOINT:  box/city?
+HOST_BASE: http://api.openweathermap.org/data/2.5
+CITY: São Paulo
+COORDINATES: {'lon': -46.6361, 'lat': -23.5475}
+COUNTRY: BR
+MSN_INVALID_KEY:    Invalid API key. Please see http://openweathermap.org/faq#error401 for more info.

@@ -2,10 +2,10 @@
 Library    RequestsLibrary
 Library    Collections
 Library    FakerLibrary
-Library    JSONSchemaLibrary    ${EXECDIR}/features/support/resources/schemas/
 Resource        ../../support/base.robot
-
 Suite Setup    Criar a sessao com a api serverest
+Library    JSONSchemaLibrary    ${EXECDIR}/features/support/resources/schemas/
+Library        jsonschema
 
 *** Variables ***
 ${URL}                https://serverest.dev
@@ -19,6 +19,7 @@ ${quantidade}          5
 ${ID_PRODUTO_CADASTRADO}
 ${produto}
 
+
 *** Test Cases ***
 Testar Listar os Produtos
     [Tags]    ListarProduto
@@ -29,12 +30,12 @@ Testar Listar os Produtos
     
 *** Keywords ***
 Criar os dados do usuario
-    ${nome}=         FakerLibrary.Name
-    ${email}=        FakerLibrary.Email
-    ${password}=     FakerLibrary.Password
+    ${nome}=         Name
+    ${email}=        Email
+    ${password}=     Password
     ${usuario}=      Create Dictionary    nome=${nome}    email=${email}    password=${password}   administrador=${admin}
     Set Suite Variable    ${usuario}
-    Log       ${usuario} 
+    Log               ${usuario} 
 
 Criar a sessao com a api serverest
     Criar os dados do usuario
@@ -58,25 +59,25 @@ Cadastrar o usuario de teste
     Length Should Be                  ${RESPONSE.json()["_id"]}    16
     ${ID_PRODUTO_CADASTRADO}          Get From Dictionary    ${RESPONSE.json()}    _id
     Set Suite Variable                ${ID_PRODUTO_CADASTRADO}
-    Log                Resposta ID: ${ID_PRODUTO_CADASTRADO}
-    Log To Console     Resposta ID: ${ID_PRODUTO_CADASTRADO}
+    Log To Console     Resposta ID:   ${ID_PRODUTO_CADASTRADO}
     Validate Json        user.json        ${RESPONSE.json()}  
 
 Efetuar o login
     ${BODY}=    Create Dictionary     email=${usuario.email}    password=${usuario.password}
     ${RESPONSE}=    POST On Session        ${ALIAS}    json=${BODY}    url=${URL}/login
-    Log                Resposta : ${RESPONSE}
-    Log To Console     Resposta : ${RESPONSE}
+    Log                Resposta : ${RESPONSE.json()}
+    Log To Console     Resposta : ${RESPONSE.json()}
     Request Should Be Successful
     Dictionary Should Contain Item    ${RESPONSE.json()}     message   Login realizado com sucesso
     Should Not Be Empty    ${RESPONSE.json()["authorization"]}
     ${TOKEN}          Get From Dictionary    ${RESPONSE.json()}    authorization
     Set Suite Variable                ${TOKEN}
+    Validate Json           login.json       ${RESPONSE.json()}     
 
 Cadastrar um Produto
-    ${produto}=           FakerLibrary.City
+    ${produto}            FakerLibrary.company
     Set Suite Variable    ${produto} 
-    Log To Console        Token : ${TOKEN}
+    Log To Console        produto : ${produto}
     ${BODY}=            Create Dictionary     nome=${produto}    preco=${preco}    descricao=${descricao}    quantidade=${quantidade}  
     ${HEADERS}=         Create Dictionary    Authorization=${TOKEN}
     ${RESPONSE}=        POST On Session        ${ALIAS}    json=${BODY}    url=produtos    headers=${HEADERS}
@@ -86,15 +87,22 @@ Cadastrar um Produto
     Length Should Be                  ${RESPONSE.json()["_id"]}    16
     ${ID_PRODUTO_CADASTRADO}  Get From Dictionary    ${RESPONSE.json()}    _id
     Set Suite Variable   ${ID_PRODUTO_CADASTRADO}
+    Log                Resposta : ${RESPONSE.json()}
+    Log To Console     Resposta : ${RESPONSE.json()}
+    ${schema}=        Get Json Schema   produto.json   
+    validate          instance=${RESPONSE.json()}    schema=${schema}
 
 Listar o produto cadastrado
     ${HEADERS}=         Create Dictionary    Authorization=${TOKEN}
     ${PARAMS}=          Create Dictionary    _id=${ID_PRODUTO_CADASTRADO}
     ${RESPONSE}=            GET On Session      ${ALIAS}    url=produtos    headers=${HEADERS}   params=${PARAMS}
-    Log                Resposta : ${RESPONSE}
+    Log                Resposta : ${RESPONSE.json()}
+    Log To Console     Resposta : ${RESPONSE.json()}
     Request Should Be Successful
     Dictionary Should Contain Item    ${RESPONSE.json()["produtos"][0]}     nome           ${produto}
     Dictionary Should Contain Item    ${RESPONSE.json()["produtos"][0]}     preco          ${preco}
     Dictionary Should Contain Item    ${RESPONSE.json()["produtos"][0]}     descricao      ${descricao} 
     Dictionary Should Contain Item    ${RESPONSE.json()["produtos"][0]}     quantidade     ${quantidade}
-    Dictionary Should Contain Item    ${RESPONSE.json()["produtos"][0]}     _id     ${ID_PRODUTO_CADASTRADO}
+    Dictionary Should Contain Item    ${RESPONSE.json()["produtos"][0]}     _id            ${ID_PRODUTO_CADASTRADO}
+    ${schema}=    Get Json Schema     listar_produto.json
+    Validate      instance=${RESPONSE.json()}         schema=${schema}      

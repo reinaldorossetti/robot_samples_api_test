@@ -1,0 +1,74 @@
+{
+    "$schema": "http://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "required": [
+        "quantidade",
+        "produtos"
+    ],
+    "properties": {
+        "quantidade": {
+            "type": "integer",
+            "default": 0
+        },
+        "produtos": {
+            "type": "array",
+            "default": [],
+            "items": {
+                "type": "object",
+                "default": {},
+                "title": "A Schema",
+                "required": [
+                    "nome",
+                    "preco",
+                    "descricao",
+                    "quantidade",
+                    "_id"
+                ],
+                "properties": {
+                    "nome": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The nome Schema",
+                        "examples": [
+                            "Vaughan and Sons"
+                        ]
+                    },
+                    "preco": {
+                        "type": "integer",
+                        "default": 0,
+                        "title": "The preco Schema",
+                        "examples": [
+                            470
+                        ]
+                    },
+                    "descricao": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The descricao Schema",
+                        "examples": [
+                            "Mouse"
+                        ]
+                    },
+                    "quantidade": {
+                        "type": "integer",
+                        "default": 0,
+                        "title": "The quantidade Schema",
+                        "examples": [
+                            5
+                        ]
+                    },
+                    "_id": {
+                        "type": "string",
+                        "default": "",
+                        "title": "The _id Schema",
+                        "examples": [
+                            "kL80gbh7vbjmq6lE"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
