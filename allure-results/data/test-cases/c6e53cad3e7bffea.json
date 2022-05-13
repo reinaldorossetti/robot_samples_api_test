@@ -1,12 +1,12 @@
 {
-  "uid" : "61ecdd72630c912f",
-  "name" : "Checking the weather by id",
-  "fullName" : "Robot Openweather Api.Features.Specifications.Weather.Weather Spec.Checking the weather by id",
-  "historyId" : "d86ce5470a67c576d7c544ee78a77365",
+  "uid" : "c6e53cad3e7bffea",
+  "name" : "Checking Call back function",
+  "fullName" : "Robot Openweather Api.Features.Specifications.Weather.Weather Spec.Checking Call back function",
+  "historyId" : "085acc378454ac9a9b92f9be94204a0b",
   "time" : {
-    "start" : 1652385661784,
-    "stop" : 1652385661854,
-    "duration" : 70
+    "start" : 1652438554121,
+    "stop" : 1652438554192,
+    "duration" : 71
   },
   "status" : "passed",
   "flaky" : false,
@@ -18,22 +18,22 @@
   "beforeStages" : [ {
     "name" : "weather_steps.Given I start the session",
     "time" : {
-      "stop" : 1652385661538
+      "stop" : 1652438552934
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "RequestsLibrary.Create Session",
       "time" : {
-        "start" : 1652385661535,
-        "stop" : 1652385661538,
+        "start" : 1652438552931,
+        "stop" : 1652438552934,
         "duration" : 3
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 ",
         "time" : {
-          "start" : 1652385661536,
-          "stop" : 1652385661536,
+          "start" : 1652438552931,
+          "stop" : 1652438552931,
           "duration" : 0
         },
         "status" : "passed",
@@ -74,34 +74,34 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "tasks_weather_steps_call.When send a request about the city weather by id",
+      "name" : "tasks_weather_steps_call.When send a request about call back support",
       "time" : {
-        "start" : 1652385661784,
-        "stop" : 1652385661844,
-        "duration" : 60
+        "start" : 1652438554121,
+        "stop" : 1652438554186,
+        "duration" : 65
       },
       "status" : "passed",
       "steps" : [ {
-        "name" : "weather_steps.Setting the parameters for weather test by id",
+        "name" : "weather_steps.Setting the parameters for call back support",
         "time" : {
-          "start" : 1652385661785,
-          "stop" : 1652385661787,
+          "start" : 1652438554122,
+          "stop" : 1652438554124,
           "duration" : 2
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "BuiltIn.Create Dictionary",
           "time" : {
-            "start" : 1652385661785,
-            "stop" : 1652385661786,
+            "start" : 1652438554122,
+            "stop" : 1652438554123,
             "duration" : 1
           },
           "status" : "passed",
           "steps" : [ {
-            "name" : "&{params} = { id=3448439 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }",
+            "name" : "&{params} = { q=São Paulo | callback=test | appid=e2f1d841cc16cff49a0aa18b531d71e0 }",
             "time" : {
-              "start" : 1652385661785,
-              "stop" : 1652385661785,
+              "start" : 1652438554122,
+              "stop" : 1652438554122,
               "duration" : 0
             },
             "status" : "passed",
@@ -116,9 +116,12 @@
           "attachments" : [ ],
           "parameters" : [ {
             "name" : "arg1",
-            "value" : "id=${ID_CITY}"
+            "value" : "q=${city}"
           }, {
             "name" : "arg2",
+            "value" : "callback=test"
+          }, {
+            "name" : "arg3",
             "value" : "appid=${API_KEY}"
           } ],
           "stepsCount" : 1,
@@ -128,16 +131,16 @@
         }, {
           "name" : "BuiltIn.Set Global Variable",
           "time" : {
-            "start" : 1652385661786,
-            "stop" : 1652385661787,
+            "start" : 1652438554123,
+            "stop" : 1652438554124,
             "duration" : 1
           },
           "status" : "passed",
           "steps" : [ {
-            "name" : "&{params} = { id=3448439 | appid=e2f1d841cc16cff49a0aa18b531d71e0 }",
+            "name" : "&{params} = { q=São Paulo | callback=test | appid=e2f1d841cc16cff49a0aa18b531d71e0 }",
             "time" : {
-              "start" : 1652385661786,
-              "stop" : 1652385661786,
+              "start" : 1652438554123,
+              "stop" : 1652438554123,
               "duration" : 0
             },
             "status" : "passed",
@@ -168,24 +171,24 @@
       }, {
         "name" : "weather_steps.Setting session to weather using GET method",
         "time" : {
-          "start" : 1652385661787,
-          "stop" : 1652385661843,
-          "duration" : 56
+          "start" : 1652438554124,
+          "stop" : 1652438554186,
+          "duration" : 62
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "RequestsLibrary.GET On Session",
           "time" : {
-            "start" : 1652385661788,
-            "stop" : 1652385661842,
-            "duration" : 54
+            "start" : 1652438554124,
+            "stop" : 1652438554185,
+            "duration" : 61
           },
           "status" : "passed",
           "steps" : [ {
-            "name" : "GET Request : url=http://api.openweathermap.org/data/2.5/weather?id=3448439&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n path_url=/data/2.5/weather?id=3448439&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} \n body=None \n ",
+            "name" : "GET Request : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&callback=test&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n path_url=/data/2.5/weather?q=S%C3%A3o+Paulo&callback=test&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json'} \n body=None \n ",
             "time" : {
-              "start" : 1652385661841,
-              "stop" : 1652385661841,
+              "start" : 1652438554183,
+              "stop" : 1652438554183,
               "duration" : 0
             },
             "status" : "passed",
@@ -197,10 +200,10 @@
             "shouldDisplayMessage" : false,
             "hasContent" : false
           }, {
-            "name" : "GET Response : url=http://api.openweathermap.org/data/2.5/weather?id=3448439&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n status=200, reason=OK \n headers={'Server': 'openresty', 'Date': 'Thu, 12 May 2022 20:01:01 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '477', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?id=3448439', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} \n body={\"coord\":{\"lon\":-46.6361,\"lat\":-23.5475},\"weather\":[{\"id\":801,\"main\":\"Clouds\",\"description\":\"few clouds\",\"icon\":\"02d\"}],\"base\":\"stations\",\"main\":{\"temp\":292.06,\"feels_like\":292.1,\"temp_min\":290.62,\"temp_max\":295.09,\"pressure\":1017,\"humidity\":80},\"visibility\":10000,\"wind\":{\"speed\":5.66,\"deg\":150},\"clouds\":{\"all\":20},\"dt\":1652385404,\"sys\":{\"type\":1,\"id\":8394,\"country\":\"BR\",\"sunrise\":1652347918,\"sunset\":1652387636},\"timezone\":-10800,\"id\":3448439,\"name\":\"São Paulo\",\"cod\":200} \n ",
+            "name" : "GET Response : url=http://api.openweathermap.org/data/2.5/weather?q=S%C3%A3o+Paulo&callback=test&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n status=200, reason=OK \n headers={'Server': 'openresty', 'Date': 'Fri, 13 May 2022 10:42:34 GMT', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '484', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?callback=test&q=s%c3%a3o+paulo', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} \n body=test({\"coord\":{\"lon\":-46.6361,\"lat\":-23.5475},\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"base\":\"stations\",\"main\":{\"temp\":289.35,\"feels_like\":289.3,\"temp_min\":288.9,\"temp_max\":291.73,\"pressure\":1021,\"humidity\":87},\"visibility\":10000,\"wind\":{\"speed\":3.6,\"deg\":110},\"clouds\":{\"all\":75},\"dt\":1652438395,\"sys\":{\"type\":1,\"id\":8394,\"country\":\"BR\",\"sunrise\":1652434347,\"sunset\":1652474007},\"timezone\":-10800,\"id\":3448439,\"name\":\"São Paulo\",\"cod\":200}) \n ",
             "time" : {
-              "start" : 1652385661841,
-              "stop" : 1652385661841,
+              "start" : 1652438554184,
+              "stop" : 1652438554184,
               "duration" : 0
             },
             "status" : "passed",
@@ -214,8 +217,8 @@
           }, {
             "name" : "${RESPONSE} = <Response [200]>",
             "time" : {
-              "start" : 1652385661841,
-              "stop" : 1652385661841,
+              "start" : 1652438554184,
+              "stop" : 1652438554184,
               "duration" : 0
             },
             "status" : "passed",
@@ -248,16 +251,16 @@
         }, {
           "name" : "BuiltIn.Set Test Variable",
           "time" : {
-            "start" : 1652385661842,
-            "stop" : 1652385661843,
+            "start" : 1652438554185,
+            "stop" : 1652438554186,
             "duration" : 1
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "${RESPONSE} = <Response [200]>",
             "time" : {
-              "start" : 1652385661843,
-              "stop" : 1652385661843,
+              "start" : 1652438554185,
+              "stop" : 1652438554185,
               "duration" : 0
             },
             "status" : "passed",
@@ -293,26 +296,26 @@
       "shouldDisplayMessage" : false,
       "hasContent" : true
     }, {
-      "name" : "weather_steps.Then validating the Response's success data",
+      "name" : "weather_steps.Then expect API response will be code",
       "time" : {
-        "start" : 1652385661844,
-        "stop" : 1652385661853,
-        "duration" : 9
+        "start" : 1652438554186,
+        "stop" : 1652438554191,
+        "duration" : 5
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "BuiltIn.Log",
         "time" : {
-          "start" : 1652385661844,
-          "stop" : 1652385661846,
-          "duration" : 2
+          "start" : 1652438554187,
+          "stop" : 1652438554188,
+          "duration" : 1
         },
         "status" : "passed",
         "steps" : [ {
-          "name" : "Response: {\"coord\":{\"lon\":-46.6361,\"lat\":-23.5475},\"weather\":[{\"id\":801,\"main\":\"Clouds\",\"description\":\"few clouds\",\"icon\":\"02d\"}],\"base\":\"stations\",\"main\":{\"temp\":292.06,\"feels_like\":292.1,\"temp_min\":290.62,\"temp_max\":295.09,\"pressure\":1017,\"humidity\":80},\"visibility\":10000,\"wind\":{\"speed\":5.66,\"deg\":150},\"clouds\":{\"all\":20},\"dt\":1652385404,\"sys\":{\"type\":1,\"id\":8394,\"country\":\"BR\",\"sunrise\":1652347918,\"sunset\":1652387636},\"timezone\":-10800,\"id\":3448439,\"name\":\"São Paulo\",\"cod\":200}",
+          "name" : "Response: test({\"coord\":{\"lon\":-46.6361,\"lat\":-23.5475},\"weather\":[{\"id\":803,\"main\":\"Clouds\",\"description\":\"broken clouds\",\"icon\":\"04d\"}],\"base\":\"stations\",\"main\":{\"temp\":289.35,\"feels_like\":289.3,\"temp_min\":288.9,\"temp_max\":291.73,\"pressure\":1021,\"humidity\":87},\"visibility\":10000,\"wind\":{\"speed\":3.6,\"deg\":110},\"clouds\":{\"all\":75},\"dt\":1652438395,\"sys\":{\"type\":1,\"id\":8394,\"country\":\"BR\",\"sunrise\":1652434347,\"sunset\":1652474007},\"timezone\":-10800,\"id\":3448439,\"name\":\"São Paulo\",\"cod\":200})",
           "time" : {
-            "start" : 1652385661845,
-            "stop" : 1652385661845,
+            "start" : 1652438554188,
+            "stop" : 1652438554188,
             "duration" : 0
           },
           "status" : "passed",
@@ -336,9 +339,9 @@
       }, {
         "name" : "BuiltIn.Log To Console",
         "time" : {
-          "start" : 1652385661846,
-          "stop" : 1652385661847,
-          "duration" : 1
+          "start" : 1652438554188,
+          "stop" : 1652438554190,
+          "duration" : 2
         },
         "status" : "passed",
         "steps" : [ ],
@@ -352,123 +355,18 @@
         "shouldDisplayMessage" : false,
         "hasContent" : true
       }, {
-        "name" : "BuiltIn.Should Not Be Empty",
-        "time" : {
-          "start" : 1652385661847,
-          "stop" : 1652385661848,
-          "duration" : 1
-        },
-        "status" : "passed",
-        "steps" : [ {
-          "name" : "Length is 13",
-          "time" : {
-            "start" : 1652385661848,
-            "stop" : 1652385661848,
-            "duration" : 0
-          },
-          "status" : "passed",
-          "steps" : [ ],
-          "attachments" : [ ],
-          "parameters" : [ ],
-          "stepsCount" : 0,
-          "attachmentsCount" : 0,
-          "shouldDisplayMessage" : false,
-          "hasContent" : false
-        } ],
-        "attachments" : [ ],
-        "parameters" : [ {
-          "name" : "arg1",
-          "value" : "${RESPONSE.json()}"
-        } ],
-        "stepsCount" : 1,
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "hasContent" : true
-      }, {
-        "name" : "Collections.Dictionary Should Contain Item",
-        "time" : {
-          "start" : 1652385661849,
-          "stop" : 1652385661850,
-          "duration" : 1
-        },
-        "status" : "passed",
-        "steps" : [ ],
-        "attachments" : [ ],
-        "parameters" : [ {
-          "name" : "arg1",
-          "value" : "${RESPONSE.json()[\"sys\"]}"
-        }, {
-          "name" : "arg2",
-          "value" : "country"
-        }, {
-          "name" : "arg3",
-          "value" : "${COUNTRY}"
-        } ],
-        "stepsCount" : 0,
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "hasContent" : true
-      }, {
-        "name" : "Collections.Dictionary Should Contain Item",
-        "time" : {
-          "start" : 1652385661850,
-          "stop" : 1652385661851,
-          "duration" : 1
-        },
-        "status" : "passed",
-        "steps" : [ ],
-        "attachments" : [ ],
-        "parameters" : [ {
-          "name" : "arg1",
-          "value" : "${RESPONSE.json()}"
-        }, {
-          "name" : "arg2",
-          "value" : "coord"
-        }, {
-          "name" : "arg3",
-          "value" : "${COORDINATES}"
-        } ],
-        "stepsCount" : 0,
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "hasContent" : true
-      }, {
-        "name" : "Collections.Dictionary Should Contain Item",
-        "time" : {
-          "start" : 1652385661851,
-          "stop" : 1652385661852,
-          "duration" : 1
-        },
-        "status" : "passed",
-        "steps" : [ ],
-        "attachments" : [ ],
-        "parameters" : [ {
-          "name" : "arg1",
-          "value" : "${RESPONSE.json()}"
-        }, {
-          "name" : "arg2",
-          "value" : "name"
-        }, {
-          "name" : "arg3",
-          "value" : "${CITY}"
-        } ],
-        "stepsCount" : 0,
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "hasContent" : true
-      }, {
         "name" : "BuiltIn.Should Be Equal As Strings",
         "time" : {
-          "start" : 1652385661852,
-          "stop" : 1652385661853,
+          "start" : 1652438554190,
+          "stop" : 1652438554191,
           "duration" : 1
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "Argument types are:\n<class 'int'>\n<class 'str'>",
           "time" : {
-            "start" : 1652385661853,
-            "stop" : 1652385661853,
+            "start" : 1652438554191,
+            "stop" : 1652438554191,
             "duration" : 0
           },
           "status" : "passed",
@@ -486,7 +384,7 @@
           "value" : "${RESPONSE.status_code}"
         }, {
           "name" : "arg2",
-          "value" : "${STATUS_ESPERADO}"
+          "value" : "${STATUS_CODE}"
         } ],
         "stepsCount" : 1,
         "attachmentsCount" : 0,
@@ -494,15 +392,18 @@
         "hasContent" : true
       } ],
       "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 10,
+      "parameters" : [ {
+        "name" : "arg1",
+        "value" : "200"
+      } ],
+      "stepsCount" : 5,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
       "hasContent" : true
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 24,
+    "stepsCount" : 19,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
@@ -525,22 +426,22 @@
     "value" : "cpython3"
   }, {
     "name" : "host",
-    "value" : "fv-az77-723"
+    "value" : "fv-az130-313"
   }, {
     "name" : "thread",
-    "value" : "default-40e216ba-1e5d-4d98-89e1-7cf8b36f33a2"
+    "value" : "default-1dfdc204-352f-494c-874a-6b7e4a33068f"
   }, {
     "name" : "tag",
     "value" : "api_tests"
   }, {
     "name" : "tag",
-    "value" : "weather_by_id"
+    "value" : "call_back"
   }, {
     "name" : "tag",
     "value" : "api_tests"
   }, {
     "name" : "tag",
-    "value" : "weather_by_id"
+    "value" : "call_back"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -553,8 +454,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ "api_tests", "weather_by_id" ]
+    "tags" : [ "api_tests", "call_back" ]
   },
-  "source" : "61ecdd72630c912f.json",
+  "source" : "c6e53cad3e7bffea.json",
   "parameterValues" : [ ]
 }
