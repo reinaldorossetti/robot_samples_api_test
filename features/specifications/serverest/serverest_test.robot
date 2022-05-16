@@ -1,10 +1,10 @@
 *** Settings ***
-Library    RequestsLibrary
-Library    Collections
-Library    FakerLibrary
+Library        RequestsLibrary
+Library        Collections
+Library        FakerLibrary
 Resource        ../../support/base.robot
 Suite Setup    Criar a sessao com a api serverest
-Library    JSONSchemaLibrary    ${EXECDIR}/features/support/resources/schemas/
+Library        JSONSchemaLibrary    ${EXECDIR}/features/support/resources/schemas/
 Library        jsonschema
 
 *** Variables ***
@@ -30,12 +30,12 @@ Testar Listar os Produtos
     
 *** Keywords ***
 Criar os dados do usuario
-    ${nome}=         Name
-    ${email}=        Email
-    ${password}=     Password
+    ${nome}=                 Name
+    ${email}=                Email
+    ${password}=             Password
     ${usuario}=      Create Dictionary    nome=${nome}    email=${email}    password=${password}   administrador=${admin}
-    Set Suite Variable    ${usuario}
-    Log               ${usuario} 
+    Set Suite Variable       ${usuario}
+    Log                      ${usuario} 
 
 Criar a sessao com a api serverest
     Criar os dados do usuario
@@ -60,7 +60,7 @@ Cadastrar o usuario de teste
     ${ID_PRODUTO_CADASTRADO}          Get From Dictionary    ${RESPONSE.json()}    _id
     Set Suite Variable                ${ID_PRODUTO_CADASTRADO}
     Log To Console     Resposta ID:   ${ID_PRODUTO_CADASTRADO}
-    Validate Json        user.json        ${RESPONSE.json()}  
+    Validate Json        user.json    ${RESPONSE.json()}  
 
 Efetuar o login
     ${BODY}=    Create Dictionary     email=${usuario.email}    password=${usuario.password}
@@ -93,8 +93,8 @@ Cadastrar um Produto
     validate          instance=${RESPONSE.json()}    schema=${schema}
 
 Listar o produto cadastrado
-    ${HEADERS}=         Create Dictionary    Authorization=${TOKEN}
-    ${PARAMS}=          Create Dictionary    _id=${ID_PRODUTO_CADASTRADO}
+    ${HEADERS}=             Create Dictionary    Authorization=${TOKEN}
+    ${PARAMS}=              Create Dictionary    _id=${ID_PRODUTO_CADASTRADO}
     ${RESPONSE}=            GET On Session      ${ALIAS}    url=produtos    headers=${HEADERS}   params=${PARAMS}
     Log                Resposta : ${RESPONSE.json()}
     Log To Console     Resposta : ${RESPONSE.json()}
