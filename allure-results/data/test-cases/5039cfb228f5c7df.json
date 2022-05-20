@@ -1,12 +1,12 @@
 {
-  "uid" : "bb636bee62fb8037",
+  "uid" : "5039cfb228f5c7df",
   "name" : "Checking weather by not found zip code",
   "fullName" : "Robot Openweather Api.Features.Specifications.Weather.Weather Spec.Checking weather by not found zip code",
   "historyId" : "5d0b2d77ca0f6c55f8954020926b1606",
   "time" : {
-    "start" : 1652704906095,
-    "stop" : 1652704906149,
-    "duration" : 54
+    "start" : 1653043294186,
+    "stop" : 1653043294213,
+    "duration" : 27
   },
   "status" : "passed",
   "flaky" : false,
@@ -18,22 +18,22 @@
   "beforeStages" : [ {
     "name" : "weather_steps.Given I start the session",
     "time" : {
-      "stop" : 1652704905739
+      "stop" : 1653043294036
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "RequestsLibrary.Create Session",
       "time" : {
-        "start" : 1652704905736,
-        "stop" : 1652704905739,
+        "start" : 1653043294033,
+        "stop" : 1653043294036,
         "duration" : 3
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Creating Session using : alias=weather, url=http://api.openweathermap.org/data/2.5, headers={'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 ",
         "time" : {
-          "start" : 1652704905737,
-          "stop" : 1652704905737,
+          "start" : 1653043294034,
+          "stop" : 1653043294034,
           "duration" : 0
         },
         "status" : "passed",
@@ -76,24 +76,24 @@
     "steps" : [ {
       "name" : "weather_steps.When send a request about weather by zip code wrong",
       "time" : {
-        "start" : 1652704906095,
-        "stop" : 1652704906144,
-        "duration" : 49
+        "start" : 1653043294187,
+        "stop" : 1653043294208,
+        "duration" : 21
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "BuiltIn.Create Dictionary",
         "time" : {
-          "start" : 1652704906095,
-          "stop" : 1652704906096,
+          "start" : 1653043294187,
+          "stop" : 1653043294188,
           "duration" : 1
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "&{params} = { zip=040,us | appid=e2f1d841cc16cff49a0aa18b531d71e0 }",
           "time" : {
-            "start" : 1652704906096,
-            "stop" : 1652704906096,
+            "start" : 1653043294187,
+            "stop" : 1653043294187,
             "duration" : 0
           },
           "status" : "passed",
@@ -120,16 +120,16 @@
       }, {
         "name" : "RequestsLibrary.POST On Session",
         "time" : {
-          "start" : 1652704906096,
-          "stop" : 1652704906143,
-          "duration" : 47
+          "start" : 1653043294188,
+          "stop" : 1653043294207,
+          "duration" : 19
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "POST Request : url=http://api.openweathermap.org/data/2.5/weather?zip=040%2Cus&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n path_url=/data/2.5/weather?zip=040%2Cus&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '0'} \n body=None \n ",
           "time" : {
-            "start" : 1652704906142,
-            "stop" : 1652704906142,
+            "start" : 1653043294206,
+            "stop" : 1653043294206,
             "duration" : 0
           },
           "status" : "passed",
@@ -141,10 +141,10 @@
           "shouldDisplayMessage" : false,
           "hasContent" : false
         }, {
-          "name" : "POST Response : url=http://api.openweathermap.org/data/2.5/weather?zip=040%2Cus&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n status=404, reason=Not Found \n headers={'Server': 'openresty', 'Date': 'Mon, 16 May 2022 12:41:46 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '40', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?zip=040%2cus', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} \n body={\"cod\":\"404\",\"message\":\"city not found\"} \n ",
+          "name" : "POST Response : url=http://api.openweathermap.org/data/2.5/weather?zip=040%2Cus&appid=e2f1d841cc16cff49a0aa18b531d71e0 \n status=404, reason=Not Found \n headers={'Server': 'openresty', 'Date': 'Fri, 20 May 2022 10:41:34 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '40', 'Connection': 'keep-alive', 'X-Cache-Key': '/data/2.5/weather?zip=040%2cus', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST'} \n body={\"cod\":\"404\",\"message\":\"city not found\"} \n ",
           "time" : {
-            "start" : 1652704906142,
-            "stop" : 1652704906142,
+            "start" : 1653043294206,
+            "stop" : 1653043294206,
             "duration" : 0
           },
           "status" : "passed",
@@ -158,8 +158,8 @@
         }, {
           "name" : "${RESPONSE} = <Response [404]>",
           "time" : {
-            "start" : 1652704906142,
-            "stop" : 1652704906142,
+            "start" : 1653043294206,
+            "stop" : 1653043294206,
             "duration" : 0
           },
           "status" : "passed",
@@ -195,16 +195,16 @@
       }, {
         "name" : "BuiltIn.Set Test Variable",
         "time" : {
-          "start" : 1652704906143,
-          "stop" : 1652704906144,
-          "duration" : 1
+          "start" : 1653043294207,
+          "stop" : 1653043294207,
+          "duration" : 0
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "${RESPONSE} = <Response [404]>",
           "time" : {
-            "start" : 1652704906143,
-            "stop" : 1652704906143,
+            "start" : 1653043294207,
+            "stop" : 1653043294207,
             "duration" : 0
           },
           "status" : "passed",
@@ -235,24 +235,24 @@
     }, {
       "name" : "weather_steps.Then expect API response will be code",
       "time" : {
-        "start" : 1652704906144,
-        "stop" : 1652704906149,
+        "start" : 1653043294208,
+        "stop" : 1653043294213,
         "duration" : 5
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "BuiltIn.Log",
         "time" : {
-          "start" : 1652704906144,
-          "stop" : 1652704906146,
+          "start" : 1653043294208,
+          "stop" : 1653043294210,
           "duration" : 2
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "Response: {\"cod\":\"404\",\"message\":\"city not found\"}",
           "time" : {
-            "start" : 1652704906145,
-            "stop" : 1652704906145,
+            "start" : 1653043294209,
+            "stop" : 1653043294209,
             "duration" : 0
           },
           "status" : "passed",
@@ -276,8 +276,8 @@
       }, {
         "name" : "BuiltIn.Log To Console",
         "time" : {
-          "start" : 1652704906146,
-          "stop" : 1652704906147,
+          "start" : 1653043294210,
+          "stop" : 1653043294211,
           "duration" : 1
         },
         "status" : "passed",
@@ -294,16 +294,16 @@
       }, {
         "name" : "BuiltIn.Should Be Equal As Strings",
         "time" : {
-          "start" : 1652704906147,
-          "stop" : 1652704906148,
+          "start" : 1653043294211,
+          "stop" : 1653043294212,
           "duration" : 1
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "Argument types are:\n<class 'int'>\n<class 'str'>",
           "time" : {
-            "start" : 1652704906148,
-            "stop" : 1652704906148,
+            "start" : 1653043294212,
+            "stop" : 1653043294212,
             "duration" : 0
           },
           "status" : "passed",
@@ -363,10 +363,10 @@
     "value" : "cpython3"
   }, {
     "name" : "host",
-    "value" : "fv-az292-587"
+    "value" : "fv-az203-510"
   }, {
     "name" : "thread",
-    "value" : "default-2e9c70b6-8db6-4fac-8710-dbedc26cdd9b"
+    "value" : "default-24b306f3-a36d-44fc-9fa0-87bc2df55757"
   }, {
     "name" : "tag",
     "value" : "api_tests"
@@ -393,6 +393,6 @@
     "categories" : [ ],
     "tags" : [ "api_tests", "weather_zipcode_fail" ]
   },
-  "source" : "bb636bee62fb8037.json",
+  "source" : "5039cfb228f5c7df.json",
   "parameterValues" : [ ]
 }

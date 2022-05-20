@@ -1,130 +1,130 @@
 [ {
-  "uid" : "3efbd41fd605e76e",
-  "name" : "Checking the weather by id",
-  "time" : {
-    "start" : 1652704905880,
-    "stop" : 1652704905937,
-    "duration" : 57
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6d78d68901f3f084",
-  "name" : "Search weather data by city name with invalid api key",
-  "time" : {
-    "start" : 1652704906580,
-    "stop" : 1652704906656,
-    "duration" : 76
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "dd7379d4866bd786",
-  "name" : "Checking multilingual support",
-  "time" : {
-    "start" : 1652704906265,
-    "stop" : 1652704906358,
-    "duration" : 93
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a6162595e4edaadc",
+  "uid" : "c96a96a9554288a3",
   "name" : "Checking the weather by city",
   "time" : {
-    "start" : 1652704905740,
-    "stop" : 1652704905875,
-    "duration" : 135
+    "start" : 1653043294037,
+    "stop" : 1653043294083,
+    "duration" : 46
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "9b85f585421aee0f",
+  "uid" : "d88f44d6e96755b8",
+  "name" : "Checking weather by longitude and latitude",
+  "time" : {
+    "start" : 1653043294121,
+    "stop" : 1653043294151,
+    "duration" : 30
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a185ddc425d9f3fa",
+  "name" : "Checking cities in circle",
+  "time" : {
+    "start" : 1653043294246,
+    "stop" : 1653043294274,
+    "duration" : 28
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dfd3c5dd36e424f2",
+  "name" : "Checking Units of measurement - For temperature in Kelvin use units=standard",
+  "time" : {
+    "start" : 1653043294617,
+    "stop" : 1653043294640,
+    "duration" : 23
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5039cfb228f5c7df",
+  "name" : "Checking weather by not found zip code",
+  "time" : {
+    "start" : 1653043294186,
+    "stop" : 1653043294213,
+    "duration" : 27
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3b2f5b1b1c508e9f",
+  "name" : "Search weather data by city name with invalid api key",
+  "time" : {
+    "start" : 1653043294644,
+    "stop" : 1653043294662,
+    "duration" : 18
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "aacf38b49a26ec58",
+  "name" : "Checking weather by zip code",
+  "time" : {
+    "start" : 1653043294155,
+    "stop" : 1653043294182,
+    "duration" : 27
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c238a5af246c80",
+  "name" : "Checking Units of measurement - For temperature in Fahrenheit use units=imperial",
+  "time" : {
+    "start" : 1653043294564,
+    "stop" : 1653043294586,
+    "duration" : 22
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2a3d22c2edd54dbf",
+  "name" : "Checking Units of measurement - For temperature in Celsius use units=metric",
+  "time" : {
+    "start" : 1653043294591,
+    "stop" : 1653043294613,
+    "duration" : 22
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a45e3e073994e484",
+  "name" : "Checking multilingual support",
+  "time" : {
+    "start" : 1653043294279,
+    "stop" : 1653043294530,
+    "duration" : 251
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5a00010bd99d0678",
+  "name" : "Checking the weather by id",
+  "time" : {
+    "start" : 1653043294087,
+    "stop" : 1653043294117,
+    "duration" : 30
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "195e2a55134e6b5",
   "name" : "Checking cities within a rectangle zone",
   "time" : {
-    "start" : 1652704907185,
-    "stop" : 1652704907236,
-    "duration" : 51
+    "start" : 1653043295073,
+    "stop" : 1653043295146,
+    "duration" : 73
   },
   "status" : "failed",
   "severity" : "normal"
 }, {
-  "uid" : "c9564e3f080349ab",
-  "name" : "Checking cities in circle",
-  "time" : {
-    "start" : 1652704906207,
-    "stop" : 1652704906261,
-    "duration" : 54
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "13f43299546f682a",
-  "name" : "Checking weather by zip code",
-  "time" : {
-    "start" : 1652704906038,
-    "stop" : 1652704906090,
-    "duration" : 52
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "bb636bee62fb8037",
-  "name" : "Checking weather by not found zip code",
-  "time" : {
-    "start" : 1652704906095,
-    "stop" : 1652704906149,
-    "duration" : 54
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "32a47d8259ddd3c1",
-  "name" : "Checking Units of measurement - For temperature in Celsius use units=metric",
-  "time" : {
-    "start" : 1652704906471,
-    "stop" : 1652704906519,
-    "duration" : 48
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "1fe874ddffdcbab8",
+  "uid" : "858de02526a51e07",
   "name" : "Checking Call back function",
   "time" : {
-    "start" : 1652704906362,
-    "stop" : 1652704906414,
-    "duration" : 52
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f13aba6c8b0d568",
-  "name" : "Checking Units of measurement - For temperature in Kelvin use units=standard",
-  "time" : {
-    "start" : 1652704906524,
-    "stop" : 1652704906576,
-    "duration" : 52
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "fbecb2de0c7df992",
-  "name" : "Checking weather by longitude and latitude",
-  "time" : {
-    "start" : 1652704907071,
-    "stop" : 1652704907181,
-    "duration" : 110
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ab1ed1d2142367cb",
-  "name" : "Checking Units of measurement - For temperature in Fahrenheit use units=imperial",
-  "time" : {
-    "start" : 1652704906418,
-    "stop" : 1652704906467,
-    "duration" : 49
+    "start" : 1653043294534,
+    "stop" : 1653043294560,
+    "duration" : 26
   },
   "status" : "passed",
   "severity" : "normal"
