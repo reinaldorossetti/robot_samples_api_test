@@ -1,11 +1,11 @@
 *** Settings ***
-Library        RequestsLibrary
 Library        Collections
+Library        RequestsLibrary
 Library        FakerLibrary
-Resource        ../../support/base.robot
-Suite Setup    Criar a sessao com a api serverest
 Library        JSONSchemaLibrary    ${EXECDIR}/features/support/resources/schemas/
 Library        jsonschema
+Resource        ../../support/base.robot
+
 
 *** Variables ***
 ${URL}                https://serverest.dev
@@ -20,22 +20,16 @@ ${ID_PRODUTO_CADASTRADO}
 ${produto}
 
 
-*** Test Cases ***
-Testar Listar os Produtos
-    [Tags]    ListarProduto
-    Cadastrar o usuario de teste
-    Efetuar o login
-    Cadastrar um Produto
-    Listar o produto cadastrado
-    
 *** Keywords ***
 Criar os dados do usuario
-    ${nome}=                 Name
-    ${email}=                Email
-    ${password}=             Password
-    ${usuario}=      Create Dictionary    nome=${nome}    email=${email}    password=${password}   administrador=${admin}
+    ${nome}=                 FakerLibrary.Name
+    ${email}=                FakerLibrary.Email
+    ${usuario}=               Get Json     usuario.json
+    Set To Dictionary        ${usuario}    nome=${nome}    email=${email}
+    Update JSON Data         usuario.json    ${usuario}
     Set Suite Variable       ${usuario}
     Log                      ${usuario} 
+    Log To Console           ${usuario}
 
 Criar a sessao com a api serverest
     Criar os dados do usuario
@@ -63,7 +57,7 @@ Cadastrar o usuario de teste
     Validate Json        user.json    ${RESPONSE.json()}  
 
 Efetuar o login
-    ${BODY}=    Create Dictionary     email=${usuario.email}    password=${usuario.password}
+    ${BODY}=    Create Dictionary     email=${usuario["email"]}    password=${usuario["password"]}
     ${RESPONSE}=    POST On Session        ${ALIAS}    json=${BODY}    url=${URL}/login
     Log                Resposta : ${RESPONSE.json()}
     Log To Console     Resposta : ${RESPONSE.json()}
