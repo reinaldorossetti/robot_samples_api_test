@@ -6,13 +6,13 @@
       "name" : "HTTPError: 400 Client Error: Bad Request for url: http://api.openweathermap.org/data/2.5/weather?bbox=12%2C32%2C15%2C37%2C10&appid=e2f1d841cc16cff49a0aa18b531d71e0",
       "children" : [ {
         "name" : "Checking cities within a rectangle zone",
-        "uid" : "77f8de286309cae6",
+        "uid" : "4e7ed0f587bfd4db",
         "parentUid" : "dd8836138b31d95fec20fc0c89cee7ac",
         "status" : "failed",
         "time" : {
-          "start" : 1654857560625,
-          "stop" : 1654857561728,
-          "duration" : 1103
+          "start" : 1655462358287,
+          "stop" : 1655462358441,
+          "duration" : 154
         },
         "flaky" : false,
         "newFailed" : false,
