@@ -48,7 +48,7 @@ jobs:
       run: |
         allure generate ./output/allure -o allure-results/
     - name: 🎁 Publishing Allure artifact to GitHub Actions
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: my_reports
         path: my_reports
