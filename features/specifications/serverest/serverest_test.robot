@@ -29,23 +29,22 @@ Testar Listar os Produtos
     Listar o produto cadastrado
     
 *** Keywords ***
-Criar os dados do usuario
+Criar Os Dados Do Usuario
     ${nome}=                 Name
     ${email}=                Email
     ${password}=             Password
     ${usuario}=      Create Dictionary    nome=${nome}    email=${email}    password=${password}   administrador=${admin}
     Set Suite Variable       ${usuario}
-    Log                      ${usuario} 
+    Log                      ${usuario}     level=DEBUG
 
-Criar a sessao com a api serverest
+Criar A Sessao Com A Api Serverest
     Criar os dados do usuario
     ${HEADER}=    Create Dictionary        Content-Type=application/json
     Create Session    ${ALIAS}    url=${URL}    headers=${HEADER}    disable_warnings=1
 
 Cadastrar o usuario de teste
-    ${RESPONSE}=    POST On Session        ${ALIAS}    json=${usuario}    url=${URL}/usuarios
-    Log        Resposta Retornada: ${RESPONSE.json()}
-    Log To Console     Resposta Retornada: ${RESPONSE.json()}
+    ${RESPONSE}=    POST On Session        ${ALIAS}    json=${usuario}    url=/usuarios
+    Log        Resposta Retornada: ${RESPONSE.json()}    level=DEBUG
     Request Should Be Successful
     Status Should Be                  201        ${RESPONSE}
     Should Be Equal As Strings        Created    ${RESPONSE.reason}
@@ -59,14 +58,12 @@ Cadastrar o usuario de teste
     Length Should Be                  ${RESPONSE.json()["_id"]}    16
     ${ID_PRODUTO_CADASTRADO}          Get From Dictionary    ${RESPONSE.json()}    _id
     Set Suite Variable                ${ID_PRODUTO_CADASTRADO}
-    Log To Console     Resposta ID:   ${ID_PRODUTO_CADASTRADO}
     Validate Json        user.json    ${RESPONSE.json()}  
 
 Efetuar o login
     ${BODY}=    Create Dictionary     email=${usuario.email}    password=${usuario.password}
     ${RESPONSE}=    POST On Session        ${ALIAS}    json=${BODY}    url=${URL}/login
-    Log                Resposta : ${RESPONSE.json()}
-    Log To Console     Resposta : ${RESPONSE.json()}
+    Log                Resposta : ${RESPONSE.json()}    level=DEBUG
     Request Should Be Successful
     Dictionary Should Contain Item    ${RESPONSE.json()}     message   Login realizado com sucesso
     Should Not Be Empty    ${RESPONSE.json()["authorization"]}
@@ -77,18 +74,17 @@ Efetuar o login
 Cadastrar um Produto
     ${produto}            FakerLibrary.company
     Set Suite Variable    ${produto} 
-    Log To Console        produto : ${produto}
     ${BODY}=            Create Dictionary     nome=${produto}    preco=${preco}    descricao=${descricao}    quantidade=${quantidade}  
     ${HEADERS}=         Create Dictionary    Authorization=${TOKEN}
     ${RESPONSE}=        POST On Session        ${ALIAS}    json=${BODY}    url=produtos    headers=${HEADERS}
-    Log                Resposta : ${RESPONSE}
+    Log                Resposta : ${RESPONSE}    level=DEBUG
     Request Should Be Successful
     Dictionary Should Contain Item    ${RESPONSE.json()}     message   Cadastro realizado com sucesso
     Length Should Be                  ${RESPONSE.json()["_id"]}    16
     ${ID_PRODUTO_CADASTRADO}  Get From Dictionary    ${RESPONSE.json()}    _id
     Set Suite Variable   ${ID_PRODUTO_CADASTRADO}
-    Log                Resposta : ${RESPONSE.json()}
-    Log To Console     Resposta : ${RESPONSE.json()}
+    Log                Resposta : ${RESPONSE.json()}    level=DEBUG
+    Log To Console     Resposta : ${RESPONSE.json()}    STDERR
     ${schema}=        Get Json Schema   produto.json   
     validate          instance=${RESPONSE.json()}    schema=${schema}
 
@@ -96,8 +92,7 @@ Listar o produto cadastrado
     ${HEADERS}=             Create Dictionary    Authorization=${TOKEN}
     ${PARAMS}=              Create Dictionary    _id=${ID_PRODUTO_CADASTRADO}
     ${RESPONSE}=            GET On Session      ${ALIAS}    url=produtos    headers=${HEADERS}   params=${PARAMS}
-    Log                Resposta : ${RESPONSE.json()}
-    Log To Console     Resposta : ${RESPONSE.json()}
+    Log                Resposta : ${RESPONSE.json()}    level=DEBUG
     Request Should Be Successful
     Dictionary Should Contain Item    ${RESPONSE.json()["produtos"][0]}     nome           ${produto}
     Dictionary Should Contain Item    ${RESPONSE.json()["produtos"][0]}     preco          ${preco}
