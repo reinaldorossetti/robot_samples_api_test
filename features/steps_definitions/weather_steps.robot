@@ -18,8 +18,6 @@ Setting session to weather using POST method
     Set Test Variable    ${RESPONSE}
 
 Then validating the Response's success data
-    Log    Response: ${RESPONSE.text}
-    Log To Console    Response: ${RESPONSE.text}
     Should Not Be Empty    ${RESPONSE.json()}
     Dictionary Should Contain Item    ${RESPONSE.json()["sys"]}    country    ${COUNTRY}
     Dictionary Should Contain Item    ${RESPONSE.json()}    coord    ${COORDINATES}
@@ -28,8 +26,6 @@ Then validating the Response's success data
 
 Then expect API response will be code
     [Arguments]    ${STATUS_CODE}
-    Log    Response: ${RESPONSE.text}
-    Log To Console    Response: ${RESPONSE.text}
     Should Be Equal As Strings    ${RESPONSE.status_code}    ${STATUS_CODE}
 
 Then validating the Response's success country
