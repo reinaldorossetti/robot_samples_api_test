@@ -3,6 +3,7 @@ Resource        ../../support/imports_api.robot
 
 Force Tags      api_tests
 Suite Setup     Given I start the session
+Test Setup      Set Log Level    ${LOG_LEVEL} 
 
 *** Test Cases ***
 Checking the weather by city

@@ -12,3 +12,4 @@ ${ZIP_CODE_FAIL}        040,us
 ${BBOX}                 12,32,15,37,10
 ${CNT}                  10
 ${LANGUAGE}             sp
+${LOG_LEVEL}            FAIL

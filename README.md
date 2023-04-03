@@ -29,7 +29,13 @@ python -m robot -d my_reports -i api_tests ./
 ```
 Api features, By File Path:
 ```
-python -m robot -d my_reports features/specifications/weather
+python -m robot -d my_reports --loglevel DEBUG:FAIL features/specifications/weather
+python -m robot -d my_reports --loglevel DEBUG:INFO features/specifications/weather
+```
+
+Add variable in command line:
+```
+python -m robot -d my_reports --variable LOG_LEVEL:INFO features/specifications/weather
 ```
 
 Comando diretamente pelo robot.
