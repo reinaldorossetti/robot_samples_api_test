@@ -23,10 +23,15 @@ export PYTHONPATH=%PYTHONPATH%;.;
 
 Command line to runner:
 
-Api features:
+Api features, by tag api_tests:
 ```
-python -m robot --loglevel DEBUG:INFO -d my_reports -i api_tests ./  
+python -m robot -d my_reports -i api_tests ./  
 ```
+Api features, By File Path:
+```
+python -m robot -d my_reports features/specifications/weather
+```
+
 Comando diretamente pelo robot.
 ```
 robot --loglevel DEBUG:INFO -d my_reports -i api_tests ./  
