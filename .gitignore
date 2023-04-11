@@ -29,6 +29,8 @@ share/python-wheels/
 *.egg
 MANIFEST
 .idea/
+my_reports/
+.pabotsuitenames
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

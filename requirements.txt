@@ -7,3 +7,6 @@ robotframework-tidy
 robotframework-jsonlibrary
 robotframework-jsonschemalibrary
 jsonschema
+pyopenssl
+cryptography>=40.0.1
+robotframework-pabot
