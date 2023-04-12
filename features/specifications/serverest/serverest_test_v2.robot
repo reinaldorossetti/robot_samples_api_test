@@ -14,20 +14,19 @@ Testar Listar os Produtos
     
 *** Keywords ***
 Criar Os Dados Do Usuario
-    ${nome}=                 Name
-    ${email}=                Email
-    ${password}=             Password
-    ${usuario}=      Create Dictionary    nome=${nome}    email=${email}    password=${password}   administrador=${admin}
-    Set Suite Variable       ${usuario}
-    Log                      ${usuario}     level=DEBUG
+    ${Email}          FakerLibrary.email
+    ${Name}           FakerLibrary.name
+    Update JSON       ${PATH_DATA}/user_body.json    email    ${Email}
+    Update JSON       ${PATH_DATA}/user_body.json    nome     ${Name}
 
 Criar A Sessao Com A Api Serverest
     Criar os dados do usuario
     ${HEADER}=    Create Dictionary        Content-Type=application/json
     Create Session    ${ALIAS}    url=${URL}    headers=${HEADER}    disable_warnings=1
 
+
 Cadastrar o usuario de teste
-    ${RESPONSE}=    POST On Session        ${ALIAS}    json=${usuario}    url=/usuarios
+    ${RESPONSE}=    POST On Session        ${ALIAS}    json=${DATA}    url=/usuarios
     Log        Resposta Retornada: ${RESPONSE.json()}    level=DEBUG
     Request Should Be Successful
     Status Should Be                  201        ${RESPONSE}
@@ -45,7 +44,7 @@ Cadastrar o usuario de teste
     Validate Json        ${PATH_SCHEMA}/user_schema.json    ${RESPONSE.json()}  
 
 Efetuar o login
-    ${BODY}=    Create Dictionary     email=${usuario.email}    password=${usuario.password}
+    ${BODY}=    Create Dictionary     email=${DATA.email}    password=${DATA.password}
     ${RESPONSE}=    POST On Session        ${ALIAS}    json=${BODY}    url=${URL}/login
     Log                Resposta : ${RESPONSE.json()}    level=DEBUG
     Request Should Be Successful

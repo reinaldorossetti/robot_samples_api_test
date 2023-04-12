@@ -8,5 +8,6 @@ robotframework-jsonlibrary
 robotframework-jsonschemalibrary
 jsonschema
 pyopenssl
-cryptography>=40.0.1
+pycryptodome
+Pylance
 robotframework-pabot
