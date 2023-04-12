@@ -11,3 +11,4 @@ pyopenssl
 pycryptodome
 Pylance
 robotframework-pabot
+psycopg2
