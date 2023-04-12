@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../steps_definitions/weather_steps.robot
+Resource    weather_keyword.robot
 ### Behave steps call Keywords.
 
 

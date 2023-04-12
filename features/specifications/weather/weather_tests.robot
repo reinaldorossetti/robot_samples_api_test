@@ -1,6 +1,7 @@
 *** Settings ***
-Resource        ../../support/imports_api.robot
 
+Resource        ../../support/imports_api.robot
+Resource        keywords/tasks_weather_steps.robot
 Force Tags      api_tests
 Suite Setup     Given I start the session
 Test Setup      Set Log Level    ${LOG_LEVEL} 

@@ -62,8 +62,9 @@ Folder Structure Conventions
     ├── features                    # Files and folders of framework (root code).
         ├── resources               # Json ou YAML files.
         ├── support                 # Commons files to tests spec (global use).
-        ├── steps_definitions       # Keywords of tests.
         ├── specifications          # Specification of what the tests should do and runner of tests.
+                ├── keywords       # Keywords of tests.
+
     ├── .gitignore                  # Files and Folders to ignore in repository.
     ├── LICENSE
     ├── README.md                   # Documentation of project.
