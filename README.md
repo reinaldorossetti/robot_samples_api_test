@@ -2,6 +2,11 @@
 
 Project Test with Robot Framework using behave directory pattern .
 
+Report do Projeto:   
+https://reinaldorossetti.github.io/robot_samples_api_test/allure-results/#  
+Na esteira estamos usando o Pabot para rodar em paralelo as features:  
+https://github.com/reinaldorossetti/robot_samples_api_test/blob/main/.github/workflows/test_robot_pabot.yml  
+
 How to install:
 ```
  git clone https://github.com/reinaldorossetti/robot_automation_ui.git
