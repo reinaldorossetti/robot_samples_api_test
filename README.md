@@ -84,16 +84,28 @@ Folder Structure Conventions
 
 Dependencies of project:
 ```
-robotframework-requests
+robotframework-requests==0.9.2
 robotframework==5.0.0
 robotframework-faker
+allure-robotframework
 pyyaml>=5.4
+robotframework-tidy
+robotframework-jsonlibrary
+robotframework-jsonschemalibrary
+jsonschema
+pyopenssl
+pycryptodome
+Pylance
+robotframework-pabot
+psycopg2
 ```
 
-References:  
-https://pypi.org/project/robotframework-pageobjectlibrary    
-https://libraries.io/pypi/robotframework-pageobjectlibrary  
-https://github.com/boakley/robotframework-pageobjectlibrary  
+References:    
+https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html  
+https://github.com/MarketSquare/robotframework-requests  
+https://github.com/kennethreitz/requests  
+https://requests.readthedocs.io/en/latest/  
 
-Udemy Course >> WEB Testing Avançado >> Follow use the page object:  
-https://www.udemy.com/course/automacao-de-testes-com-robot-framework-avancado  
+Cursos de Robot  
+https://www.udemy.com/course/automacao-de-testes-com-robot-framework-basico/  
+https://www.udemy.com/course/automacao-de-testes-com-robot-framework-avancado    
