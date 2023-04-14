@@ -1,16 +1,23 @@
 # robot_automation
 
-Project Test with Robot Framework using behave directory pattern .
+Projeto Exemplo usando o Robot Framework. Projeto para estudo sobre o Framework.  
 
-Report do Projeto:   
+Report do Projeto utilizando o Git Actions:   
 https://reinaldorossetti.github.io/robot_samples_api_test/allure-results/#  
-Na esteira estamos usando o Pabot para rodar em paralelo as features:  
+
+Na esteira estamos usando em uma PIPELINE o Pabot para rodar em paralelo as features:  
 https://github.com/reinaldorossetti/robot_samples_api_test/blob/main/.github/workflows/test_robot_pabot.yml  
 
-How to install:
+Pré-requisito Instalação do Python 3.9.4, e o mesmo deve setar as váriaveis de ambiente no SO.
+https://www.python.org/downloads/release/python-394/
+
+Estamos usando a versão 6.0.2, ultima versão mais estável atualmente:
+Release Notes: https://github.com/robotframework/robotframework/blob/master/doc/releasenotes/rf-6.0.2.rst
+
+Como Instalar o Projeto:
 ```
- git clone https://github.com/reinaldorossetti/robot_automation_ui.git
- cd robot_automation_ui   
+ git clone https://github.com/reinaldorossetti/robot_samples_api_test.git
+ cd robot_samples_api_test   
  pip install -r requirements.txt
 ```
 
@@ -89,7 +96,7 @@ Folder Structure Conventions
 Dependencies of project:
 ```
 robotframework-requests==0.9.2
-robotframework==5.0.0
+robotframework==6.0.2
 robotframework-faker
 allure-robotframework
 pyyaml>=5.4
