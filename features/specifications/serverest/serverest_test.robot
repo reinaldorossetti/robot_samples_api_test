@@ -1,6 +1,5 @@
 *** Settings ***
-Resource        ../../baseTests.robot
-Resource        tests_variables.robot
+Resource       feature_variables.robot
 Suite Setup    Criar a sessao com a api serverest
 Default Tags   serverest_tests
 

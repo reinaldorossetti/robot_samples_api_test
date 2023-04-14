@@ -1,6 +1,5 @@
 *** Settings ***
-Resource        ../../../baseTests.robot
-Resource        ../tests_variables.robot
+Resource        ../feature_variables.robot
 
 *** Keywords ***
 Criar Os Dados Do Usuario
