@@ -63,17 +63,21 @@ Folder Structure Conventions
 > Folder structure and naming conventions for my project.
 
 ### A typical cucumber directory pattern.
-    .
-    ├── features                    # Files and folders of framework (root code).
-        ├── resources               # Json ou YAML files.
-        ├── support                 # Commons files to tests spec (global use).
-        ├── specifications          # Specification of what the tests should do and runner of tests.
-                ├── keywords       # Keywords of tests.
+ .
+├── atests                      # Pasta Feature é principal do projeto (root code).
+    ├── support                 # Funções comuns que são compartilhadas no projeto.
+    ├── features                # Pasta aonde vai conter as features e seus respectivos testes.
+        ├── keywords            # Keywords que serão utilizadas nos testes.
+        ├── resources           # Arquivos Json ou YAML que fazem parte dos testes.
+        feature_test.robot      # Arquivos _test vão conter a escrita dos testes.
+        feature_variables.robot # Arquivo que vai conter as variáveis e Resource da feature. 
+    ├── global_variables.robot  # Arquivo que vai conter as variáveis e Resource do Projeto. 
 
-    ├── .gitignore                  # Files and Folders to ignore in repository.
-    ├── LICENSE
-    ├── README.md                   # Documentation of project.
-    └── requirements.txt            # Libraries to need to install.
+├── .gitignore                  # Arquivos/pastas que serão ignorados no github.
+├── LICENSE
+├── README.md                   # Documentação Simplificada do Projeto.
+└── requirements.txt          # Aqui vão estar as bibliotecas do Projeto, definir as versões utilizadas.
+
 
 > Use short lowercase names at least for the top-level files and folders except  
 > `LICENSE`, `README.md`, in folder pages the name follow github default in Letter case.  
