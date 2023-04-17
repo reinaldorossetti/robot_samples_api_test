@@ -10,6 +10,7 @@ https://github.com/reinaldorossetti/robot_samples_api_test/blob/main/.github/wor
 
 Pré-requisito Instalação do Python 3.9.4, e o mesmo deve setar as váriaveis de ambiente no SO.
 https://www.python.org/downloads/release/python-394/
+** Obs: Na instalação do Pythons selecione a opção para adicionar no Path do Sistema, senão vai precisar adicionar manualmente.
 
 Estamos usando a versão 6.0.2, ultima versão mais estável atualmente:
 Release Notes: https://github.com/robotframework/robotframework/blob/master/doc/releasenotes/rf-6.0.2.rst
@@ -20,18 +21,6 @@ Como Instalar o Projeto:
  cd robot_samples_api_test   
  pip install -r requirements.txt
 ```
-
-** Setting PYTHONPATH inside project (python problem only):
-
-Windows:
-```
-set PYTHONPATH=%PYTHONPATH%;.;
-```
-Linux: 
-```
-export PYTHONPATH=%PYTHONPATH%;.;
-```
-** If Set PYTHONPATH need set python path in SO system path variables.
 
 Command line to runner:
 
