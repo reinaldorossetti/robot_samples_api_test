@@ -79,7 +79,7 @@ jobs:
         # Required recipients' addresses:
         to: reiload@gmail.com
         # Required sender full name (address can be skipped):
-        from: Automation Robot  # <user@example.com>
+        from: automation.reinaldo@gmail.com
         # Optional plain body:
         body: Build job of ${{github.repository}} completed successfully! \n Link do Reporte do Projeto utilizando o Git Actions
               https://reinaldorossetti.github.io/robot_samples_api_test/allure-results/#
