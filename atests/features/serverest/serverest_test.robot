@@ -41,7 +41,7 @@ Cadastrar o usuario de teste
     Length Should Be                  ${RESPONSE.json()["_id"]}    16
     ${ID_PRODUTO_CADASTRADO}          Get From Dictionary    ${RESPONSE.json()}    _id
     Set Suite Variable                ${ID_PRODUTO_CADASTRADO}
-    Validate Json        ${PATH_SCHEMA}/user_schema.json    ${RESPONSE.json()}  
+    Validate Json Schema              ${PATH_SCHEMA}/user_schema.json    ${RESPONSE.json()}  
 
 Efetuar o login
     ${BODY}=    Create Dictionary     email=${usuario.email}    password=${usuario.password}
@@ -51,8 +51,8 @@ Efetuar o login
     Dictionary Should Contain Item    ${RESPONSE.json()}     message   Login realizado com sucesso
     Should Not Be Empty    ${RESPONSE.json()["authorization"]}
     ${TOKEN}          Get From Dictionary    ${RESPONSE.json()}    authorization
-    Set Suite Variable                ${TOKEN}
-    Validate Json           ${PATH_SCHEMA}/login.json       ${RESPONSE.json()}     
+    Set Suite Variable            ${TOKEN}
+    Validate Json Schema          ${PATH_SCHEMA}/login.json       ${RESPONSE.json()}     
 
 Cadastrar um Produto
     ${produto}            FakerLibrary.company
@@ -68,7 +68,7 @@ Cadastrar um Produto
     Set Suite Variable   ${ID_PRODUTO_CADASTRADO}
     Log                Resposta : ${RESPONSE.json()}    level=DEBUG
     Log To Console     Resposta : ${RESPONSE.json()}    STDERR
-    Validate Json           ${PATH_SCHEMA}/produto.json      ${RESPONSE.json()}
+    Validate Json Schema          ${PATH_SCHEMA}/produto.json      ${RESPONSE.json()}
 
 Listar o produto cadastrado
     ${HEADERS}=             Create Dictionary    Authorization=${TOKEN}
@@ -81,4 +81,4 @@ Listar o produto cadastrado
     Dictionary Should Contain Item    ${RESPONSE.json()["produtos"][0]}     descricao      ${descricao} 
     Dictionary Should Contain Item    ${RESPONSE.json()["produtos"][0]}     quantidade     ${quantidade}
     Dictionary Should Contain Item    ${RESPONSE.json()["produtos"][0]}     _id            ${ID_PRODUTO_CADASTRADO}
-    Validate Json           ${PATH_SCHEMA}/listar_produto.json      ${RESPONSE.json()}   
+    Validate Json Schema              ${PATH_SCHEMA}/listar_produto.json      ${RESPONSE.json()}   

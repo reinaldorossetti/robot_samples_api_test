@@ -111,11 +111,35 @@ robotframework-pabot
 psycopg2
 ```
 
+Exemplos de Uso do Json Library, ótimo para alterar os valores em um json.
+Podemos fazer uso da validação do json schema por esta biblioteca da comunidade.
+```
+Example Test Case
+*** Settings ***				
+Library	JSONLibrary			
+*** Test Cases ***				
+${json_obj}=	            Load Json From File	example.json		
+${object_to_add}=	        Create Dictionary	country=Thailand		
+${json_obj}=	            Add Object To Json	${json_obj}	$..address	${object_to_add}
+${value}=	                Get Value From Json	${json_obj}	$..country	
+Should Be Equal As Strings	${value[0]}	Thailand		
+${value_to_update}=	        Set Variable	Japan		
+${json_obj}=	            Update Value To Json	${json_obj}	$..country	${value_to_update}
+Should Be Equal As Strings	${json_obj['country']	${value_to_update}		
+Should Have Value In Json	${json_obj}	$..isMarried		
+Should Not Have Value In Json	${json_obj}	$..hasSiblings		
+Dump Json To File	        ${OUTPUT_DIR}${/}output.json	${json}		
+${schema_json_obj}=	        Load Json From File	schema.json		
+Validate Json By Schema	        ${json_obj}	${schema_json_obj}		
+Validate Json By Schema File	${json_obj}	schema.json		
+```
+
 References:    
 https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html  
 https://github.com/MarketSquare/robotframework-requests  
 https://github.com/kennethreitz/requests  
 https://requests.readthedocs.io/en/latest/  
+https://github.com/robotframework-thailand/robotframework-jsonlibrary
 
 Cursos de Robot  
 https://www.udemy.com/course/automacao-de-testes-com-robot-framework-basico/  

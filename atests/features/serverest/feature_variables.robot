@@ -4,5 +4,5 @@ Resource        keywords/serverest_keyword.robot
 
 *** Variables ***
 
-${PATH_SCHEMA}              serverest/resources/schemas
-${PATH_DATA}                serverest/resources/data_requests
+${PATH_SCHEMA}              ${PATH_FEATURES}/serverest/resources/schemas
+${PATH_DATA}                ${PATH_FEATURES}/serverest/resources/data_requests
