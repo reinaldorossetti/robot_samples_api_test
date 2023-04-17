@@ -82,7 +82,7 @@ jobs:
         from: automation.reinaldo@gmail.com
         # Optional plain body:
         html_body: <p>Build de Teste Realizado ;) Projeto https://github.com/${{github.repository}} </p><br>
-              <p>Link do Reporte do Projeto https://reinaldorossetti.github.io/robot_samples_api_test/allure-results/#</p>
+              <p>Link do Reporte do Projeto <a href="https://reinaldorossetti.github.io/robot_samples_api_test/allure-results/#">Link Report</a></p>
         reply_to: Silvio.aulik@gmail.com
         # Optional unsigned/invalid certificates allowance:
         ignore_cert: true
