@@ -95,20 +95,18 @@ Folder Structure Conventions
 
 Dependencies of project:
 ```
+allure-robotframework~=2.13.1
 robotframework-requests==0.9.2
-robotframework==6.0.2
-robotframework-faker
-allure-robotframework
-pyyaml>=5.4
-robotframework-tidy
-robotframework-jsonlibrary
-robotframework-jsonschemalibrary
-jsonschema
-pyopenssl
-pycryptodome
-Pylance
-robotframework-pabot
-psycopg2
+robotframework~=5.0.0
+robotframework-faker~=5.0.0
+robotframework-tidy>=4.1.0
+robotframework-jsonlibrary>=0.5
+robotframework-pabot~=2.15.0
+pyyaml~=5.4
+pyopenssl>=23.1.1
+pycryptodome~=3.17
+Pylance~=0.4.2
+psycopg2~=2.9.6
 ```
 
 Exemplos de Uso do Json Library, ótimo para alterar os valores em um json.
