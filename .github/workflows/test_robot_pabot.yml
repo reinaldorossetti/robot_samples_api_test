@@ -81,7 +81,8 @@ jobs:
         # Required sender full name (address can be skipped):
         from: automation.reinaldo@gmail.com
         # Optional plain body:
-        body: Build job of ${{github.repository}} completed successfully! \n Link do Reporte do Projeto utilizando o Git Actions
+        body: Build de Teste Realizado !!! ${{github.repository}} <br> 
+              Link do Reporte do Projeto utilizando o Git Actions
               https://reinaldorossetti.github.io/robot_samples_api_test/allure-results/#
         reply_to: Silvio.aulik@gmail.com
         # Optional unsigned/invalid certificates allowance:
