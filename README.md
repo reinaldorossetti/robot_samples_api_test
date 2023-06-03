@@ -59,7 +59,7 @@ Folder Structure Conventions
 > Folder structure and naming conventions for my project.
 
 ### A typical cucumber directory pattern.
- .
+´´´
 ├── atests                      # Pasta Feature é principal do projeto (root code).
     ├── support                 # Funções comuns que são compartilhadas no projeto.
     ├── features                # Pasta aonde vai conter as features e seus respectivos testes.
@@ -73,7 +73,7 @@ Folder Structure Conventions
 ├── LICENSE
 ├── README.md                   # Documentação Simplificada do Projeto.
 └── requirements.txt          # Aqui vão estar as bibliotecas do Projeto, definir as versões utilizadas.
-
+´´´
 
 > Use short lowercase names at least for the top-level files and folders except  
 > `LICENSE`, `README.md`, in folder pages the name follow github default in Letter case.  
